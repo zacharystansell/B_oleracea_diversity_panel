@@ -1,0 +1,21 @@
+#rename the appropriate mlm_out files to statistics/compression/effects
+cut -f1,16,17 mlm_statistics.txt | sort | uniq > mlm_genvar.txt
+cut -f1 mlm_statistics.txt | sort | uniq > trait_list.txt
+nano header.csv #SNP,CHR,BP,P,R2
+for i in $(cat trait_list.txt); do grep "$i" mlm_statistics.txt | cut -f2,3,4,7,15 > mlm_"$i".csv; done
+for i in $(cat trait_list.txt); do mv mlm_"$i".csv mlm_"$i".txt; done
+sed -i 's/,/\t/g' header.csv
+for i in $(cat trait_list.txt); do tail -n+2 mlm_"$i".txt > temp_"$i".txt; done
+for i in $(cat trait_list.txt); do cat header.csv temp_"$i".txt > mlm_"$i".csv; done
+for i in $(cat trait_list.txt); do rm -f mlm_"$i".txt; done
+for i in $(cat trait_list.txt); do rm -f temp_"$i".txt; done
+for i in $(cat trait_list.txt); do sed -i 's/\t/,/g' mlm_"$i".csv; done
+
+for i in $(cat trait_list.txt); do sed -i 's/CIAMA_CHR//g' mlm_"$i".csv; done
+
+for i in $(cat trait_list.txt); do sed -i 's/NaN/NA/g' mlm_"$i".csv; done
+
+for i in $(cat trait_list.txt); do grep -v S00 mlm_"$i".csv > new_"$i".csv; done
+
+for i in $(cat trait_list.txt); do rm -f mlm_"$i".csv; done
+for i in $(cat trait_list.txt); do mv new_"$i".csv mlm_"$i".csv; done

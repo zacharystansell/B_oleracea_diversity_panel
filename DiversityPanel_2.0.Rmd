@@ -1,0 +1,3501 @@
+--- 
+title: Diversity Panel 2.0
+author: "ZJS, TNB"
+date: '`r format(Sys.Date(), "%d-%b-%Y")`'
+output:
+  html_document:
+    highlight: pygments
+    theme: united
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  pdf_document:
+    toc: yes
+---  
+
+#  Packages 
+```{r loading packages, eval=FALSE}
+source("../ANALYSIS/scripts/PACKAGES.R") 
+```
+
+# GBS
+## GBS pipeline
+```{bash, eval=FALSE}
+#./SCRIPTS/GBS.sh
+```
+
+## Filtering Data
+```{bash filtering data, eval=FALSE}
+#./SCRIPTS/FILTERING_SNPs.sh
+```
+
+## Summary Stats & Subpopulations
+### Summary Stats
+```{bash summary stats, eval=FALSE}
+#./SCRIPTS/SUMMARY_STATS.sh
+```
+
+### Visualize Stats
+```{r GBS Summary Stats, eval=FALSE }
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+
+# by Taxa 
+taxaStats <-
+  read.delim("../DATA/GBS/DATASETS/STATS/BOL4.txt", sep = "\t") %>%
+  dplyr::select(Taxa.Name,
+                Number.of.Sites,
+                Proportion.Missing,
+                Proportion.Heterozygous)
+taxaStats <- merge(taxaStats, PSP, by.x = "Taxa.Name", by.y = "gbs")
+
+
+# All sitedata
+# siteStats <- read.delim("../DATA/GBS/DATASETS/STATS/BOL3.txt", sep ="\t")
+# bySite x subpop
+siteStats <-  list(
+  Calabrese.F1 = read.delim("../DATA/GBS/DATASETS/STATS/Calabrese_F13.txt", sep =
+                              "\t"),
+  Calabrese.LR = read.delim("../DATA/GBS/DATASETS/STATS/Calabrese_LR3.txt", sep =
+                              "\t"),
+  Violet.Caul = read.delim("../DATA/GBS/DATASETS/STATS/Violet_Caul3.txt", sep =
+                             "\t"),
+  Sprouting.Broccoli = read.delim("../DATA/GBS/DATASETS/STATS/Sprouting_Broccoli3.txt", sep =
+                                    "\t")
+) %>%
+  rbindlist(idcol = TRUE) %>%
+  rename(ID = .id) %>%
+  dplyr::select(
+    ID,
+    Site.Name,
+    Chromosome,
+    Proportion.Missing,
+    Minor.Allele.Frequency,
+    Proportion.Heterozygous
+  )  
+ 
+height=5
+width=5
+
+
+ggsave(
+  "../OUTPUT/GBS/GBS/proMiss.svg",
+  plot = ggplot(taxaStats) +
+    geom_violin(aes(
+      y = Proportion.Missing, x = subpop, fill = subpop
+    ), show.legend = FALSE,alpha = .9) +
+    theme_minimal()  +
+    scale_color_manual(
+      values = levels(taxaStats$groupCol)[c(1,3,4,2)],
+      aesthetics = "fill"
+    )+ 
+    labs(y= "Proportion Missing", x = "Subpopulation"),
+  width = width,
+  height = height
+)
+# Heterozyg x subpop
+ggsave(
+  "../OUTPUT/GBS/GBS/proHetSubpop.svg",
+  plot = ggplot(taxaStats) + 
+    geom_violin(aes(y = Proportion.Heterozygous, x = subpop, fill = subpop),show.legend = FALSE, alpha=.9) +
+    theme_minimal() +
+    scale_color_manual(values = levels(taxaStats$groupCol)[c(1,3,4,2)], aesthetics = "fill")+
+    labs(y= "Proportion Heterozygous", x = "Subpopulation"),
+  width = width,
+  height = height
+)
+
+# MAF x subpop
+ggsave(
+  "../OUTPUT/GBS/GBS/MAF.svg",
+  plot = ggplot(siteStats) + 
+   geom_density(aes(Minor.Allele.Frequency, fill = ID), show.legend = FALSE, alpha=.5) + 
+   theme_minimal() +
+   scale_color_manual(values = levels(taxaStats$groupCol)[c(1,3,4,2)], aesthetics = "fill")+
+    labs(y= "Minor Allele Freq", x = "Subpopulation"),
+  width = width,
+  height = height
+)
+
+rm(list=ls())
+```
+
+
+## Unique SNPs
+```{r unique SNPs, eval=FALSE}
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+
+SNPs <-
+  list(
+    Calabrese.F1 = read.delim(
+      "../OUTPUT/GBS/UNIQUE/Calabrese_F1.txt",
+      sep = "\t",
+      stringsAsFactors = FALSE
+    ),
+    Calabrese.LR = read.delim(
+      "../OUTPUT/GBS/UNIQUE/Calabrese_LR.txt",
+      sep = "\t",
+      stringsAsFactors = FALSE
+    ),
+    Violet.Caul = read.delim(
+      "../OUTPUT/GBS/UNIQUE/Violet_Caul.txt",
+      sep = "\t",
+      stringsAsFactors = FALSE
+    ),
+    Sprouting.Broccoli = read.delim(
+      "../OUTPUT/GBS/UNIQUE/Sprouting_Broccoli.txt",
+      sep = "\t",
+      stringsAsFactors = FALSE
+    )
+  )
+
+taxaStats <-
+  read.delim("../DATA/GBS/DATASETS/STATS/BOL4.txt", sep = "\t") %>%
+  dplyr::select(Taxa.Name,
+                Number.of.Sites,
+                Proportion.Missing,
+                Proportion.Heterozygous)
+taxaStats <- merge(taxaStats, PSP, by.x = "Taxa.Name", by.y = "gbs")
+
+wd <- getwd()
+setwd("../OUTPUT/GBS/UNIQUE/")
+# Diagram
+## make names
+vec <- NULL; for (i in levels(PSP$subpop)) vec[i] <- paste(i,"\n"," (N = ",table(PSP$subpop)[i],")",sep="")
+
+  venn.diagram(
+  x = list(
+    SNPs$Calabrese.F1$Name,
+    SNPs$Calabrese.LR$Name ,
+    SNPs$Sprouting.Broccoli$Name,
+    SNPs$Violet.Caul$Name 
+           ),
+  category.names = vec,
+  filename = 'VENN.png',
+  output = TRUE,
+  cat.fontfamily=2,
+  cat.cex=0.8,
+
+  
+  # Output features
+  imagetype = 'png',
+  res = 400,
+  height = 6 ,
+  width = 6 ,
+  units = "in",
+  
+  # Circles
+  lwd = 1,
+  lty = 1,
+  fill = levels(taxaStats$groupCol)[c(1,3,4,2)],
+  
+  # Numbers
+  cex = 0.8,
+  fontface = "bold",
+  fontfamily = "sans",
+  
+)
+
+# just F1 and calabrese LR
+  
+  venn.diagram(
+    x = list(SNPs$Calabrese.F1$Name,
+             SNPs$Calabrese.LR$Name),
+    category.names = c("F1","LR"),
+    filename = 'VENN-f1-lr-calabrese.png',
+    output = TRUE,
+    #cat.fontfamily = 2,
+    #cat.cex = 0.8,
+    
+    
+    # Output features
+    imagetype = 'png',
+    res = 400,
+    height = 6 ,
+    width = 6 ,
+    units = "in"
+  )
+  
+setwd(wd)
+rm(list=ls())
+```
+```{bash, eval=FALSE}
+cd ~/PROJECTS/diversity_panel_2.0/OUTPUT/GBS/UNIQUE/
+rm *.log
+```
+
+## SNP Density
+```{r SNP Map, eval= FALSE}
+## Ref genome assembly stats
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+genomeStats <- read.delim("../DATA/GBS/METADATA/GCA_000695525.1_sequence_report.txt", sep="\t")
+
+
+# All Sites
+Sites <- read.delim("../DATA/GBS/DATASETS/STATS/BOL3.txt",sep="\t") %>%   mutate(
+    Chromosome = recode(
+      Chromosome,
+      "C1" = "chr1",
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    ))
+
+snpCnt <- table(Sites$Chromosome)
+CHR <- genomeStats[1:9,]
+1e6*snpCnt/CHR$sequence.length
+
+
+SNP.Density <-  ggplot(Sites) +
+  geom_histogram(aes(x = Physical.Position / 1e6), binwidth = 1) +
+  facet_wrap(~ Chromosome, ncol = 1)  +
+  xlab("Genomic position (Mbp)") +
+  ylab("SNP Density (SNP/Mbp)") +
+  theme_minimal() +
+  theme(
+    strip.text.x = element_text(hjust = 0, size = 9, face = "bold"),
+    axis.text = element_text(size = 6),
+    panel.grid.major = element_blank(),
+    #panel.grid.minor = element_blank())
+  )
+        
+ggsave(
+  "../OUTPUT/GBS/GBS/SNP.Density.svg",
+  plot = SNP.Density ,
+  device = NULL,
+  path = NULL,
+  width = 4.66,
+  height = 9.4,
+  units="in"
+  )   
+
+rm(list=ls())
+
+```
+
+## LD
+### Calculate
+```{bash calculate LD, eval=FALSE}
+#./shellScripts/LD.sh
+````
+
+### Evaluate 
+```{r ld vis and calu, eval=FALSE}
+START <- Sys.time()
+source("../ANALYSIS/scripts/zHist.R")
+source("../ANALYSIS/scripts/readGFF.R")
+SNPeff <-
+  read.delim("../OUTPUT/GBS/snpEFF/stats.genes.txt",
+             sep = "\t",
+             skip = 1)
+popColors <-
+  read.csv("../DATA/populations.csv", stringsAsFactors = FALSE)
+merge.distance = 1e6
+
+
+LD <-
+  list(
+    ALL = read.delim(
+      "../OUTPUT/GBS/LD/ALL.geno.ld",
+      sep = "\t", stringsAsFactors = FALSE),
+    Calabrese.F1 = read.delim(
+      "../OUTPUT/GBS/LD/Calabrese_F1.geno.ld",
+      sep = "\t", stringsAsFactors = FALSE),
+    Calabrese.LR = read.delim(
+      "../OUTPUT/GBS/LD/Calabrese_LR.geno.ld",
+      sep = "\t", stringsAsFactors = FALSE),
+    Violet.Caul = read.delim(
+      "../OUTPUT/GBS/LD/Violet_Caul.geno.ld",
+      sep = "\t",stringsAsFactors = FALSE),
+    Sprouting.Broccoli = read.delim(
+      "../OUTPUT/GBS/LD/Sprouting_Broccoli.geno.ld",
+      sep = "\t",stringsAsFactors = FALSE)) %>%
+  rbindlist(idcol = TRUE) %>%
+  rename(ID = .id) %>% mutate(dist = log10(POS2 - POS1))
+
+splineCol <- data.frame(cbind(c("black",popColors$pop.colors[1:4]),levels(as.factor(LD$ID))))
+hs <- hist(LD$R.2 / 10000, breaks=50, plot=FALSE)
+
+
+# some graphic paramz...
+    #dev.off()
+    old.par <- par(no.readonly=TRUE)
+    mar.default <- par('mar')
+    mar.left <- mar.default
+    mar.right <- mar.default
+    mar.left[4] <- 0
+    mar.right[2] <- 0
+
+#Start plot...
+    png(
+      "../OUTPUT/GBS/LD/genome_wide_ld.png",
+      units = "in",
+      res = 300,
+      height = 9,
+      width = 9
+    )
+    # pdf("../OUTPUT/LD/N109_9K_HDEM/genome_wide_ld.pdf",
+    # height = 5,
+    # width = 7)
+    par(fig = c(0, 0.8, 0, 1.0), mar = mar.left, oma=c(2,0,0,1))
+    plot(
+      LD$dist[LD$ID =="ALL"],
+      LD$R.2[LD$ID =="ALL"],
+      col = alpha("black", 0.05),
+      xlim = c(1, max(LD$dist)),
+      cex = 0.35,
+      pch = 19,
+      type = "p",
+      ylab = "",
+      xlab = ""
+    )
+    #Legend
+    legend(
+      x = 0.75 * max(LD$dist[LD$ID =="ALL"]),
+      y = 1,
+      legend = as.character(splineCol$X2),
+      col = as.character(splineCol$X1),
+      lwd = 4,
+      lty = 1,
+      cex = 0.85
+    )
+    # Smoothing Splines
+    for (i in levels(as.factor(LD$ID))){
+      spline <- smooth.spline(na.omit(LD[LD$ID == i,c("dist","R.2")]), spar = 0.5)
+      lines(spline,
+      lwd = 5 ,
+      col = alpha("white", 0.5)
+    )      
+      lines(spline,
+      lwd = 4 ,
+      col = alpha(splineCol$X1[splineCol$X2  == i], 1)
+    )
+
+    }
+    # Axis Labels
+     mtext(
+      side = 2,
+      line = 2,
+      text = expression(paste('R' ^ 2, sep = '')),
+      font = 1,
+      cex = 1.2
+    )
+    mtext(
+      side = 1,
+      line = 3,
+      text = expression(paste('Distance ', log[10], '[bp]', sep = '')),
+      font = 1,
+      cex = 1.0
+    )
+    # Histogram of freq
+    par (fig = c(0.8, 1, 0.0, 1.0),
+         mar = mar.right,
+         new = TRUE)
+    plot (
+      NA,
+      type = 'n',
+      axes = FALSE,
+      yaxt = 'n',
+      xaxt = 'n',
+      xlab = NA,
+      ylab = NA,
+      main = NA,
+      xlim = c(0, max(hs$counts)),
+      ylim = c(1, length(hs$counts))
+    )
+    
+
+    #axis (1)
+    arrows(
+      rep(0, length(hs$counts)),
+      1:length(hs$counts),
+      hs$counts,
+      1:length(hs$counts),
+      length = 0,
+      angle = 0,
+      lwd = 0.1*length(hs$counts)
+    )
+    # mtext(side=2, line=1, "f", font=1, cex=1.5)
+    mtext(
+      side = 1,
+      line = 3,
+      text = paste("", sep = ''),
+      font = 1,
+      cex = 1.0
+    )
+    box()
+    
+dev.off()
+    
+
+
+
+
+#What is decay below the 0.2 R2 threshold ?
+LDdecay <- NULL
+for (i in levels(as.factor(LD$ID))) {
+  spline <-
+    smooth.spline(na.omit(LD[LD$ID == i, c("dist", "R.2")]), spar = 0.5)
+  LDdecay[i] <- 10 ^ max(spline$x[spline$y > 0.2])
+}
+
+#LD decay in kbp
+LDdecay/1000
+#              ALL       Calabrese.F1       Calabrese.LR Sprouting.Broccoli        Violet.Caul 
+#            0.815              4.166              0.301              0.629             52.070 
+
+
+
+#How does LD change across genome?
+
+
+F1 <- read.delim("../OUTPUT/GBS/LD/Calabrese_F1.geno.ld", sep = "\t") %>%
+  dplyr::select(
+    chr = CHR,
+    start = POS1 ,
+    end = POS2,
+    r2 = R.2
+  ) %>% 
+  filter(!is.na(r2)) %>%
+  mutate(
+    start = start,
+    end = end,
+    dist = (start+end)/2,
+    chr = recode(
+      chr,
+      "C1" = "chr1",
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    )) 
+
+threshold <- quantile(smooth.spline(F1[, c("dist", "r2")])$y,0.99)
+  
+pdf("../OUTPUT/GBS/LD/LD_gw_calabreseF1.pdf",
+    height = 12,
+    width=6)
+par(mfcol = c(9, 1),mar=c(2,2,0.5,0.5))
+datalist = list()
+for (i in levels(F1$chr)) {
+  f1 <- F1[F1$chr == i,]
+  plot(
+    x = 0,
+    y = 0,
+    xlim = c(0, 70e6),
+    ylim = c(0, 0.35),
+    type="n",
+    yaxt="n",
+    xaxt=ifelse(i=="chr9","s","n")
+  )
+  spline <- smooth.spline(f1[, c("dist", "r2")], spar = 0.5)
+  datalist[[i]] <-
+    data.frame(cbind(
+      CHR = rep(i, length(spline$y[spline$y > threshold])),
+      dist =  spline$x[spline$y > threshold],
+      r2 = spline$y[spline$y > threshold]
+    ))
+
+  
+ # write.csv(t, file=paste("../OUTPUT/GBS/LD/chr_spline/",i,"_LD.txt", sep=""))
+  lines(spline,
+        lwd = 1.5 ,
+        col = alpha("purple", 0.9))
+  text(i,x=5, y=0.2)
+  abline(
+    a= threshold,
+    b=0,
+    col="black",
+    lwd=2,
+    lty=2
+  )
+}
+
+dev.off()
+
+ldReg = do.call(rbind, datalist) %>%
+  dplyr::select(chr = CHR,
+                start = dist ,
+                end = dist,
+                r2) %>%
+  mutate(
+    chr = as.character(chr),
+    start = floor(as.numeric(as.character(start))),
+    end = ceiling(as.numeric(as.character(end)))
+  ) %>%
+  bedr.merge.region(distance = merge.distance) %>%
+  mutate(names = sapply(strsplit((names), split = ","), function(x)
+    mean(as.numeric(x)))) %>%
+  rename(r2 = names)
+
+write.csv(ldReg,"../OUTPUT/GBS/LD/sig_regions_calabrese.F1.csv", row.names=FALSE )
+  
+
+write.csv(
+    gff[gff %in.region% ldReg,],
+    "../OUTPUT/GBS/LD/sig_genes_calabrese.F1.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+
+
+LD <- read.csv("../OUTPUT/GBS/LD/sig_genes_calabrese.F1.csv")
+
+LD$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(LD$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% LD$gene,]
+
+LD <-
+  merge(
+    x = LD,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = LD$gene,
+  mart = ensembl_bol
+)
+
+LD <-
+  merge(
+    x = LD,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    LD,
+    "../OUTPUT/GBS/LD/sig_genes_calabrese.F1.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+
+
+
+END <-Sys.time()
+END - START #Time difference of 2.80629 mins
+#rm(list=ls())
+```
+
+
+
+
+## SNP_EFF
+### Run SNP_EFF
+```{bash functional annotation, eval=FALSE}
+#./shellScripts/SNP_EFF.sh
+```
+### Harvest Reults
+```{r snpEFF analysis, eval=FALSE}
+#Read results of SNPeff
+
+genes <- read.delim("../OUTPUT/GBS/snpEFF/stats.genes.txt", sep="\t", skip=1)
+colnames(genes)[1]  <- "GeneName"
+
+highImpact <- genes[genes$variants_impact_HIGH > 0,]
+write.csv(highImpact,"../OUTPUT/GBS/snpEFF/highImpact.csv" )
+modImpact <- genes[genes$variants_impact_MODERATE > 0,]
+write.csv(modImpact,"../OUTPUT/GBS/snpEFF/modImpact.csv" )
+rm(list=ls())
+```
+
+
+## Does [AC] vary between subpops?
+
+```{R, AC content, eval=FALSE }
+
+AT <- list(
+F1 = read.delim("../DATA/GBS/DATASETS/STATS/Calabrese_F12.txt", sep ="\t")[1:11,1:2],
+LR = read.delim("../DATA/GBS/DATASETS/STATS/Calabrese_LR2.txt", sep ="\t")[1:11,1:2],
+VC = read.delim("../DATA/GBS/DATASETS/STATS/Violet_Caul2.txt", sep ="\t")[1:11,1:2],
+SB = read.delim("../DATA/GBS/DATASETS/STATS/Sprouting_Broccoli2.txt", sep ="\t")[1:11,1:2]
+) %>% rbindlist(idcol = TRUE) %>% droplevels()
+
+
+
+
+boxplot(Number ~ Alleles + .id, data=AT, drop.levels=TRUE)
+
+
+```
+
+# Phenotype
+##Cleaning Data
+```{r  Cleaning Data, eval=FALSE}
+source("../ANALYSIS/scripts/cleaningPhenoData.R") 
+```
+
+## Correlations
+```{r correlations and summary table of phenotype data, eval=FALSE}
+
+traits <- read.csv("../DATA/PHENOTYPE/traits.csv")$Code
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv") %>% dplyr::select(traits) 
+
+allcorr <- cor(PSP, use = "pairwise.complete.obs", method = "spearman")
+
+
+pdf("../OUTPUT/PHENOTYPE/COR/corrplot.pdf",
+    width = 7,
+    height = 7,)
+corrplot(
+  allcorr,
+  type = "lower",
+  order = "hclust",
+  tl.col = "black",
+  tl.srt = 45,
+  diag = FALSE,
+  col= viridis(10)
+)
+dev.off()
+rm(list=ls())
+```
+
+## Violin Plots
+```{r violinplot of traits by class, eval=FALSE}
+# traits of interest, melted  for violinplot
+groups <- read.csv("../DATA/populations.csv", stringsAsFactors = FALSE)
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+traits <- read.csv("../DATA/PHENOTYPE/traits.csv")$Code
+#class(PSP$groupCol) <- as.character(class(PSP$groupCol))
+df.m <- PSP %>%  dplyr::select(geno, subpop, groupCol,  traits) %>% subset(select = -FC) %>% melt()
+
+
+phenoPlot <- ggplot(data = df.m, aes(x = subpop, y = value)) +
+  geom_violin(aes(fill = subpop)) +
+  facet_wrap(~ variable,
+             scales = "free",
+             ncol = 4,
+             dir = "v") +
+  coord_flip() +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    strip.background = element_blank(),
+    strip.text.y = element_blank(),
+    strip.text.x = element_text(size = 10),
+    legend.position = c(0.88, 0.15),
+    legend.key.height = unit(0.35, "in"),
+    legend.key.width = unit(0.35, "in"),
+    legend.title  = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(
+      colour = "black",
+      fill = NA,
+      size = 1
+    )
+  ) +
+  guides(fill = guide_legend(reverse = TRUE))+
+  scale_color_manual(values =groups$pop.colors , aesthetics = "fill")
+
+ggsave(
+  "../OUTPUT/PHENOTYPE/VIOLIN/traits.svg",
+  plot = phenoPlot,
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = 7,
+  height = 9,
+  units = "in",
+  limitsize = TRUE
+)
+
+rm(list = ls())
+
+```
+
+## RIA
+```{r relative importance analysis, eval=FALSE}
+`%notin%` <- Negate(`%in%`)
+
+traits <- read.csv("../DATA/PHENOTYPE/traits.csv")
+
+# not using MF50 and HI bc not linear independent, FC bc binary
+relImpTraits <- traits$Code[traits$Code %notin% c("OQ","MF50","HI","FC")]
+#temp, just a few traits..
+#relImpTraits <- traits$Code[c(1,2,6,7,8,15,21)]
+formula_vec  <-as.formula(paste("OQ ~",paste(relImpTraits, collapse = "+")))
+
+bootNo <- 1000
+# START <- Sys.time()
+# out <-
+#   raterimp(
+#     PSPraw,
+#     unlist(formula_vec),
+#     atype = "lmg",
+#     byrater = FALSE,
+#     b = bootNo
+#   )
+# END <- Sys.time()
+# END - START
+#   
+# lmg <- out$bootevallist[[1]]@lmg
+# lower <-  as.vector(out$bootevallist[[1]]@lmg.lower)
+# upper <-   as.vector(out$bootevallist[[1]]@lmg.upper)
+# RIA <- data.frame(relImpTraits, lmg, lower, upper)
+# RIA <- merge(RIA, traits.df, by.x="relImpTraits", by.y="Code", all.x=TRUE)
+# RIA <- RIA[order(-RIA$lmg),]
+# 
+# write.csv(RIA,"../OUTPUT/PHENOTYPE/RIA/RIA.csv")
+RIA <- read.csv("../OUTPUT/PHENOTYPE/RIA/RIA.csv")
+
+pdf("../OUTPUT/PHENOTYPE/RIA/RIA.pdf",
+    width = 5,
+    height = 5)
+par(mar = c(3, 5, 1, 1))
+bp <-
+  barplot(
+    RIA$lmg,
+    col = as.character(RIA$Color),
+    ylab = expression(R ^ 2),
+    cex.lab = 1.5,
+    cex.axis = 1,
+    ylim = c(0, max(RIA$lmg) * 1.3),
+    names.arg = RIA$relImpTraits,
+    las = 2
+  )
+arrows(
+  bp,
+  RIA$upper,
+  bp,
+  RIA$lower,
+  angle = 90,
+  code = 3,
+  length = 0.05
+)
+
+legend(
+  "topright",
+  inset = 0,
+  bty = "n",
+  legend = levels(as.factor(traits$Class)),
+  col = levels(as.factor(traits$Color))[c(3,1,2,4)],
+  pch = c(15, 15, 15),
+  cex = 1.5
+)
+dev.off()
+  
+  
+rm(list=ls())
+```
+
+## Head Figure
+```{r making mega image, eval=FALSE}
+START <- Sys.time()
+source("../ANALYSIS/scripts/addImg.R") 
+source("../ANALYSIS/scripts/cornerText.R") 
+tree.order <-read.csv("../OUTPUT/DIVERSITY/RAxML/order.csv", stringsAsFactors = FALSE)
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+images <- read.csv("../OUTPUT/PHENOTYPE/FIGURE/img.files.csv")
+images <- merge(images, PSP, by="geno", all.x=TRUE) 
+images <- images[match(tree.order$x, images$short.name),]
+images <- images[!is.na(images$filename),]
+clusters <- levels(PSP$subpop)
+
+
+#clusters <- grep("Cluster",colnames(images)) 
+imgNo <- length(images$short.name)
+
+# set plot dimensions using 4" x 4" cell
+cellSize <- 4
+# define a square grid (eg. 10 x 10 for 97 images)
+gridSize <- ceiling(sqrt(imgNo))
+plotDim <- cellSize * gridSize
+resolution <- 300
+
+
+# Start plot;
+
+
+png(
+  "../OUTPUT/PHENOTYPE/FIGURE/megaFig.png",
+  width = plotDim,
+  height = plotDim,
+  units = "in",
+  res = resolution
+)
+
+par(mfrow = c(gridSize, gridSize), mar = c(0, 0, 0, 0))
+for (i in 1:ifelse(imgNo == gridSize^2, gridSize^2,imgNo)) {
+  plot(
+    1:1,
+    ty = "n",
+    xlab = NULL,
+    ylab = NULL,
+    xaxt = 'n',
+    yaxt = 'n',
+    ann = FALSE
+  )
+  image <- readPNG(as.character(images$filename[i]))
+  addImg(image, x = 1.05, y = 1.0, HEIth = 0.75)
+  
+  # Add name of accession
+  cornerText(
+    text = as.character(images$short.name[i]),
+    location = "bottom",
+    cex = 1.45,
+    text.font = 2
+  )
+  
+  # Add population structure barplots
+  # The placement values are chosen rather inelegantly/by hand  
+  subplot(
+    barplot(matrix(images[i, clusters]), col =levels(PSP$groupCol)[c(1,3,4,2)] , yaxt = "n"),
+    x = 1,
+    y = 1,
+    size=c(0.25,3.25),
+    hadj=-7,
+    type = "plt"
+  )
+}
+
+
+dev.off()
+END <- Sys.time()
+END - START
+#Time difference of 3.390721 mins
+rm(list=ls())
+```
+
+## Geo Map
+```{r accession mapping, eval=FALSE}
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+# Get data
+labs <- data.frame(
+  long = PSP$Long,
+  lat = PSP$Lat,
+  names = PSP$short.name,
+  colorz = PSP$groupCol,
+  stringsAsFactors = FALSE
+)
+
+
+# Get map of Italy 
+italy <- map_data("italy")
+acc_plot <-  ggplot() +
+  geom_polygon(data = italy,
+               aes(x = long, y = lat, group = group),
+               fill = "grey") +  coord_fixed(1.3) +
+  geom_point(data = labs,
+             aes(x = long, y = lat),
+             color = labs$colorz,
+             alpha = 0.75,
+             size = 4,
+             position = position_jitter(w = 0, h = 0)) +  
+  theme_minimal() +
+  geom_label_repel(
+    data = labs,
+    aes(long, lat, label = names),
+    size = 1.5,
+    label.size = 0.1,
+    label.padding = 0.1,
+    box.padding   = 0.1,
+    point.padding = 0.5,
+    force = 1,
+    col = "black",
+    segment.color = 'black',
+    segment.alpha = 0.25,
+    min.segment.length =0.1
+  ) 
+  
+ggsave(
+  "../OUTPUT/PHENOTYPE/MAP/italy.svg",
+  plot = acc_plot,
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 9,
+  dpi = 600,
+  limitsize = TRUE
+)
+
+#make a map withouth labels for main paper
+acc_plot_NL <- ggplot() +
+  geom_polygon(data = italy,
+               aes(x = long, y = lat, group = group),
+               fill = "grey") +  coord_fixed(1.3) + 
+  geom_point(data = labs,
+             aes(x = long, y = lat),
+             color = labs$colorz,
+             alpha = 0.75,
+             size = 3,
+             position = position_jitter(w = .15, h = .15)) +  
+             theme_minimal() 
+ 
+ggsave(
+  "../OUTPUT/PHENOTYPE/MAP/italy_NL.svg",
+  plot = acc_plot_NL,
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = 5,
+  height = 5,
+  dpi = 600,
+  limitsize = TRUE
+)
+
+rm(list=ls())
+```
+
+
+## Weather
+
+```{r Weather Data, eval=FALSE}
+weather <- read.csv("../DATA/PHENOTYPE/WEATHER/weather.csv")
+
+
+
+pdf("../DRAFT/SUBMISSION/SciReports/SUPPLEMENTARY/FIGURES/weather.pdf", width = 8,height = 4)
+par(mar = c(4, 2.5, 1, 2.5))
+# Highs
+plot(
+  weather$JD,
+  weather$max,
+  ylim = c(0, 35),
+  col = alpha("#ef8a62", 0.5),
+  type = "l",
+  ylab = "",
+  lty = 1,
+  lwd = 6,
+  xlab = "Julian Date"
+)
+# Lows
+points(
+  weather$JD,
+  weather$min,
+  lwd = 6,
+  lty = 1,
+  ylab = "",
+  col = alpha("#67a9cf", 0.5),
+  type = "l"
+)
+
+par(new = TRUE)
+
+plot(
+  weather$JD,
+  weather$precip / 100,
+  axes = FALSE,
+  lwd = 6,
+  lty = 1,
+  ylab = "",
+  xlab = "",
+  col = alpha("black", 0.25),
+  type = "h",
+  #breaks = max(weather$JD) - min(weather$JD)
+)
+axis(side = 4)
+mtext("z", side = 4, line = 3)
+
+legend(
+  "topleft",
+  bty = "n",
+  legend = c(expression(paste("Temp High [°C]")),
+             expression(paste("Temp Low [°C]")),
+             expression(paste("Precip [cm]"))),
+  lty = c(1, 1),
+  pch = c(NA, NA),
+  cex = 1.0,
+  lwd = 6,
+  col = c(alpha("#ef8a62",0.5), alpha("#67a9cf",0.5), alpha("black", 0.25))
+)
+
+dev.off()
+rm(list=ls())
+```
+
+# Diversity Analyses
+## BioMart
+```{r biomart setup, eval=FALSE}
+# load biomart
+ensembl_bol = useMart(
+  host = "plants.ensembl.org",
+  "plants_mart",
+  dataset = "boleracea_eg_gene")
+
+
+attributesHOMO = c(
+  "ensembl_gene_id",
+  "chromosome_name",
+  "start_position",
+  "end_position",
+  # Arabidopsis stuff
+  "athaliana_eg_homolog_ensembl_gene",
+  "athaliana_eg_homolog_associated_gene_name",
+  "athaliana_eg_homolog_perc_id"
+)
+
+# attributesGO = c(
+#   "ensembl_gene_id",
+#   "chromosome_name",
+#   "start_position",
+#   "end_position",
+#   #GO stuff
+#   "go_id",
+#   "name_1006",
+#   "definition_1006",
+#   "go_linkage_type",
+#   "namespace_1003"
+# )
+
+```
+
+## RoH
+
+```{bash, eval=FALSE}
+#!/bin/bash
+cd ~/PROJECTS/diversity_panel_2.0/
+### Paths
+export DATA="DATA/GBS/DATASETS/BOL/PLINK/"
+export ROH="OUTPUT/DIVERSITY/ROH/"
+export PATH=~/PROGRAMS/plink:$PATH
+
+# using plink
+
+plink --bfile $DATA"BOL" --update-ids $DATA"family.txt" --make-bed --out $DATA"BOL"
+
+
+plink --bfile $DATA"BOL" --out $ROH"roh" --make-founders  --homozyg group --homozyg-kb 1000 --homozyg-snp 100 --homozyg-gap 1000  --homozyg-window-threshold 0.05 --homozyg-match 0.99
+
+
+
+```
+
+
+
+```{r RoH, eval=FALSE}
+source("scripts/plot_Runs_mod.R")
+source("../ANALYSIS/scripts/readGFF.R")
+
+ROH <- read.csv("../OUTPUT/DIVERSITY/ROH/roh_consensus_dirty.csv" ) %>%
+  dplyr::select(
+    chr = CHR,
+    start = BP1 ,
+    end = BP2,
+    nSNP = NSNP
+  ) %>%
+  mutate(
+    chr = recode(
+      chr,
+      "C1" = "chr1",
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    )
+  ) %>% 
+  arrange(chr, start) %>%
+  write.csv("../OUTPUT/DIVERSITY/ROH/roh_consensus.csv", row.names = FALSE)
+
+ROH <- read.csv("../OUTPUT/DIVERSITY/ROH/roh_consensus.csv",stringsAsFactors = FALSE)
+# remove any regions < 1 bp
+ROH <- ROH[ROH$end - ROH$start > 0,]
+
+write.csv(
+    gff[gff %in.region% ROH,],
+    "../OUTPUT/DIVERSITY/ROH/OUTPUT/ROH_GENES.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+
+
+ROH <- read.csv("../OUTPUT/DIVERSITY/ROH/OUTPUT/ROH_GENES.csv")
+ROH$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(ROH$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% ROH$gene,]
+
+ROH <-
+  merge(
+    x = ROH,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = ROH$gene,
+  mart = ensembl_bol
+)
+
+ROH <-
+  merge(
+    x = ROH,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    ROH,
+    "../OUTPUT/DIVERSITY/ROH/OUTPUT/ROH_GENES.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+
+# 
+# slidingRuns <- slidingRUNS.run(
+#   genotypeFile = "../DATA/GBS/DATASETS/BOL/PLINK/BOL.ped", 
+#   mapFile = "../DATA/GBS/DATASETS/BOL/PLINK/BOL.map", 
+#   windowSize = 50, 
+#   threshold = 0.05,
+#   minSNP = 50, 
+#   ROHet = FALSE, 
+#   maxOppWindow = 3, 
+#   maxMissWindow = 5,
+#   maxGap = 1e6, 
+#   minLengthBps = 1e6, 
+#   minDensity = 1/10^3, # SNP/kbps
+#   maxOppRun = NULL,
+#   maxMissRun = NULL
+# ) 
+# 
+# 
+# 
+# plot_Runs_mod(runs = slidingRuns,suppressInds = TRUE)
+
+```
+
+
+
+## Distance Matrix
+### Calculate IBS
+```{bash calculate IBS}
+#./shellScripts/IBS.sh
+```
+
+### Make Distance Matrix 
+```{r genetic diversity of groups, eval=FALSE}
+#distance matrix using base R
+data <- read.delim("../OUTPUT/DIVERSITY/DM/OUT.plk.mibs", header = FALSE)
+ids <- read.delim("../OUTPUT/DIVERSITY/DM/OUT.plk.mibs.id",header = FALSE)[,2]
+tree.order <-read.csv("../OUTPUT/DIVERSITY/RAxML/order.csv", stringsAsFactors = FALSE)
+
+colnames(data) <-ids
+rownames(data) <-ids
+data <- replace(data, data == 1, NA)
+mat_data <- as.matrix(data)
+mat_data <- replace(mat_data, mat_data == 0, NA)
+#reorder to follow phylo tree
+mat_data <-mat_data[tree.order$x,]
+
+#Most similar and dissimilar
+center <- apply(mat_data, 2, mean, na.rm=TRUE)
+rownames(mat_data)[order(center)]
+
+inds <- arrayInd(which.min(mat_data), dim(mat_data))
+
+mat_data[inds]
+rownames(mat_data)[inds[,1]]
+colnames(mat_data)[inds[,2]]
+
+
+inds <- arrayInd(which.max(mat_data), dim(mat_data))
+mat_data[inds]
+rownames(mat_data)[inds[,1]]
+colnames(mat_data)[inds[,2]]
+
+temp <- c("B095.Verde.Calabrese.Precoce" ,"B102.Ramoso.Calabrese",  "B108.Verde.Calabrese", "B109.Ramoso.Calabrese.Verde", "B133.Ramoso.Calabrese")
+mean(
+mat_data[temp[1],temp[2]],
+mat_data[temp[1],temp[3]],
+mat_data[temp[1],temp[4]],
+mat_data[temp[1],temp[5]],
+mat_data[temp[2],temp[3]],
+mat_data[temp[2],temp[4]],
+mat_data[temp[2],temp[5]],
+mat_data[temp[3],temp[4]],
+mat_data[temp[3],temp[5]],
+mat_data[temp[4],temp[5]],
+)
+
+
+svg("../OUTPUT/DIVERSITY/DM/distanceMatrix.svg", height = 17.5,width = 17.5)
+heatmap.2(mat_data,
+          key=TRUE, 
+          key.title = "",
+          Rowv = FALSE,
+          Colv = TRUE,
+          key.xlab = "pIBS",
+          keysize = 0.5,
+          margins=c(15,15),
+          symkey=FALSE, 
+          scale="none",
+          density.info="histogram", 
+          densadj = 0.9,
+          trace="none",
+          na.color = alpha("black",0.5),
+          col=viridis(256))
+dev.off()
+
+rm(list=ls())
+```
+
+## PCA
+
+### Make MDS and PCA
+```{bash make PCA, eval=FALSE}
+./shellScripts/PCA.shS
+```
+
+### Make PCA plots
+```{r PCA , eval=FALSE }
+#source("../ANALYSIS/scripts/zHist.R")
+#source("../ANALYSIS/scripts/readGFF.R")
+#Set distance for merging intermals (here, 1 Mbp)
+merge.distance = 1e6
+
+
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+groups <- read.csv("../DATA/populations.csv")
+
+
+eigenVals <- read.delim("../OUTPUT/DIVERSITY/PCA/MDS2.txt",  sep="\t" )
+image.size <- 7
+label.size <- 1.2
+
+
+
+# #PC 1 vs 2
+PC12 <- ggplot(PSP, aes(
+  x = PC1,
+  y = PC2,
+  shape = cross.type,
+  color =subpop))   +
+  geom_point(size=3, alpha = 0.75) +
+  theme_clean() +
+  theme(legend.position = "none", axis.title = element_text(size = rel(1.0))) +
+  geom_label_repel(
+    aes(label = short.name),
+    size = label.size,
+    label.size = 0.01,
+    label.padding = 0.1,
+    box.padding   = 0.1,
+    point.padding = 0.1,
+    force = 10,
+    col = "black",
+    segment.color = 'grey50',
+    segment.alpha = 0.25,
+    min.segment.length = 0.1
+  ) +
+  scale_color_manual(values=as.character(groups$pop.colors)) +
+  labs(x = paste("PC1 [", round(100*eigenVals[1,2],1)," %]", sep=""),
+       y = paste("PC2 [", round(100*eigenVals[2,2],1)," %]", sep=""))
+
+
+
+ggsave(
+  "../OUTPUT/DIVERSITY/PCA/pc1.pc2_WL.svg",
+  plot = PC12,
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = image.size,
+  height = image.size,
+  dpi = 600,
+  limitsize = TRUE
+)
+
+# #PC 1 vs 3
+PC13 <- ggplot(PSP, aes(
+  x = PC1,
+  y = PC3,
+  shape = cross.type,
+  color = subpop))  +
+  geom_point(size=3, alpha = 0.75) +
+  theme_clean() +
+  theme(legend.position = "none", axis.title = element_text(size = rel(1.0))) +
+  geom_label_repel(
+    aes(label = short.name),
+    size = label.size,
+    label.size = 0.0,
+    label.padding = 0.1,
+    box.padding   = 0.1,
+    point.padding = 0.1,
+    force = 10,
+    col = "black",
+    segment.color = 'grey50',
+    segment.alpha = 0.25,
+    min.segment.length = 0.1
+  )  +
+  scale_color_manual(values=as.character(groups$pop.colors)) +
+  labs(x = paste("PC1 [", round(100*eigenVals[1,2],1)," %]", sep=""),
+       y = paste("PC3 [", round(100*eigenVals[3,2],1)," %]", sep=""))
+
+ggsave(
+  "../OUTPUT/DIVERSITY/PCA/pc1.pc3_WL.svg",
+  plot = PC13,
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = image.size,
+  height = image.size,
+  dpi = 600,
+  limitsize = TRUE
+)
+
+
+# #PC 2 vs 3
+PC23 <- ggplot(PSP, aes(
+  x = PC2,
+  y = PC3,
+  shape = cross.type,
+  color = subpop))  +
+  geom_point(size=3, alpha = 0.75) +
+  theme_clean() +
+  theme(legend.position = "none", axis.title = element_text(size = rel(1.0))) +
+  geom_label_repel(
+    aes(label = short.name),
+    size = label.size,
+    label.size = 0.0,
+    label.padding = 0.1,
+    box.padding   = 0.1,
+    point.padding = 0.1,
+    force = 10,
+    col = "black",
+    segment.color = 'grey50',
+    segment.alpha = 0.25,
+    min.segment.length = 0.1
+  )  +
+  scale_color_manual(values=as.character(groups$pop.colors)) +
+  labs(x = paste("PC2 [", round(100*eigenVals[2,2],1)," %]", sep=""),
+       y = paste("PC3 [", round(100*eigenVals[3,2],1)," %]", sep=""))
+
+ggsave(
+  "../OUTPUT/DIVERSITY/PCA/pc2.pc3_WL.svg",
+  plot = PC23,
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = image.size,
+  height = image.size,
+  dpi = 600,
+  limitsize = TRUE
+)
+
+rm(list=ls())
+```
+
+```{r PCA PCA vs Lat, Long, and Year, eval=FALSE}
+#Additional PCA plotting
+calabrese <- PSP[PSP$subpop %in% c("Calabrese.F1" , "Calabrese.LR"), ]
+calabrese$release <-as.numeric(as.character(calabrese$release))
+ALPHA=0.75
+height = 5
+dev.off()
+pdf(
+  "../OUTPUT/DIVERSITY/PCA/GEO_YEAR_PCA.pdf",
+  height = height,
+  width = 8
+)
+
+par(
+  mfrow = c(3, 3),
+  oma = c(3, 5, 3, 1),
+  mar = c(0.25, 0.25, 0.25, 0.25)
+)
+
+
+
+plot(
+  PSP$Lat,
+  PSP$PC1,
+  col = alpha(PSP$groupCol, ALPHA),
+  pch = ifelse(PSP$cross.type == "F1", 19, 17),
+  main = "",
+  cex.main =1.5,
+  xlab = "",
+  xaxt="n",
+  ylab = "",
+ # yadj=4,
+  font.lab = 2,
+  cex.lab = 1.5,
+  )
+mtext("Lat",line=0.5,side=3,font=2,cex=1.0)
+mtext("PC1",line=3,side=2,font=2,cex=1.0)
+abline(
+  lm(PSP$PC1 ~ PSP$Lat),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <- round(summary(lm(PSP$PC1 ~ PSP$Lat))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = -30,
+     x = 43.5,
+     cex = 1.5)
+
+
+
+plot(
+  PSP$Long,
+  PSP$PC1,
+  
+  col = alpha(PSP$groupCol,ALPHA),
+  pch = ifelse(PSP$cross.type == "F1", 19, 17),
+  main = "",
+  cex.main =1.5,
+  xlab = "",
+  xaxt="n",
+  ylab = "",
+  yaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+mtext("Long",line=0.5,side=3,font=2,cex=1.0)
+abline(
+  lm(PSP$PC1 ~ PSP$Long),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <- round(summary(lm(PSP$PC1 ~ PSP$Long))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = 14,
+     x = 11,
+     cex = 1.5)
+
+
+plot(
+  calabrese$release,
+  calabrese$PC1,
+  col = alpha(calabrese$groupCol, ALPHA),
+  pch = ifelse(calabrese$cross.type == "F1", 19, 17),
+  main = "",
+  cex.main =1.5,
+  xlab = "",
+  xaxt="n",
+  ylab = "",
+  yaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+mtext("CRY",line=0.5,side=3,font=2,cex=1.0)
+abline(
+  lm(calabrese$PC1 ~ calabrese$release),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <-
+  round(summary(lm(calabrese$PC1 ~ calabrese$release))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = 16,
+     x = 1920,
+     cex = 1.5)
+
+
+
+plot(
+  PSP$Lat,
+  PSP$PC2,
+  
+  col = alpha(PSP$groupCol, ALPHA),
+  pch = ifelse(PSP$cross.type == "F1", 19, 17),
+  ylab = "" ,
+  xlab = "",
+  xaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+
+mtext("PC2",line=3,side=2,font=2,cex=1.0)
+abline(
+  lm(PSP$PC2 ~ PSP$Lat),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <- round(summary(lm(PSP$PC2 ~ PSP$Lat))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = -27,
+     x = 43.5,
+     cex = 1.5)
+
+
+
+plot(
+  PSP$Long,
+  PSP$PC2,
+  
+  col = alpha(PSP$groupCol, ALPHA),
+  pch = ifelse(PSP$cross.type == "F1", 19, 17),
+  ylab = "",
+  xlab = "",
+  xaxt="n",
+  yaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+abline(
+  lm(PSP$PC2 ~ PSP$Long),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <- round(summary(lm(PSP$PC2 ~ PSP$Long))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = -27,
+     x = 15.5,
+     cex = 1.5)
+
+plot(
+  calabrese$release,
+  calabrese$PC2,
+  
+  col = alpha(calabrese$groupCol, ALPHA),
+  pch = ifelse(calabrese$cross.type == "F1", 19, 17),
+  xlab = "",
+  xaxt="n",
+  ylab = "",
+  yaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+abline(
+  lm(calabrese$PC2 ~ calabrese$release),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <-
+  round(summary(lm(calabrese$PC2 ~ calabrese$release))$r.squared, 1)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = -7,
+     x = 1920,
+     cex = 1.5)
+
+
+plot(
+  PSP$Lat,
+  PSP$PC3,
+  
+  col = alpha(PSP$groupCol, ALPHA),
+  pch = ifelse(PSP$cross.type == "F1", 19, 17),
+  ylab = "PC",
+  xlab = "",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+mtext("PC3",line=3,side=2,font=2,cex=1.0)
+abline(
+  lm(PSP$PC3 ~ PSP$Lat),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <- round(summary(lm(PSP$PC3 ~ PSP$Lat))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = 14.5 ,
+     x = 43.5,
+     cex = 1.5)
+
+
+plot(
+  PSP$Long,
+  PSP$PC3,
+  
+  col = alpha(PSP$groupCol, ALPHA),
+  pch = ifelse(PSP$cross.type == "F1", 19, 17),
+  ylab = "",
+  xlab = "",
+  yaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+abline(
+  lm(PSP$PC3 ~ PSP$Long),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+
+rsq <- round(summary(lm(PSP$PC3 ~ PSP$Long))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = 14.5,
+     x = 11,
+     cex = 1.5)
+
+
+plot(
+  calabrese$release,
+  calabrese$PC3,
+  
+  col = alpha(calabrese$groupCol, ALPHA),
+  pch = ifelse(calabrese$cross.type == "F1", 19, 17),
+  xlab = "",
+  ylab = "",
+  yaxt="n",
+  font.lab = 2,
+  cex.lab = 1.5
+)
+abline(
+  lm(calabrese$PC3 ~ calabrese$release),
+  col = alpha("black", 0.5),
+  lty = 2,
+  lwd = 1.5
+)
+rsq <-
+  round(summary(lm(calabrese$PC3 ~ calabrese$release))$r.squared, 2)
+text(bquote(paste("R" ^ 2 * "=" ~ .(rsq))),
+     y = 9.25,
+     x = 1920,
+     cex = 1.5)
+
+#box(which="outer",lwd=1,lty="solid")
+dev.off()
+
+rm(list=ls())
+```
+
+### SNP based PCA
+```{R SNP PCA, eval=FALSE}
+source("../ANALYSIS/scripts/zHist.R")
+source("../ANALYSIS/scripts/readGFF.R")
+source("../ANALYSIS/scripts/poscum.R")
+
+PCA <- read.delim("../OUTPUT/DIVERSITY/PCA/PCA3.txt", sep = "\t")
+STATS <- read.delim("../DATA/GBS/DATASETS/STATS/BOL3.txt", sep = "\t")
+SNPeff <- read.delim("../OUTPUT/GBS/snpEFF/stats.genes.txt", sep="\t", skip=1)
+
+
+#generate relationship between PCA eigenvecs
+PCA <- merge(PCA, STATS, by.x = "Trait",  by.y = "Site.Name") %>%
+  dplyr::select(
+    chr = Chromosome,
+    marker = Trait,
+    eig1 = Eigenvector1,
+    eig2 = Eigenvector2,
+    eig3 = Eigenvector3,
+    pos = Physical.Position,
+    maf = Minor.Allele.Frequency ,
+    propM = Proportion.Missing,
+    propH = Proportion.Heterozygous
+  )   %>%
+  mutate(
+    chr = recode(
+      chr,
+      "C1" = "chr1",
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    )) %>%
+  #filter(propM < 0.1 && maf > 0.05)  %>%
+  melt(id = c("chr", "marker", "pos")) 
+
+write.csv(PCA, "../OUTPUT/DIVERSITY/PCA/SNP/PCA_EIGEN.csv", row.names=FALSE)
+
+##Make multiplot
+PCA <-
+  merge(
+    read.delim("../OUTPUT/DIVERSITY/PCA/PCA3.txt", sep = "\t"),
+    STATS,
+    by.x = "Trait",
+    by.y = "Site.Name"
+  ) %>%
+  dplyr::select(
+    chr = Chromosome,
+    marker = Trait,
+    eig1 = Eigenvector1,
+    eig2 = Eigenvector2,
+    eig3 = Eigenvector3,
+    pos = Physical.Position
+  )   %>%
+  mutate(
+    chr = recode(
+      chr,
+      "C1" = "chr1",
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    )
+  ) #%>%
+  #melt(id = c("chr", "marker", "pos"))
+
+##QQ norm plots
+pdf("../OUTPUT/DIVERSITY/PCA/SNP/PCA_qqnorm.pdf",
+    height = 7,
+    width = 3.5)
+par(mfcol=c(3,1), mar=c(3,4,1,1))
+qqnorm(PCA$eig1, main="PC1",ylab="",xaxt="n", xlab = "")
+qqnorm(PCA$eig2, main="PC2",xaxt="n", xlab = "")
+qqnorm(PCA$eig3, main="PC3",ylab="", new=TRUE)
+dev.off()
+
+# Cumulative position
+PCA$pos <- poscum(PCA$chr, PCA$pos)
+
+threshold <-quantile(abs(unlist(PCA$eig1,PCA$eig2,PCA$eig3)),0.99)
+
+colors <- viridis(nlevels(PCA$chr))
+
+pdf("../OUTPUT/DIVERSITY/PCA/SNP/PCA.pdf",
+    height = 7,
+    width = 7)
+par(mfcol = c(3, 1),
+    mar = c(1, 5, 1, 1),
+    oma = c(5, 2, 1, 0),
+    bg = 'white')
+for (i in c("eig1", "eig2", "eig3")) {
+  plot(
+    PCA$pos/1e6,
+    PCA[, i],
+    cex = 0.2,
+    pch = 19,
+    ylim=c(-0.03,0.03),
+    xaxt = ifelse(i == "eig3","s","n"),
+    #xlab=ifelse(i == "eig3","Position (Mbp)","n"),
+    ylab =i,
+    cex.lab = 1,
+    col =colors[PCA$chr],
+    col.lab = 'black'
+  )
+  abline(
+    a = 0,
+    b = 0,
+    col = alpha("black", 0.75),
+    lty = 2,
+    lwd = 3
+  )
+  abline(
+    a = threshold,
+    b = 0,
+    col = alpha("black", 0.75),
+    lty = 3,
+    lwd = 3
+  )
+  abline(
+    a = -threshold,
+    b = 0,
+    col = alpha("black", 0.75),
+    lty = 3,
+    lwd = 3
+  )
+  mtext(side=1, "Position (Mbp)", line= 3, outer=TRUE)
+  mtext(side=2, "Eigenvector (% var)",outer=TRUE)
+  
+}
+dev.off()
+```
+
+
+```{r extract genes from PCA SNPs, eval=FALSE}
+
+
+## Extract genomic regions from PCA
+# PCA regions
+PCA <- read.csv("../OUTPUT/DIVERSITY/PCA/SNP/PCA_EIGEN.csv") %>% 
+  mutate( eig = abs(value)) %>%
+  #take top 1%
+  filter(eig > quantile(eig,0.99))
+    
+
+#  svg("../OUTPUT/DIVERSITY/PCA/SNP/zHist.svg", height=6,width=6)  
+# zHist(PCA,stat="value", breaks=100,col=viridis(9)[5])
+# dev.off()
+
+
+PCA <- PCA %>%
+  mutate(chr = as.character(chr)) %>%
+   dplyr::select(
+    chr,
+    start = pos ,
+    end = pos ,
+    value,    
+    variable,   
+    eig) %>%
+  bedr.merge.region(distance = 0) %>%
+  mutate(names = sapply(strsplit((names), split = ","), function(x) mean(abs(as.numeric(x))))) %>%
+  rename(eig = names) 
+
+write.csv(PCA,"../OUTPUT/DIVERSITY/PCA/SNP/sigSNPs.csv", row.names=FALSE)
+
+write.csv(
+    gff[gff %in.region% PCA,],
+    "../OUTPUT/DIVERSITY/PCA/SNP/SNP_GENES.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+### intersect with SNP_EFF
+
+
+SNP <- read.csv("../OUTPUT/DIVERSITY/PCA/SNP/SNP_GENES.csv")
+
+SNP$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(SNP$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% SNP$gene,]
+
+
+SNP <-
+  merge(
+    x = SNP,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = SNP$gene,
+  mart = ensembl_bol
+)
+
+SNP <-
+  merge(
+    x = SNP,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    SNP,
+    "../OUTPUT/DIVERSITY/PCA/SNP/SNP_GENES.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+
+# # 
+# temp <- sapply(strsplit(as.character(SNPs$attr), split=c(":"), fixed=TRUE), `[`, 2)
+# temp <- sapply(strsplit(as.character(temp), split=c(";"), fixed=TRUE), `[`, 1)
+# temp <- SNPeff[SNPeff$TranscriptId %in% temp,]
+# # Names of genes with high PCA loadings:
+# temp[temp$variants_impact_HIGH > 0,]$GeneId
+# 
+# rm(list=ls())
+```
+
+## Population Structure 
+### Run fastStructure
+```{bash fastSTRUCTURE, eval=FALSE}
+./shellScripts/STRUCTURE.sh
+```
+
+### Visualization & Export
+```{r pop structure plots, eval=FALSE}
+popColors <- read.csv("../DATA/populations.csv", stringsAsFactors = FALSE)
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+tree.order <-read.csv("../OUTPUT/DIVERSITY/RAxML/order.csv", stringsAsFactors = FALSE)
+
+Kstr <-read.delim("../OUTPUT/DIVERSITY/STRUCTURE/K.txt", sep="=",stringsAsFactors = FALSE, header=FALSE)[2,2]
+Kmml <-read.delim("../OUTPUT/DIVERSITY/STRUCTURE/K.txt", sep="=",stringsAsFactors = FALSE, header=FALSE)[1,2]
+ 
+sfiles <- list.files(path = "../OUTPUT/DIVERSITY/STRUCTURE/meanQ", full.names =T)
+slist <- readQ(files = sfiles, indlabfromfile = F)
+
+for (i in 1:length(slist)) {
+  row.names(slist[[i]]) <- paste(PSP$short.name, sep = "")
+  slist[[i]] <- slist[[i]][match(tree.order$x, row.names(slist[[i]]) ),]
+  }
+
+PLOT <- if (Kstr != Kmml) {
+  plotQ(
+    slist[c(Kstr - 1, Kmml - 1)],
+    imgoutput = "sep",
+    showindlab = TRUE,
+    useindlab = TRUE,
+    sortind = "all",
+    sharedindlab = FALSE,
+    indlabsize = 3,
+    showlegend = TRUE,
+    showsp = TRUE,
+    sppos = "left",
+    barbordercolour = "white",
+    barbordersize = 0,
+    imgtype = "pdf",
+    dpi = 600,
+    height = 7.5,
+    width = 15,
+    units = "cm",
+    outputfilename = c(
+      "../OUTPUT/DIVERSITY/STRUCTURE/OUTPUT/Kstr",
+      "../OUTPUT/DIVERSITY/STRUCTURE/OUTPUT/Kmml"
+    )
+  )
+} else {
+  plotQ(
+    slist[Kstr - 1],
+    imgoutput = "sep",
+    #Have to set manually
+    clustercol = popColors$pop.colors[c(1,4,2,3)],
+    showindlab = TRUE,
+    useindlab = TRUE,
+    sortind = NA,
+    showtitle = FALSE,
+    sharedindlab = FALSE,
+    indlabsize = 3,
+    showlegend = FALSE,
+    showsp = FALSE,
+    sppos = "left",
+    barbordercolour = "white",
+    barbordersize = 0,
+    imgtype = "pdf",
+    dpi = 600,
+    height = 7.5,
+    width = 15,
+    units = "cm",
+    returnplot = TRUE,
+    returndata = TRUE,
+    outputfilename = c("../OUTPUT/DIVERSITY/STRUCTURE/OUTPUT/Kstr")
+  )
+}
+      groups
+#### Export Data
+  Q <-  cbind(rownames(PLOT$data$qlist$BOL.04),PLOT$data$qlist$BOL.04)
+  colnames(Q)[1] <- "gbs"
+  gwasQ <- Q
+
+# Set Population Names
+
+  admix <- apply(Q[,-c(1)],1,max,na.rm=TRUE)
+  Q <- Q %>%  setnames(
+    old = colnames(Q)[-1],
+    new = popColors$pop.names[c(1,4,2,3)],
+    skip_absent = TRUE
+  ) 
+  subpop <- colnames(Q[,-c(1)])[apply(Q[,-c(1)],1,which.max)]
+  subpop[admix < 0.5 ] <- "Admixed"
+  Q <- cbind(Q,subpop)
+  table(Q$subpop)
+  #Define group colors
+  group.colors <- c(
+    Calabrese.F1 = popColors$pop.colors[1],
+    Calabrese.LR = popColors$pop.colors[2],
+    Sprouting.Broccoli = popColors$pop.colors[3],
+    Violet.Caul = popColors$pop.colors[4],
+    Admixed = popColors$pop.colors[5]
+  )
+  
+
+Q <- cbind(Q, groupCol = revalue(Q$subpop, group.colors))
+  
+
+write.csv(Q,"../OUTPUT/DIVERSITY/STRUCTURE/Q.csv",row.names = FALSE )
+
+#Export data for tassel Q matrix...
+  gwasQ <- as.matrix(gwasQ)
+  colnames(gwasQ) <- c("<Covariate>", rep(",", Kstr))
+  gwasQ<- rbind(c("<Trait>", paste(rep("Q", Kstr), seq(1:Kstr), sep = "")), gwasQ)
+  write.table(
+    gwasQ,
+    "../OUTPUT/GWAS/population_structure.txt",
+    sep = "\t" ,
+    quote = FALSE,
+    row.names = FALSE
+  )
+  
+rm(list=ls())
+```
+
+
+## RAxML 
+### Convert to phylip
+```{bash convert to phylip, eval=FALSE}
+./shellScripts/RAxML.sh
+```
+
+### Print Tree
+```{r work with tree, eval=FALSE}
+tree <- read.tree(file="../OUTPUT/DIVERSITY/RAxML/bestTree.txt")
+
+tree <- root(tree, outgroup = "B128.Broccolo.Natalino.Di.Sarno")
+temp <-plot(tree,node.pos=1, font=1, align.tip.label=TRUE ,plot=FALSE)
+
+is_tip <- tree$edge[,2] <= length(tree$tip.label)
+ordered_tips <- tree$edge[is_tip, 2]
+write.csv(tree$tip.label[rev(ordered_tips)], file="../OUTPUT/DIVERSITY/RAxML/order.csv", row.names=FALSE)
+
+# Tree for popstructure
+svg("../OUTPUT/DIVERSITY/RAxML/bestTree.svg", height = 35, width=20)
+par(oma=c(0,0,0,10))
+plot(tree,node.pos=1, font=1, align.tip.label=TRUE, cex=1.5, edge.width=4, no.margin=TRUE,  label.offset = 0.01 )
+dev.off()
+
+# Tree for popstructure
+svg("../OUTPUT/DIVERSITY/RAxML/bestTree_DM.svg", height = 17, width=5)
+par(oma=c(0,0,0,10))
+plot(tree,node.pos=1, font=1,show.tip.label = TRUE,  align.tip.label=TRUE, cex=1, edge.width=1, no.margin=TRUE,  label.offset = 0.01 )
+dev.off()  
+
+rm(list=ls())
+```
+
+## ROD 
+
+```{r ROD, eval=FALSE}
+source("../ANALYSIS/scripts/assignChromosomes.R")
+source("../ANALYSIS/scripts/zHist.R")
+source("../ANALYSIS/scripts/readGFF.R")
+
+
+SNPeff <- read.delim("../OUTPUT/GBS/snpEFF/stats.genes.txt", sep="\t", skip=1)
+#Set distance for merging intermals (here, 1 Mbp)
+merge.distance = 1e6
+rodCOL="#d95f02"
+iodCOL="#1b9e77" 
+
+
+
+F1 <-
+  assignChromosomes(
+    read.delim(
+      "../OUTPUT/DIVERSITY/ROD/INPUT/Calabrese_F11.txt",
+      stringsAsFactors = FALSE
+    )
+  )
+
+Calabrese.LR <-
+  assignChromosomes(
+    read.delim(
+      "../OUTPUT/DIVERSITY/ROD/INPUT/Calabrese_LR1.txt",
+      stringsAsFactors = FALSE
+    )
+  )
+
+
+Sprouting.Broccoli<-
+  assignChromosomes(
+    read.delim(
+      "../OUTPUT/DIVERSITY/ROD/INPUT/Sprouting_Broccoli1.txt",
+      stringsAsFactors = FALSE
+    )
+  )
+
+
+Violet.Caul <-
+  assignChromosomes(
+    read.delim(
+      "../OUTPUT/DIVERSITY/ROD/INPUT/Violet_Caul1.txt",
+      stringsAsFactors = FALSE
+    )
+  )
+
+LR <-
+  assignChromosomes(
+    read.delim("../OUTPUT/DIVERSITY/ROD/INPUT/LR1.txt", 
+               stringsAsFactors = FALSE))
+
+# Make table of genomewide ROD
+ROD <- cbind(F1, F1$PiPerBP / LR$PiPerBP) %>%
+  dplyr::select(
+    chr = Chromosome,
+    start = StartChrPosition ,
+    end = EndChrPosition,
+    ROD = "F1$PiPerBP/LR$PiPerBP"
+  )
+
+# Write csv
+write.csv(ROD, "../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD.csv", row.names = FALSE)
+
+# ROD plot
+
+pdf("../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD.pdf", width=7, height=12)
+par(mfcol = c(9, 1),oma=c(6,7,0.5,0.5), mar = c(0.2, 0.2, 0.2, 0.2))
+F1$Chromosome <- as.factor(F1$Chromosome)
+
+#Define ROD
+ROD <- F1$PiPerBP / LR$PiPerBP
+#Set thresholds
+thresholdIOD <-quantile(F1$PiPerBP / LR$PiPerBP,0.99) 
+thresholdROD <-quantile(F1$PiPerBP / LR$PiPerBP,0.01) 
+
+
+for (i in levels(F1$Chromosome)) {
+  f1 <- F1[F1$Chromosome == i, ]
+  lr <- LR[LR$Chromosome == i, ]
+  rod <- (f1$PiPerBP / lr$PiPerBP)
+  plot((f1$StartChrPosition + f1$EndChrPosition) / (1000000 * 2),
+       rod ,
+       ylim = c(0, 2),
+       xlim = c(0, 1.05 * max(F1$EndChrPosition) / 1000000),
+       ylab = NULL,
+       xlab = "",
+       yaxt = "n",
+       xaxt = ifelse(i == "chr9" , "s", "n"),
+       col = ifelse(
+         rod > thresholdIOD,
+         alpha(iodCOL, 1),
+         ifelse(rod < thresholdROD, rodCOL, alpha("black", 0.15))
+       ),
+       cex = ifelse(rod > thresholdIOD, 1.0, 0.75),
+       pch = 19,
+       type = "p"
+  )
+  axis(
+    side = 2,
+    at = c(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5),
+    labels = c(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5)
+  )
+  mtext(
+    "Position (Mbp)",
+    cex = 1.25,
+    side = 1,
+    line = 3,
+    outer = TRUE
+  )
+  mtext(
+    text = bquote(frac(pi[F[1]], pi[LR])),
+    cex = 1.25,
+    side = 2,
+    line = 2,
+    outer = TRUE
+  )
+  
+  
+  #Add legend
+  if (i == "chr1") {
+    legend(
+      x = 60 ,
+      y = 2,
+      bty = "n",
+      legend = c(expression(paste("ROD")),
+                 expression(paste("IOD")) ),
+      lty = c(1, 1),
+      cex = 1.25,
+      lwd = 3,
+      col = c(rodCOL,iodCOL ),
+      pch = 0
+    )
+  }
+  
+  
+  abline(1,
+         0,
+         lty = 3,
+         col = alpha("black", 0.25))
+  abline(thresholdIOD,
+         0,
+         lty = 2.5,
+         col = alpha(iodCOL, 0.5))
+  abline(thresholdROD,
+         0,
+         lty = 2.5,
+         col = alpha(rodCOL, 0.5))
+  text(
+    x = 0.01 * max(f1$EndChrPosition) / (1000000 * 2),
+    y =  0.95 * 2,
+    labels = paste(i),
+    font = 2,
+    cex = 1.5
+  )
+  
+  
+}
+dev.off()
+
+
+###Make genomic regions
+#Diversity
+ROD <- read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD.csv")
+#IOD
+IOD <- ROD %>%
+  filter(ROD > thresholdIOD) %>%
+  mutate(chr = as.character(chr)) %>%
+  bedr.merge.region(distance=merge.distance) %>%
+  mutate(names = sapply(strsplit((names), split = ","), function(x) mean(abs(as.numeric(x))))) %>%
+  rename(ROD = names)
+
+write.csv(IOD,"../OUTPUT/DIVERSITY/ROD/OUTPUT/IOD_intervals.csv", row.names = FALSE)
+
+write.csv(
+    gff[gff %in.region% IOD,],
+    "../OUTPUT/DIVERSITY/ROD/OUTPUT/IODGenes.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+
+# high impact variants?
+iodGenes <- read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/IODGenes.csv")
+iodGenes$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(iodGenes$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% iodGenes$gene,]
+
+iodGenes <-
+  merge(
+    x = iodGenes,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = iodGenes$gene,
+  mart = ensembl_bol
+)
+
+iodGenes <-
+  merge(
+    x = iodGenes,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    iodGenes,
+    "../OUTPUT/DIVERSITY/ROD/OUTPUT/IODGenes.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+#How many genes in the HQ9 IOD hotspot?
+HQ9 <- temp %>%
+  dplyr::filter(
+    chr == "chr9",
+    start > 42e6,
+    end < 47e7,
+    TranscriptId != is.na(TranscriptId),
+    variants_impact_HIGH > 0 |
+      variants_impact_MODERATE > 0 |
+      variants_impact_LOW > 0
+  ) %>%
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+
+
+
+#ROD
+ROD <- ROD %>%
+  filter(ROD < thresholdROD) %>%
+  mutate(chr = as.character(chr)) %>%
+  bedr.merge.region(distance = merge.distance) %>%
+  mutate(names = sapply(strsplit((names), split = ","), function(x)
+    mean(abs(as.numeric(
+      x
+    ))))) %>%
+  rename(ROD = names)
+
+write.csv(ROD,"../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD_intervals.csv", row.names=FALSE)
+
+write.csv(
+    gff[gff %in.region% ROD,],
+    "../OUTPUT/DIVERSITY/ROD/OUTPUT/RODGenes.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+
+rodGenes <- read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/RODGenes.csv")
+
+rodGenes$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(rodGenes$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% rodGenes$gene,]
+
+rodGenes <-
+  merge(
+    x = rodGenes,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = rodGenes$gene,
+  mart = ensembl_bol
+)
+
+rodGenes <-
+  merge(
+    x = rodGenes,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    rodGenes,
+    "../OUTPUT/DIVERSITY/ROD/OUTPUT/RODGenes.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+
+# temp <-
+#   sapply(strsplit(
+#     as.character(rodGenes$attr),
+#     split = c(":"),
+#     fixed = TRUE
+#   ), `[`, 2)
+# 
+# temp <-
+#   sapply(strsplit(as.character(temp), split = c(";"), fixed = TRUE), `[`, 1)
+# temp <- SNPeff[SNPeff$TranscriptId %in% temp,]
+
+
+# high impact gentlemen:
+# temp[temp$variants_impact_HIGH > 0, ]$GeneId
+  
+
+#rm(list = ls())
+```
+
+## Fst
+### Run FST
+```{bash using vcftools, eval=FALSE}
+/ANALYSIS/shellScripts/FST.sh
+```
+### Make FST data
+```{r Fst Analysis, eval=FALSE}
+source("../ANALYSIS/scripts/zHist.R")
+source("../ANALYSIS/scripts/readGFF.R")
+SNPeff <- read.delim("../OUTPUT/GBS/snpEFF/stats.genes.txt", sep="\t", skip=1)
+#Set distance for merging intermals (here, 1 Mbp)
+merge.distance = 1e6
+Zthreshold = 1.96
+
+# F1 vs LR
+
+FST <-
+  read.delim("../OUTPUT/DIVERSITY/FST/OUT/Calabrese_F1xLR.windowed.weir.fst") %>%
+  dplyr::select(
+    chr = CHROM,
+    start = BIN_START ,
+    end = BIN_END,
+    FST = WEIGHTED_FST
+  ) %>%
+  mutate(
+    chr = recode(
+      chr,
+      "C1" = "chr1",
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    )
+  ) %>%
+  write.csv("../OUTPUT/DIVERSITY/FST/Fst.csv", row.names = FALSE)
+
+
+
+#FST
+FST <- read.csv("../OUTPUT/DIVERSITY/FST/Fst.csv") %>% 
+  mutate(Z = (FST-mean(FST))/sd(FST)) 
+#Z score
+svg("../OUTPUT/DIVERSITY/FST/zHist.svg", height=6,width=6)  
+zHist(FST,stat="Z",Z=Zthreshold, breaks=1000,col=viridis(9)[2])
+dev.off()
+
+FST <- FST %>%
+  filter(Z > Zthreshold) %>%
+  mutate(chr = as.character(chr)) %>%
+  bedr.merge.region(distance=merge.distance) %>%
+  mutate(names = sapply(strsplit((names), split = ","), function(x) mean(abs(as.numeric(x))))) %>%
+  rename(FST = names) 
+
+write.csv(FST,"../OUTPUT/DIVERSITY/FST/Fst_intervals.csv", row.names=FALSE)
+
+write.csv(
+    gff[gff %in.region% FST,],
+    "../OUTPUT/DIVERSITY/FST/FstSigGenes.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+
+
+# high impact variants?
+fstgenes <- read.csv("../OUTPUT/DIVERSITY/FST/FstSigGenes.csv")
+
+fstgenes$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(fstgenes$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% fstgenes$gene,]
+
+
+fstgenes <-
+  merge(
+    x = fstgenes,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = fstgenes$gene,
+  mart = ensembl_bol
+)
+
+fstgenes <-
+  merge(
+    x = fstgenes,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    fstgenes,
+    "../OUTPUT/DIVERSITY/FST/FSTGenes.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+
+# temp <-
+#   sapply(strsplit(
+#     as.character(fstgenes$attr),
+#     split = c(":"),
+#     fixed = TRUE
+#   ), `[`, 2)
+# temp <-
+#   sapply(strsplit(as.character(temp), split = c(";"), fixed = TRUE), `[`, 1)
+# temp <- SNPeff[SNPeff$TranscriptId %in% temp, ]
+# # high impact gentlemen:
+# temp[temp$variants_impact_HIGH > 0,]$GeneId
+
+
+rm(list=ls())
+```
+
+
+## SweeD
+### Run SWEED
+```{bash selective sweeps, eval=FALSE}
+/ANALYSIS/shellScripts/SWEED.sh
+```
+### Genes
+```{r  SweeD,eval=FALSE}
+source("../ANALYSIS/scripts/zHist.R")
+source("../ANALYSIS/scripts/readGFF.R")
+SNPeff <-
+  read.delim("../OUTPUT/GBS/snpEFF/stats.genes.txt",
+             sep = "\t",
+             skip = 1)
+#Set distance for merging intermals (here, 1 Mbp)
+merge.distance = 1e6
+
+
+sweed <-  list(
+  chr1 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C1",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr2 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C2",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr3 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C3",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr4 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C4",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr5 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C5",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr6 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C6",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr7 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C7",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr8 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C8",
+    skip = 2,
+    sep = "\t"
+  ),
+  chr9 = read.delim(
+    "../OUTPUT/DIVERSITY/SWEED/REPORT/SweeD_Report.sweed_C9",
+    skip = 2,
+    sep = "\t"
+  )
+) %>%
+  rbindlist(idcol = TRUE) %>%
+  rename(CHR = .id) %>%
+  dplyr::select(
+    chr = CHR,
+    start = Position ,
+    end = Position ,
+    likelihood = Likelihood
+  ) %>%
+  mutate(start = floor(start),
+         end = floor(end)) %>%
+  write.csv("../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED.csv", row.names = FALSE)
+
+
+
+# Sweed Regions
+
+
+
+
+
+SWEED <- read.csv("../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED.csv") %>%
+  filter(likelihood > quantile(likelihood, 0.99)) %>%
+  mutate(chr = as.character(chr)) %>%
+  bedr.merge.region(distance = merge.distance) %>%
+  mutate(names = sapply(strsplit((names), split = ","), function(x)
+    mean(abs(as.numeric(
+      x
+    ))))) %>%
+  rename(likelihood = names) 
+
+# purge trivial 0 bp SWEED regions
+SWEED <- SWEED[SWEED$end- SWEED$start > 0,]
+
+write.csv(SWEED,"../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED_intervals.csv", row.names=FALSE)
+
+write.csv(
+    gff[gff %in.region% SWEED,],
+    "../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED_GENES.csv",
+    quote = FALSE,
+    row.names = FALSE
+  )
+
+
+sweed <- read.csv("../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED_GENES.csv")
+
+sweed$gene  <-
+  sapply(strsplit(
+    as.character(sapply(
+      strsplit(
+        as.character(sweed$attr),
+        split = c(":"),
+        fixed = TRUE
+      ), `[`, 2
+    )),
+    split = c("."),
+    fixed = TRUE
+  ), `[`, 1)
+
+var <- SNPeff[SNPeff$GeneId %in% sweed$gene,]
+
+sweed <-
+  merge(
+    x = sweed,
+    y = var,
+    by.x = "gene",
+    by.y = "GeneId",
+    all = TRUE
+  )
+
+
+homo <-  getBM(
+  attributes = attributesHOMO,
+  filters = 'ensembl_gene_id',
+  values = sweed$gene,
+  mart = ensembl_bol
+)
+
+sweed <-
+  merge(
+    x = sweed,
+    y = homo,
+    by.x = "gene",
+    by.y = "ensembl_gene_id",
+    all = TRUE
+  ) %>% 
+  dplyr::select(
+    gene,
+    chr,
+    start,
+    end,
+    ATgene = athaliana_eg_homolog_ensembl_gene,
+    ATname = athaliana_eg_homolog_associated_gene_name,
+    ATperID = athaliana_eg_homolog_perc_id,
+    variants_impact_HIGH,
+    variants_impact_MODERATE,
+    variants_impact_LOW
+  )
+
+write.csv(
+    sweed,
+    "../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED_GENES.csv",
+    quote = FALSE,
+    row.names = FALSE
+  ) 
+
+
+# 
+# # high impact variants?
+# temp <- sapply(strsplit(as.character(sweedgenes$attr), split=c(":"), fixed=TRUE), `[`, 2)
+# temp <- sapply(strsplit(as.character(temp), split=c(";"), fixed=TRUE), `[`, 1)
+# temp <- SNPeff[SNPeff$TranscriptId %in% temp,]
+# # high impact gentlemen:
+# temp[temp$variants_impact_HIGH > 0,]$GeneId
+
+#rm(list=ls())
+```
+
+# Genomic Regions
+```{R multiple region intersection, eval=FALSE}
+
+FST <-
+  read.csv("../OUTPUT/DIVERSITY/FST/Fst_intervals.csv",
+           stringsAsFactors = FALSE)
+IOD <-
+  read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/IOD_intervals.csv",
+           stringsAsFactors = FALSE)
+ROD <-
+  read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD_intervals.csv",
+           stringsAsFactors = FALSE)
+PCA <-
+  read.csv("../OUTPUT/DIVERSITY/PCA/SNP/sigSNPs.csv",
+           stringsAsFactors = FALSE)
+SWEED <-
+  read.csv("../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED_intervals.csv",
+           stringsAsFactors = FALSE)
+LD <-
+  read.csv("../OUTPUT/GBS/LD/sig_regions_calabrese.F1.csv",
+           stringsAsFactors = FALSE)
+ROH <-
+  read.csv("../OUTPUT/DIVERSITY/ROH/roh_consensus.csv",
+           stringsAsFactors = FALSE)
+
+UNION <-
+  bedr.join.multiple.region(list(FST, IOD, ROD, PCA, SWEED, LD, ROH))
+colnames(UNION)  <-
+  c(
+    "chr",
+    "start",
+    "end",
+    "n.overlap",
+    "names",
+    "FST",
+    "IOD",
+    "ROD",
+    "PCA",
+    "SWEED",
+    "LD",
+    "ROH"
+  )
+
+write.csv(UNION, "../OUTPUT/DIVERSITY/UNION.csv")
+
+
+test <- bedr.join.multiple.region(list(SWEED, ROH))
+
+```
+# Multiplot
+```{r multiplot, eval=FALSE}
+# Read data
+centromeres <- read.csv("../DATA/GBS/REFERENCE_GENOMES/BOL/centromeres.csv")
+genome <-
+  droplevels(read.delim("../DATA/GBS/METADATA/GCA_000695525.1_sequence_report.txt",
+             sep = "\t")[1:9,]) %>%
+  mutate(
+    chr  = recode(
+      sequence.name,
+      "C1" = "chr1" ,
+      "C2" = "chr2",
+      "C3" = "chr3",
+      "C4" = "chr4",
+      "C5" = "chr5",
+      "C6" = "chr6",
+      "C7" = "chr7",
+      "C8" = "chr8",
+      "C9" = "chr9"
+    ))
+
+FSTlines <- read.csv("../OUTPUT/DIVERSITY/FST/Fst.csv")
+RODlines <- read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD.csv")
+
+FST <- read.csv("../OUTPUT/DIVERSITY/FST/Fst_intervals.csv")
+IOD <- read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/IOD_intervals.csv")
+ROD <- read.csv("../OUTPUT/DIVERSITY/ROD/OUTPUT/ROD_intervals.csv")
+
+PCA <- read.csv("../OUTPUT/DIVERSITY/PCA/SNP/sigSNPs.csv")
+SWEED <- read.csv("../OUTPUT/DIVERSITY/SWEED/OUTPUT/SWEED_intervals.csv")
+LD <- read.csv("../OUTPUT/GBS/LD/sig_regions_calabrese.F1.csv" )
+ROH <- read.csv("../OUTPUT/DIVERSITY/ROH/roh_consensus.csv" )
+
+
+# Set colors
+ALPHA = 0.75
+fstCOL ="gray"
+rodCOL="#d95f02"
+iodCOL="#1b9e77" 
+sweedCOL="#7570b3"
+ldCOL="#E7298A"
+
+
+
+# Call plot
+pdf("../DRAFT/SUBMISSION/SciReports/FIGURES/genome.pdf",
+    width = 7,
+    height = 12)
+# graphing params
+par(
+  mfcol = c(9, 1),
+  oma = c(4, 2, 2, 4),
+  mar = c(0.5, 2.5, 0, 1)
+)
+
+for (i in levels(as.factor(genome$chr))) {
+  #subset dataframes; lowercase == individ chr data
+  gn <- genome[genome$chr == i , ]
+  cent <- centromeres[centromeres$chr == i , ]
+  # trim of last 1 Mbp from sliding window analysis
+  #fstlines <- FSTlines[FSTlines$chr == i  , ]
+  fstlines <- FSTlines %>% filter(chr == i) %>% filter(end < max(mean(start +end))-1e6)
+  rodlines <- RODlines[RODlines$chr == i, ]
+  fst <- FST[FST$chr == i, ]
+  iod <- IOD[IOD$chr == i, ]
+  rod <- ROD[ROD$chr == i, ]
+  sweed  <- SWEED[SWEED$chr == i, ]
+  pca <- PCA[PCA$chr == i, ]
+  ld <- LD[LD$chr == i, ]
+  roh <- ROH[ROH$chr == i,]
+  
+  
+  #call a null plot
+
+  plot(
+    0,
+    xlim = c(0,  max(genome$sequence.length) / 1e6),
+    ylim = c(-2*0.15,  0.3),
+    type = "n",
+    xlab = ifelse(i == "chr9", "Mbp", ""),
+    ylab = ifelse(i == "chr1", "Fst", ""),
+    xaxt = ifelse(i != "chr9", "n", "s"),
+    yaxt = "n"
+  )
+
+    # Add axes
+  axis(
+    side = 2,
+    at = c(0, 0.1, 0.2, 0.3),
+    labels = c("0.0", "0.1", "0.2", "0.3"),
+    las = 2,
+    cex = 0.5
+  )
+  mtext(
+    "Fst",
+    side = 2,
+    line = 3,
+    #outer = TRUE,
+    adj = +0.75,
+    #padj = -3,
+    font = 2,
+    cex = 0.75
+  )
+  
+    axis(
+    side = 4,
+    at = c(0,-1*.15, -2*0.15),
+    labels = c("0.0","1.0", "2.0"),
+    las = 2
+  )
+  mtext(
+    text=bquote(bold(frac(pi[F[1]],pi[LR]))),
+    side = 4,
+    line = 3,
+    #outer = TRUE,
+    #adj = 1,
+    padj = 1.4,
+    las=2,
+    cex = 0.75
+  )  
+    
+  #Add legend
+  if (i == "chr1") {
+    legend(
+      x = 0.75 * max(FSTlines$end) / 1e6,
+      y = 0.75 * max(FSTlines$FST),
+      bty ="n",
+      legend = c(
+        expression(paste("Fst Enriched")),
+        expression(paste("ROD")),
+        expression(paste("IOD")),
+        expression(paste("Selective Sweeps")),
+        expression(paste("LD Enriched")),
+        expression(paste("Run of Homogygosity")),
+        expression(paste("Key SNPs"))
+      ),
+      lty = c(1, 1),
+      cex = 0.9,
+      lwd = 3,
+      col = c(
+        alpha(fstCOL, ALPHA),
+        alpha(rodCOL, ALPHA),
+        alpha(iodCOL, ALPHA),
+        alpha(sweedCOL, ALPHA),
+        alpha(ldCOL, ALPHA),
+        alpha("yellow", ALPHA),
+        alpha("black", 1)
+      ),
+      pch = c(0, 0, 0, 0, 0,19, 3)
+    )
+  }
+  
+  
+  # Fst  
+  if (dim(fst)[1] > 0) {
+    for (j in 1:dim(fst)[1]) {
+      rect(
+        xleft = (fst$start[j]) / 1e6,
+        xright = (fst$end[j]) / 1e6,
+        ybottom = 0,
+        ytop = 0.35 ,
+        col = alpha(fstCOL, ALPHA),
+        border = FALSE,
+        density = NULL
+      )
+    }
+  }  
+  
+  #LD boxes
+  if (dim(ld)[1] > 0) {
+    for (j in 1:dim(ld)[1]) {
+      rect(
+        xleft = (ld$start[j]) / 1e6,
+        xright = (ld$end[j]) / 1e6,
+        ybottom = 0,
+        ytop = 0.35 ,
+        col = alpha(ldCOL, ALPHA),
+        border = FALSE,
+        density = NULL
+      )
+    }
+  } else {
+    print(paste("No Hits on", i))
+  }
+  
+  #Sweed boxes
+  if (dim(sweed)[1] > 0) {
+    for (j in 1:dim(sweed)[1]) {
+      rect(
+        xleft = (sweed$start[j]) / 1e6,
+        xright = (sweed$end[j]) / 1e6,
+        ybottom = 0,
+        ytop = 0.35 ,
+        col = alpha(sweedCOL, ALPHA),
+        border = FALSE,
+        density = NULL
+      )
+    }
+  } else {
+    print(paste("No Hits on", i))
+  }
+    
+  
+
+  
+# Draw ROD plots    
+   #IOD boxes
+  if (dim(iod)[1] > 0) {
+    for (j in 1:dim(iod)[1]) {
+      rect(
+        xleft = (iod$start[j])/ 1e6,
+        xright = (iod$end[j] )/ 1e6,
+        ybottom = -1*0.15,
+        ytop = -2.5*0.15,
+        col = alpha(iodCOL, ALPHA),
+        border = FALSE,
+        density = NULL
+      )
+    }
+  }
+  
+
+    #ROD boxes
+  if (dim(rod)[1] > 0) {
+    for (j in 1:dim(rod)[1]) {
+      rect(
+        xleft = (rod$start[j]) / 1e6,
+        xright = (rod$end[j] )/ 1e6,
+        ybottom = 0,
+        ytop = -1*0.15,
+        col = alpha(rodCOL, ALPHA),
+        border = FALSE,
+        density = NULL
+      )
+    }
+  }
+  
+  
+    #ROH segments
+  if (dim(roh)[1] > 0) {
+    for (j in 1:dim(roh)[1]) {
+      segments(
+        x0= roh$start[j]/1e6,
+        x1= roh$end[j]/1e6,
+        y0= 0.3,
+        y1 = 0.3,
+        col = "black",
+        lwd=2.5
+      )
+    }
+  }
+      #ROH boxes
+  if (dim(roh)[1] > 0) {
+    for (j in 1:dim(roh)[1]) {
+      segments(
+        x0= roh$start[j]/1e6,
+        x1= roh$end[j]/1e6,
+        y0= 0.3,
+        y1 = 0.3,
+        col = "yellow",
+        lwd=1.5
+      )
+    }
+  }
+  
+   
+  
+  
+    
+# FST line
+  polygon(
+    x = c(min((
+      fstlines$start + fstlines$end
+    ) / 2e6), (fstlines$start + fstlines$end) / 2e6 , max((
+      fstlines$start + fstlines$end
+    ) / 2e6)),
+    y = c(0, fstlines$FST, 0),
+    ylim = c(-max(FSTlines$FST),  max(FSTlines$FST)),
+    col = alpha("gray", 1),
+    border = alpha("black", 1),
+    lwd = 0.15,
+    new = FALSE
+  )
+  
+  
+
+  #ROD line
+  polygon(
+    x = c(
+      min(rodlines$start + rodlines$end) / 2e6,
+      (rodlines$start + rodlines$end) / 2e6,
+      max(rodlines$start + rodlines$end) / 2e6
+    ),
+    y = c(-1, -rodlines$ROD, -1) * 0.15,
+    col = alpha("gray", 1),
+    border=alpha("black", 1),
+    lwd=0.15,
+    new = FALSE
+  )
+  
+    #ROD line shading
+  polygon(
+    x = c(
+      min(rodlines$start + rodlines$end) / 2e6,
+      (rodlines$start + rodlines$end) / 2e6,
+      max(rodlines$start + rodlines$end) / 2e6
+    ),
+    y = c(-1, -rodlines$ROD, -1) * 0.15,
+    col = alpha(rodCOL, ALPHA),
+    border=NA,
+    lwd=0.15,
+    new = FALSE
+  )
+  
+
+#PCA
+  if (dim(pca)[1] > 0) {
+    for (j in 1:dim(pca)[1]) {
+      rect(
+        xleft = (pca$start[j] - 10000) / 1e6,
+        xright = (pca$end[j] + 10000) / 1e6,
+        ybottom = -0.1 * max(FSTlines$FST),
+        ytop = 0.1 * max(FSTlines$FST),
+        col = alpha("black", 1),
+        border = FALSE,
+        density = NULL
+      )
+    }
+  }
+  
+
+  
+
+  # Draw chr spline
+  lines(
+    x = c(0, max(gn$sequence.length) / 1e6),
+    y = c(0, 0),
+    lwd = 1,
+    col = alpha("black", 0.9)
+  )
+  # Draw centromeres spline
+  lines(
+    x = c(cent$start / 1e6, cent$stop / 1e6),
+    y = c(0, 0),
+    lwd = 3
+  )
+  
+  # label chromosomes
+  text(
+    x = 2.5,
+    y = -0.25,
+    i,
+    col = alpha("black", 1),
+    cex = 1.25,
+    font = 2
+  )
+
+}
+# Add outer x-axis label
+mtext(
+  "Mbp",
+  side = 1,
+  line = 2,
+  outer = TRUE,
+  font = 2,
+  cex = 1
+)
+
+
+dev.off()
+
+
+#rm(list=ls())
+```
+
+# Ensembl REST-API
+```{r ensembl, eval=FALSE}
+#Requesting a gene by ID – R
+library(httr)
+library(jsonlite)
+fetch_endpoint <- function(server, request, content_type){
+r <- GET(paste(server, request, sep = ""), accept(content_type))
+stop_for_status(r)
+if (content_type == 'application/json'){
+return (fromJSON(content(r, "text")))
+} else {
+return (content(r, "text"))
+}
+}
+server <- "http://rest.ensembl.org/"
+ext <- "lookup/id/ENSG00000157764?"
+con <- "application/json"
+get_gene <- fetch_endpoint(server, ext, con)
+prettify(toJSON(get_gene))
+
+## Seq from a gene name
+library(httr)
+library(jsonlite)
+fetch_endpoint <- function(server, request, content_type){
+r <- GET(paste(server, request, sep = ""), accept(content_type))
+stop_for_status(r)
+if (content_type == 'application/json'){
+return (fromJSON(content(r, "text")))
+} else {
+return (content(r, "text"))
+}
+}
+gene_name <- "IRAK4"
+server <- "http://rest.ensembl.org/"
+con <- "application/json"
+ext_get_lookup <- paste("lookup/symbol/homo_sapiens/", gene_name, "?", sep ="")
+get_lookup <- fetch_endpoint(server, ext_get_lookup, con)
+stable_id <- get_lookup$id
+# define the REST query to get the sequence from the gene
+ext_get_seq <- paste("sequence/id/", get_lookup$id, "?", sep = "")
+get_seq <- fetch_endpoint(server, ext_get_seq, 'text/x-fasta')
+# print the gene name, ID and sequence
+paste(">", gene_name, sep = "")
+get_seq
+
+
+```
+# GWAS
+## Transforming Data
+```{r GWAS, eval=FALSE}
+source("../ANALYSIS/scripts/normalizingFun.R")
+PSP <- read.csv("../DATA/PHENOTYPE/PSP.csv")
+
+
+
+gwasTraits <- c("gbs",
+    "HT",
+    "WD",
+    "HE",
+    "LT",
+    "BM",
+    "HM",
+    "HI",
+    "BS",
+    "BU",
+    "HC",
+    "HD",
+    "CL",
+    "RR",
+    "BR",
+    "HS",
+    "HU",
+    "HR",
+    "OQ",
+    # note, when only using F1, all flower color is the same
+    #"FC", 
+    "MT",
+    "FF",
+    "F50",
+    "MF50",
+    "PC1",
+    "PC2",
+    "PC3"
+  )
+
+
+# Normalize ALL data
+gwasNN.ALL <-  PSP  %>% 
+  #filter(Type %in% "F1") %>% 
+  dplyr::select(gwasTraits)
+
+n1 <- lapply(gwasNN.ALL[-1],normalizingFun)
+n2 <- as.data.frame(sapply(n1, `[`))
+gwasNorm.ALL <- cbind(gwasNN.ALL$gbs, n2)
+colnames(gwasNorm.ALL)[1] <- "gbs"
+
+# write data
+write.table(gwasNorm.ALL,"../OUTPUT/GWAS/pheno_gwas_ALL.txt", sep = "\t" , quote=FALSE, row.names = FALSE)
+
+# Normalize F1 data   
+gwasNN.F1 <-  PSP  %>% 
+  filter(subpop %in% "Calabrese.F1") %>% 
+  dplyr::select(gwasTraits)
+
+n1 <- lapply(gwasNN.F1[-1],normalizingFun)
+n2 <- as.data.frame(sapply(n1, `[`))
+gwasNorm.F1 <- cbind(gwasNN.F1$gbs, n2)
+colnames(gwasNorm.F1)[1] <- "gbs"
+
+# write data
+write.table(gwasNorm.F1,"../OUTPUT/GWAS/pheno_gwas_F1.txt", sep = "\t" , quote=FALSE, row.names = FALSE)
+
+# Normalize LR data
+gwasNN.LR <-  PSP  %>% 
+  filter(subpop %in% c("Calabrese.LR","Sprouting.Broccoli","Violet.Caul")) %>% 
+  dplyr::select(gwasTraits)
+
+n1 <- lapply(gwasNN.LR[-1],normalizingFun)
+n2 <- as.data.frame(sapply(n1, `[`))
+gwasNorm.LR <- cbind(gwasNN.LR$gbs, n2)
+colnames(gwasNorm.LR)[1] <- "gbs"
+
+# write data
+write.table(gwasNorm.LR,"../OUTPUT/GWAS/pheno_gwas_LR.txt", sep = "\t" , quote=FALSE, row.names = FALSE)
+
+
+#QQ plots
+
+gwasListNN <- list(gwasNN.ALL=gwasNN.ALL,gwasNN.F1=gwasNN.F1,gwasNN.LR=gwasNN.LR)
+gwasListNorm <- list(gwasNorm.ALL=gwasNorm.ALL,gwasNorm.F1=gwasNorm.F1,gwasNorm.LR=gwasNorm.LR)
+
+#choose data
+for (j in 1:3) {
+  gwasNN <- as.data.frame(gwasListNN[j])
+  gwasNorm <- as.data.frame(gwasListNorm[j])
+# make plots loop  
+ pdf(
+    paste("../OUTPUT/GWAS/qqPlot/", names(gwasNN)[j], ".pdf"),
+    height = 50,
+    width = 6
+  )
+  par(mfrow = c(22, 2), mar = c(1.75, 2, 1.4, 1))
+  
+  
+  for (i in 1:25) {
+    #qq of non-normalized results
+    qqPlot(
+      gwasNN[, i + 1],
+      main = colnames(gwasNN[i + 1]),
+      xlab = "",
+      ylab = "" ,
+      col = alpha(viridis(7)[j], .75),
+      pch = 19,
+      cex = 1,
+      col.lines = alpha(viridis(7)[j], 0.5),
+      id = FALSE
+    )
+    text(-1.75, max(gwasNN[, i + 1], na.rm = TRUE),
+         paste("p = ", round(shapiro.test(gwasNN[, i + 1])$p.value, 3)), font =
+           2)
+    
+    #qq of normalized results
+    qqPlot(
+      gwasNorm[, i + 1],
+      main = colnames(gwasNN[i + 1]),
+      xlab = "",
+      ylab = "" ,
+      col = alpha(viridis(7)[j*2], .75),
+      pch = 19,
+      cex = 1,
+      col.lines = alpha(viridis(7)[j*2], 0.5),
+      id = FALSE
+    )
+    text(-1.75,
+         max(gwasNorm[, i + 1], na.rm = TRUE),
+         paste("p = ", round(shapiro.test(gwasNorm[, i + 1])$p.value, 3)),
+         font = 2)
+    LAMDA <- powerTransform(gwasNN[, i + 1], family = "yjPower")
+    text(
+      -1.75,
+      0.95 * max(gwasNorm[, i + 1], na.rm = TRUE),
+      ifelse(
+        shapiro.test(gwasNN[, i + 1])$p.value > 0.05,
+        "dist is normal",
+        paste("lamda = ", round(LAMDA$lambda, 2))
+      )
+    )
+  }
+  dev.off()
+}
+
+
+# Make GWAS phenotype data, eval=FALSE}
+
+pheno <- read.table("../OUTPUT/GWAS/pheno_gwas_ALL.txt", head = TRUE )
+columbz <-c("taxa",rep("data",dim(pheno)[2]-1))
+test <- rbind(columbz,colnames(pheno), as.matrix(pheno))
+colnames(test) <- c("<Phenotype>",rep("",dim(test)[2]-1))
+write.table(test,"../OUTPUT/GWAS/pheno_gwas_normalized_ALL.txt", quote=FALSE, row.names=FALSE, sep="\t" )
+
+pheno <- read.table("../OUTPUT/GWAS/pheno_gwas_F1.txt", head = TRUE )
+columbz <-c("taxa",rep("data",dim(pheno)[2]-1))
+test <- rbind(columbz,colnames(pheno), as.matrix(pheno))
+colnames(test) <- c("<Phenotype>",rep("",dim(test)[2]-1))
+write.table(test,"../OUTPUT/GWAS/pheno_gwas_normalized_F1.txt", quote=FALSE, row.names=FALSE, sep="\t" )
+
+pheno <- read.table("../OUTPUT/GWAS/pheno_gwas_LR.txt", head = TRUE )
+columbz <-c("taxa",rep("data",dim(pheno)[2]-1))
+test <- rbind(columbz,colnames(pheno), as.matrix(pheno))
+colnames(test) <- c("<Phenotype>",rep("",dim(test)[2]-1))
+write.table(test,"../OUTPUT/GWAS/pheno_gwas_normalized_LR.txt", quote=FALSE, row.names=FALSE, sep="\t" )
+
+rm(list=ls())
+```
+## Run Tassel
+```{bash TASSEL GLM, eval=FALSE}
+./ANALYSIS/shellScripts/GWAS.sh
+```
+## Plot Data
+```{r plot GWAS results, eval=FALSE}
+source("../ANALYSIS/scripts/manhattan.R")
+GLM <- read.delim("../OUTPUT/GWAS/CLI/GLM_LR1.txt", sep="\t", na.strings = "NaN")
+GLM_PCA <- read.delim("../OUTPUT/GWAS/CLI/GLM_PCA_LR1.txt", sep="\t", na.strings = "NaN")
+MLM_PCA_K <- read.delim("../OUTPUT/GWAS/CLI/MLM_PCA_K23.txt", sep="\t", na.strings = "NaN")
+names(MLM_PCA_K)[names(MLM_PCA_K) == "Locus"] <- "Chr"
+MLM_Q_K <- read.delim("../OUTPUT/GWAS/CLI/MLM_Q_K23.txt", sep="\t", na.strings = "NaN")
+# 
+# names(MLM_Q_K)[names(MLM_Q_K) == "Locus"] <- "Chr"
+# #temp fix for some p values == 0? idk why
+# MLM_Q_K <- na.omit(MLM_Q_K)
+# MLM_Q_K[MLM_Q_K$p == 0,] <- 1e-16
+
+
+plotGWAS(GLM,  filename="../OUTPUT/GWAS/GLM.png", res=300)
+plotGWAS(GLM_PCA,  filename="../OUTPUT/GWAS/GLM_PCA1.png", res=300)
+# plotGWAS(MLM_PCA_K,  filename="../OUTPUT/GWAS/MLM_PCA_K.png", res=150)
+# plotGWAS(MLM_Q_K,  filename="../OUTPUT/GWAS/MLM_Q_K.png", res=150)
+```
+
