@@ -1,0 +1,838 @@
+trial,geno,rep,unique,sc,MT,FF,F50,MF50,HT,WD,BM,LT,HM,HI,HD,CL,RR,BS,BR,BU,HC,HE,HS,HU,HR,OQ,FC,note.geno,note.plot
+0,B001,1,A01_row-1_rep-GBS1_E,8,125,133,139,14,NA,39.37,319.3,5,41.1,12.8719072972127,20,13.6,11.5,1.08,5,5,4,4,4,3,4,3,0,irregular heading and flowering,slow end plot
+0,B001,2,D07_row-2_rep-GBS2_E,5,89,99,106,17,46.736,62.23,722.1,9,124.4,17.2275308129068,46.7,17.3,15.4,1.36,2,4,5,3,3,2,3,2,0,irregular heading and flowering,"extreme lats, irregular heading and flowering "
+1,B001,1,B001_row-3_rep-1_E,6,127,141,144,17,49.276,74.93,878.3,6,153,17.4200159398839,68,37.1,19,1.36,4,3,4,3,3,3,3,3,0,irregular heading and flowering,
+1,B001,2,B001_row-9_rep-2_W,11,127,133,145,18,47.752,71.882,1015.5,13,135.6,13.3530280649926,55.1,31.7,19.8,1.44,4,4,5,3,3,3,3,3,0,irregular heading and flowering,extreme lats
+1,B001,3,B001_row-13_rep-3_W,9,131,147,153,22,53.848,67.31,1178.4,7,193.3,16.4035980991174,90.9,41.3,27.3,1.72,4,2,5,4,3,3,4,3,0,irregular heading and flowering,extreme lats
+2,B001,1,B001_row-19_rep-1_E,8,141,NA,NA,NA,48.768,61.976,640.6,5,84.1,13.1283172026225,54.6,24.5,18.4,1.06,5,4,5,4,3,4,5,4,NA,irregular heading and flowering,stunted front of plot. head maturity may be off
+2,B001,2,B001_row-26_rep-2_W,11,116,133,144,28,42.418,69.088,694.8,5,170.3,24.51065054692,87.2,28,13.2,1.22,5,4,5,3,3,4,4,4,0,irregular heading and flowering,
+2,B001,3,B001_row-29_rep-3_W,10,112,140,146,34,46.736,91.186,867.3,7,171.3,19.7509512279488,77,29.1,25.8,1.32,5,4,5,3,3,4,4,4,0,irregular heading and flowering,extreme lats
+0,B003,1,A02_row-1_rep-GBS1_E,5,81,105,121,40,35.052,56.642,474.4,5,79.5,16.7580101180438,40.9,16.6,16.6,1.12,4,4,3,3,3,2,4,3,0,no notes,
+0,B003,2,D08_row-2_rep-GBS2_E,4,80,101,104,24,48.006,67.056,622.6,4,87.9,14.1182139415355,60.4,32,17.2,1.2,5,3,3,4,3,3,4,3,0,no notes,
+1,B003,1,B003_row-3_rep-1_E,10,109,128,131,22,34.036,74.676,626.1,10,90.7,14.486503753394,44.9,24.7,11.2,1.68,5,3,4,3,3,3,4,4,0,no notes,
+1,B003,2,B003_row-10_rep-2_W,11,105,122,130,25,40.64,68.834,663.7,9,100.4,15.1273165586862,61.5,30.1,13.1,1.36,5,4,4,3,3,3,4,4,0,no notes,
+1,B003,3,B003_row-16_rep-3_E,10,110,126,130,20,40.386,78.486,941.8,7,140,14.8651518369081,69.2,27.1,21.3,1.42,4,5,5,3,4,4,4,4,0,no notes,
+2,B003,1,B003_row-19_rep-1_E,8,113,139,144,31,39.116,74.168,589.2,7,96,16.2932790224033,63.6,31.1,17.6,1.52,5,5,3,3,3,4,5,4,0,no notes,
+2,B003,2,B003_row-27_rep-2_E,8,102,117,125,23,41.91,72.39,725.5,8,138.8,19.131633356306,83.5,42,23.8,1.16,5,4,5,4,2,4,4,4,0,no notes,
+2,B003,3,B003_row-28_rep-3_E,8,97,105,114,17,43.942,74.422,490.9,4,77.3,15.7465878997759,56,33.5,23.8,1.36,5,4,4,3,2,2,4,3,0,no notes,
+0,B004,1,A03_row-1_rep-GBS1_E,4,94,110,113,19,46.736,67.564,745.8,2,128,17.1627782247251,63.5,31.2,24.8,1.44,5,4,4,4,4,4,5,4,0,some slow flowering,
+0,B004,2,D09_row-2_rep-GBS2_E,4,91,109,113,22,45.466,78.74,974.7,0,171,17.5438596491228,89.1,39.9,24.9,1.42,5,5,5,3,3,3,5,4,0,some slow flowering,
+1,B004,1,B004_row-3_rep-1_E,6,120,139,143,23,42.418,70.612,426.1,1,103.3,24.243135414222,70.7,39.7,17.3,1.42,5,3,4,3,2,2,3,3,0,some slow flowering,
+1,B004,2,B004_row-11_rep-2_E,11,136,150,155,19,41.91,76.2,926.4,2,201.8,21.7832469775475,96.8,37.2,17.6,1.24,5,5,5,4,4,4,4,4,0,some slow flowering,slower flowering 
+1,B004,3,B004_row-14_rep-3_E,9,135,135,165,30,34.29,75.438,620.2,0,120.9,19.4937117059013,66.2,25.5,19,1.18,5,5,5,4,4,4,5,4,0,some slow flowering,
+2,B004,1,B004_row-19_rep-1_E,7,123,148,155,32,41.402,76.962,673.7,3,133.5,19.8159418138637,77.3,27.8,22.2,1.46,5,4,4,3,3,4,4,4,0,some slow flowering,
+2,B004,2,B004_row-25_rep-2_W,8,108,146,150,42,43.688,97.536,854.6,0,151.3,17.7041890943131,72.5,37.2,24.7,1.34,5,5,5,3,3,4,5,4,0,some slow flowering,
+2,B004,3,B004_row-27_rep-3_E,8,112,148,154,42,46.482,100.33,1261.3,0,287.9,22.825656069135,132.4,72.1,17.5,1.5,5,5,5,3,3,5,5,5,0,some slow flowering,
+0,B005,1,A04_row-1_rep-GBS1_E,5,95,107,110,15,45.466,44.45,355.6,0,90.8,25.5343082114736,53.8,18.5,24,1.28,4,4,5,4,3,4,4,4,0,not enough plants,
+0,B005,2,D10_row-2_rep-GBS2_E,3,77,NA,NA,NA,46.228,39.37,292,0,77.9,26.6780821917808,67.8,24.3,21.1,1.36,5,3,4,4,3,3,4,4,NA,not enough plants,no plants for flowering 
+0,B006,1,A05_row-1_rep-GBS1_E,4,82,126,129,47,37.084,45.212,465,0,113,24.3010752688172,56.2,26,24.4,1.06,3,3,5,3,2,2,3,2,0,no notes,
+0,B006,2,D11_row-2_rep-GBS2_E,2,91,115,121,30,35.052,50.546,350.5,0,87,24.8216833095578,57,22.9,13.4,1.52,2,1,5,3,2,1,2,1,0,no notes,
+0,B011,1,A06_row-1_rep-GBS1_E,5,75,98,100,25,43.688,78.232,651.5,6,124,19.0330007674597,79.2,37.2,19.9,1.76,5,3,5,3,3,4,4,3,0,some slow heading,
+0,B011,2,D12_row-2_rep-GBS2_E,1,73,NA,NA,NA,49.53,82.804,1195.6,7,141.7,11.8517898962864,64.5,36.8,16.7,1.62,5,3,5,4,2,4,3,2,NA,some slow heading,
+1,B011,1,B011_row-3_rep-1_E,11,110,127,131,21,45.212,76.962,744.2,0,121.5,16.3262563826928,66.8,20,15.9,1.7,5,4,3,4,3,3,4,4,0,some slow heading,
+1,B011,2,B011_row-9_rep-2_W,11,108,129,133,25,55.626,55.88,408.6,1,92.8,22.7116984826236,83.2,35.1,17.1,1.3,5,3,5,4,2,3,3,3,0,some slow heading,
+1,B011,3,B011_row-13_rep-3_W,7,114,127,137,23,48.768,69.596,496,0,78.3,15.7862903225806,61.9,30,18.1,1.36,4,2,4,4,2,3,4,3,0,some slow heading,
+2,B011,1,B011_row-19_rep-1_E,8,96,115,119,23,48.26,69.596,582.7,1,120.8,20.7310794576969,71.4,32.8,18.7,1.6,5,3,4,4,2,3,4,3,0,some slow heading,slow heading? 
+2,B011,2,B011_row-26_rep-2_W,8,96,113,115,19,51.308,75.692,655.8,0,115.9,17.6730710582495,74.5,29.1,17.8,1.8,4,2,4,3,3,4,3,3,0,some slow heading,
+2,B011,3,B011_row-27_rep-3_E,9,103,116,120,17,48.26,79.248,744.8,3,113.8,15.2792696025779,66,30.9,25.5,1.64,5,4,5,3,2,3,4,3,0,some slow heading,
+0,B013,1,A07_row-1_rep-GBS1_E,6,72,74,78,6,39.624,82.296,750.3,0,150,19.9920031987205,71.5,35.7,20.8,1.5,5,4,4,3,3,4,5,4,0,no notes,
+0,B013,2,E01_row-2_rep-GBS2_E,4,68,91,96,28,32.512,75.692,898.2,2,211.8,23.5804943219773,111.7,52.3,29.5,1.82,5,3,5,3,3,3,4,3,0,no notes,
+1,B013,1,B013_row-3_rep-1_E,10,105,129,131,26,39.37,43.942,576.5,0,137,23.7640936686904,71.9,38.1,14.7,1.48,5,3,5,3,3,3,4,3,0,no notes,
+1,B013,2,B013_row-12_rep-2_E,10,109,127,131,22,46.228,52.578,425,2,112,26.3529411764706,83.8,39.9,20.1,1,5,2,4,3,2,3,3,3,0,no notes,
+1,B013,3,B013_row-16_rep-3_E,8,106,125,127,21,31.242,81.788,661.6,3,125.9,19.0296251511487,57.2,36.1,21.7,1.72,4,2,4,2,2,3,3,3,0,no notes,
+2,B013,1,B013_row-19_rep-1_E,10,100,111,115,15,38.608,75.946,428.4,0,114.1,26.6339869281046,75,33.3,18.8,1.12,5,4,4,3,3,4,4,4,0,no notes,
+2,B013,2,B013_row-25_rep-2_W,11,96,108,113,17,37.846,83.566,662.9,0,205.3,30.969980389199,93.2,52.8,37.3,1.82,5,3,4,2,3,3,5,4,0,no notes,
+2,B013,3,B013_row-30_rep-3_W,9,96,106,109,13,38.608,74.676,494.8,0,141.6,28.6176232821342,79.7,42.9,25.8,1.62,5,4,4,3,4,5,5,4,0,no notes,
+0,B014,1,A08_row-1_rep-GBS1_E,5,72,74,76,4,40.894,69.596,653.2,6,145.6,22.2902633190447,73.6,36.5,19.6,1.74,5,4,5,3,3,3,4,4,0,no notes,
+0,B014,2,E02_row-2_rep-GBS2_E,4,74,101,103,29,41.402,78.994,772.7,7,146.8,18.9983175876796,81.3,35.2,18.3,1.4,3,3,5,3,3,4,3,4,0,no notes,
+1,B014,1,B014_row-3_rep-1_E,10,102,120,125,23,40.386,75.692,590,0,150.8,25.5593220338983,93,42.7,25.4,1.6,4,4,5,3,3,4,4,4,0,no notes,
+1,B014,2,B014_row-13_rep-2_W,11,101,114,124,23,37.338,66.802,564.4,0,134.5,23.830616583983,76,37.7,26,1.48,4,2,5,3,2,3,3,3,0,no notes,
+1,B014,3,B014_row-15_rep-3_E,12,108,128,131,23,39.624,77.216,596.4,5,129.1,21.6465459423206,71.4,27.7,17.8,1.76,4,2,5,3,2,3,3,3,0,no notes,
+2,B014,1,B014_row-19_rep-1_E,12,100,116,119,19,40.132,83.566,658.7,10,176.8,26.8407469257629,77,40,23.1,1.36,2,4,4,3,3,4,5,4,0,no notes,
+2,B014,2,B014_row-24_rep-2_E,12,97,113,119,22,40.132,77.724,532.6,10,139.7,26.2298159969959,69.6,35,19.9,1.44,5,3,4,3,2,3,4,3,0,no notes,
+2,B014,3,B014_row-29_rep-3_W,12,95,114,116,21,39.37,72.39,581.9,5,131.1,22.5296442687747,57.7,31.4,15.8,1.84,5,3,4,2,3,3,4,3,0,no notes,
+0,B015,2,F01_row-2_rep-GBS2_E,4,95,112,115,20,55.626,64.008,935.5,17,129.4,13.8321753073223,72,37.7,8.9,2.28,4,1,4,4,1,1,2,1,0,"extreme lats, irregular heading and flowering",extreme lats
+1,B015,1,B015_row-3_rep-1_E,11,123,133,137,14,52.832,72.898,818.9,9,123.8,15.1178410062279,79,44,22.2,1.66,4,1,5,4,2,1,1,1,0,"extreme lats, irregular heading and flowering",
+1,B015,2,B015_row-9_rep-2_W,10,130,147,161,31,49.53,67.31,927.8,11,108.4,11.6835524897607,73.4,34.7,15.1,1.38,4,2,4,3,1,1,1,1,0,"extreme lats, irregular heading and flowering",extreme lats
+1,B015,3,B015_row-18_rep-3_W,11,138,147,169,31,56.896,60.198,659.5,19,128.4,19.4692949203942,74.3,41.5,16.9,1.12,5,4,5,4,2,2,3,2,0,"extreme lats, irregular heading and flowering","extreme lats, irregular flowering and heading "
+2,B015,1,B015_row-19_rep-1_E,8,112,128,140,28,43.434,85.852,1145.7,10,183.8,16.0425940473073,79.5,47.1,33.9,1.34,5,4,5,3,4,3,4,3,0,"extreme lats, irregular heading and flowering",extreme lats
+2,B015,2,B015_row-25_rep-2_W,12,112,131,140,28,44.45,70.866,890.3,11,134.4,15.0960350443671,81.1,41.9,24,1.2,5,4,5,4,2,3,3,3,0,"extreme lats, irregular heading and flowering",extreme lats
+2,B015,3,B015_row-30_rep-3_W,11,117,131,142,25,55.118,72.136,703.7,8,138,19.6106295296291,89.3,45.4,25.1,1.62,5,2,5,4,2,2,3,2,0,"extreme lats, irregular heading and flowering",
+0,B016,2,E06_row-2_rep-GBS2_E,4,78,29,NA,NA,41.656,62.23,407.3,3,121,29.7078320648171,73.2,28.3,18.9,1.624,4,2,3,3,2,2,1,1,0,"very early flowering, some flowering irregularities",some flowered early 2/5
+1,B016,1,B016_row-3_rep-1_E,6,72,52,74,2,21.082,44.196,184.3,4,NA,NA,63,34.7,4.8,NA,5,3,3,3,3,3,NA,1,0,"very early flowering, some flowering irregularities",irregular flowering.  
+1,B016,2,B016_row-11_rep-2_E,7,72,60,75,3,NA,NA,168,4,NA,NA,99.7,61.6,11.4,0.98,5,3,3,3,2,3,NA,1,0,"very early flowering, some flowering irregularities",early irregular floweribg
+1,B016,3,B016_row-16_rep-3_E,12,72,60,72,NA,19.05,35.052,62.1,1,NA,NA,43.4,23.9,5.6,1.94,5,2,3,3,3,2,NA,1,0,"very early flowering, some flowering irregularities",early irregular flowering 
+2,B016,1,B016_row-19_rep-1_E,3,68,99,105,37,26.162,45.72,209,0,87.5,41.866028708134,76.5,31.8,16.5,NA,2,1,3,2,2,1,1,1,0,"very early flowering, some flowering irregularities",
+2,B016,2,B016_row-23_rep-2_E,4,81,105,105,24,35.052,40.894,428.6,0,90.9,21.2085860942604,74.7,41.4,14.1,1.3,5,4,4,3,3,2,2,2,0,"very early flowering, some flowering irregularities",
+2,B016,3,B016_row-28_rep-3_E,3,87,99,107,20,31.242,65.278,473.1,0,130.1,27.4994715704925,76.3,37.6,14,0.88,NA,NA,5,2,2,2,1,1,0,"very early flowering, some flowering irregularities",
+0,B017,1,A09_row-1_rep-GBS1_E,6,67,NA,107,40,37.338,70.612,816.2,1,NA,NA,93.3,38.5,17.7,1.44,5,4,3,3,2,2,3,3,0,some stunting,
+0,B017,2,E03_row-2_rep-GBS2_E,5,70,72,82,12,37.338,69.85,578.6,0,113,19.5298997580366,69,29.3,21.2,0.98,5,5,4,3,2,4,4,3,0,some stunting,
+1,B017,1,B017_row-4_rep-1_E,12,96,105,120,24,38.1,87.884,852,0,198.4,23.2863849765258,105.3,48.2,39.3,2.18,5,4,4,3,3,4,4,4,0,some stunting,
+1,B017,2,B017_row-12_rep-2_E,12,100,108,117,17,35.306,57.658,438.9,0,98.8,22.5108225108225,75.3,34.8,18.7,1.36,5,4,3,3,2,2,4,3,0,some stunting,
+1,B017,3,B017_row-18_rep-3_W,9,97,114,121,24,36.068,65.786,588,0,120.3,20.4591836734694,80.9,27.6,14.9,1.12,4,5,4,3,2,3,4,3,0,some stunting,
+2,B017,1,B017_row-20_rep-1_E,11,99,105,112,13,31.242,56.896,374.1,0,94.6,25.2873563218391,73.3,33.5,14.7,1.8,5,4,3,4,3,4,4,3,0,some stunting,stunted front of plot
+2,B017,2,B017_row-23_rep-2_E,12,88,101,104,16,35.306,56.896,321.1,0,75.8,23.606353161009,50.6,35.2,16,1.86,5,4,4,3,2,4,4,3,0,some stunting,
+2,B017,3,B017_row-30_rep-3_W,12,93,101,105,12,37.592,80.01,865.6,0,201.1,23.2324399260628,103.8,35.4,35.3,1.92,5,4,4,3,3,4,5,4,0,some stunting,
+0,B021,1,A10_row-1_rep-GBS1_E,3,92,109,113,21,60.452,49.276,549.9,0,124.1,22.5677395890162,72.7,28.4,23.1,1.46,5,4,3,4,3,4,4,4,0,no notes,
+0,B047,1,A11_row-1_rep-GBS1_E,5,61,71,75,14,45.72,87.63,1256.3,6,250.1,19.9076653665526,129.4,58,17.3,2.46,5,5,4,3,3,4,4,4,0,no notes,
+1,B047,1,B047_row-4_rep-1_E,7,87,108,114,27,34.798,90.17,753,5,NA,NA,46.5,60.7,17.7,2.36,5,4,4,4,3,4,5,4,0,no notes,
+1,B047,2,B047_row-12_rep-2_E,6,99,108,113,14,37.592,58.42,323.5,0,63.4,19.5981452859351,52.9,23.5,15.1,1.4,4,5,3,4,2,2,3,3,0,no notes,
+1,B047,3,B047_row-18_rep-3_W,5,94,102,112,18,34.544,67.056,597.6,2,114.2,19.1097724230254,91.5,35.9,17,1.96,5,3,2,4,2,2,3,2,0,no notes,
+2,B047,1,B047_row-20_rep-1_E,6,87,97,99,12,31.75,79.248,540.7,3,130,24.042907342334,66.5,36.8,18.6,1.8,5,4,3,4,2,3,4,3,0,no notes,
+2,B047,2,B047_row-23_rep-2_E,6,86,99,105,19,40.132,65.532,477.2,0,99.4,20.8298407376362,76.7,35.6,20,2.08,5,3,3,4,1,2,4,3,0,no notes,
+2,B047,3,B047_row-32_rep-3_E,7,83,98,99,16,32.258,72.136,527.6,1,102.7,19.4655041698256,70.8,29.9,15.5,1.9,5,3,2,3,1,3,4,3,0,no notes,
+0,B093,1,B01_row-1_rep-GBS1_E,5,84,101,126,42,80.772,74.676,717.4,24,46.6,6.49567884025648,35.1,17.5,14.8,1.66,4,4,2,4,2,4,4,3,0,irregular heading and flowering,
+1,B093,1,B093_row-4_rep-1_E,5,128,154,162,34,58.42,69.596,284.8,0,37.6,13.2022471910112,35,16.2,13.2,1.88,3,2,2,4,1,1,2,1,0,irregular heading and flowering,late flowering 
+1,B093,2,B093_row-12_rep-2_E,6,144,175,191,47,69.342,64.77,527.1,13,57.5,10.9087459685069,52,21,19.6,1.5,5,1,2,5,2,1,2,2,0,irregular heading and flowering,slow irregular flowering! 
+1,B093,3,B093_row-14_rep-3_E,6,111,127,166,55,52.832,76.962,756.5,12,72.2,9.54395241242565,56.7,24,29.5,2.84,3,3,2,4,2,1,2,2,0,irregular heading and flowering,
+2,B093,1,B093_row-20_rep-1_E,5,107,142,170,63,41.91,75.692,708.1,12,104.8,14.8001694675893,73.4,41.1,23.7,1.88,4,2,4,4,2,3,3,3,0,irregular heading and flowering,irregular heading and flowering 
+2,B093,2,B093_row-23_rep-2_E,6,108,119,140,32,36.83,98.298,670.5,6,101.9,15.1976137211037,63.2,29.4,15.7,2.46,2,1,3,3,1,2,2,1,0,irregular heading and flowering,
+2,B093,3,B093_row-30_rep-3_W,5,119,119,138,19,51.816,91.948,512.9,0,56.1,10.9378046402808,48.8,21.8,16.1,1.84,5,3,2,3,2,2,4,2,0,irregular heading and flowering,irregular maturity and flowering 
+0,B094,1,B02_row-1_rep-GBS1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B094,1,B094_row-4_rep-1_E,8,193,NA,NA,NA,56.642,66.294,399.8,15,49,12.256128064032,35,15,11.3,3.28,4,2,2,3,3,2,3,2,NA,irregular heading and flowering,irregular heading and flowering. one head ready oct 29th
+1,B094,2,B094_row-9_rep-2_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B094,3,B094_row-17_rep-3_W,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B094,1,B094_row-20_rep-1_E,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B094,2,B094_row-26_rep-2_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B094,3,B094_row-31_rep-3_E,12,NA,148,168,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,irregular heading and flowering,irregular heading and flowering 
+0,B095,1,B03_row-1_rep-GBS1_E,5,112,NA,NA,NA,54.61,67.056,1058.4,13,112.2,10.6009070294785,36.2,13.7,21.2,1.38,2,3,1,4,2,1,1,1,NA,irregular heading and flowering,seems like a oddball? 
+1,B095,1,B095_row-4_rep-1_E,10,108,127,157,49,49.022,57.658,274.9,12,51.4,18.6977082575482,37.2,20.6,7.3,1.4,1,3,1,4,2,2,2,1,0,irregular heading and flowering,
+1,B095,2,B095_row-10_rep-2_W,10,133,143,162,29,58.928,62.738,692.8,11,107.8,15.5600461893764,53.2,22.7,20.7,1.8,2,3,4,4,3,3,3,2,0,irregular heading and flowering,"very susceptible, stunted, late flowering "
+1,B095,3,B095_row-17_rep-3_W,11,142,125,169,27,62.23,80.772,903.6,18,88.6,9.80522355024347,44.6,18.5,10.9,1.22,3,4,3,3,2,2,3,2,0,irregular heading and flowering,variable maturity irregular heading and flowering 
+2,B095,1,B095_row-20_rep-1_E,7,119,140,155,36,51.562,72.39,601.7,12,88.2,14.6584676749211,71,27.5,25.6,1.3,3,2,3,4,1,1,2,2,0,irregular heading and flowering,
+2,B095,2,B095_row-26_rep-2_W,9,115,123,147,32,50.8,57.912,286.8,4,45.8,15.9693165969317,28.7,12.5,8.3,1,3,4,2,4,2,2,3,1,0,irregular heading and flowering,"irregular heading and flowering , slow? "
+2,B095,3,B095_row-30_rep-3_W,9,112,120,158,46,60.96,74.676,588.2,12,63.2,10.7446446786807,52.5,19.4,12.3,1.76,5,3,2,5,2,2,3,2,0,irregular heading and flowering,irregular heading and flowering. one early flowering 
+0,B096,1,B04_row-1_rep-GBS1_E,4,74,97,99,25,46.736,69.85,1090.1,23,158.1,14.503256581965,97.6,43.2,17.9,1.86,1,3,3,3,2,1,3,2,0,irregular heading and flowering, extreme lats
+1,B096,1,B096_row-4_rep-1_E,11,111,121,130,19,35.052,77.47,594.3,6,121.1,20.37691401649,44.2,25.7,17.1,1.86,4,4,4,4,3,2,4,2,0,irregular heading and flowering, extreme lats
+1,B096,2,B096_row-10_rep-2_W,10,106,109,139,33,39.878,57.15,353.8,10,57.1,16.1390616167326,43.5,18.3,11.9,1.96,5,4,4,3,3,4,4,3,0,irregular heading and flowering, extreme lats
+1,B096,3,B096_row-18_rep-3_W,7,108,127,140,32,33.528,78.994,787.5,7,112.9,14.3365079365079,65.3,27.2,14.2,1.94,3,3,2,3,3,2,3,2,0,irregular heading and flowering, extreme lats
+2,B096,1,B096_row-20_rep-1_E,7,100,99,114,14,43.942,65.278,485.4,7,83.4,17.1817058096415,64.8,29.8,21.3,1.56,3,2,3,3,2,2,3,2,0,irregular heading and flowering, extreme lats
+2,B096,2,B096_row-25_rep-2_W,8,101,99,159,58,41.656,83.82,723.4,7,122.3,16.9062759192701,73.4,29.6,19.2,2.3,NA,1,4,3,2,2,3,2,0,irregular heading and flowering," extreme lats,irregular flowering and heading  "
+2,B096,3,B096_row-29_rep-3_W,7,106,119,139,33,54.61,63.5,572.5,5,117.7,20.5589519650655,84.7,32.6,27.8,2.06,5,3,3,4,2,3,4,3,0,irregular heading and flowering," extreme lats,irregular flowering and heading  "
+0,B097,1,B05_row-1_rep-GBS1_E,3,117,128,132,15,47.244,62.23,351.9,9,62.2,17.6754759874964,40.9,20,10.9,1.56,5,3,3,3,3,4,4,3,0,irregular heading and flowering,
+1,B097,1,B097_row-4_rep-1_E,10,118,127,138,20,46.736,55.88,306.4,5,67,21.8668407310705,40.9,21.9,19.7,1.48,1,3,3,3,1,1,1,2,0,irregular heading and flowering,
+1,B097,2,B097_row-7_rep-2_E,10,109,127,139,30,56.134,71.882,531.6,7,98.9,18.6042136945071,40.1,18.9,7.6,1.28,1,2,2,4,0,1,1,1,0,irregular heading and flowering,
+1,B097,3,B097_row-18_rep-3_W,9,112,115,150,38,38.1,68.072,567,16,57.9,10.2116402116402,49.1,25.6,13.4,1.8,5,4,2,4,2,2,4,3,0,irregular heading and flowering,highly variable germplasm
+2,B097,1,B097_row-20_rep-1_E,4,107,119,133,26,42.672,79.756,771.4,14,157.6,20.4303863106041,57.8,25.4,15.7,0.92,2,4,4,3,2,2,2,1,0,irregular heading and flowering,slow? 
+2,B097,2,B097_row-28_rep-2_E,3,106,120,147,41,44.704,88.392,NA,7,154.6,NA,63,24.3,16.8,1.32,2,3,5,3,2,2,1,1,0,irregular heading and flowering,"irregular heading and flowering, front of plot maybe stunted "
+2,B097,3,B097_row-29_rep-3_W,4,115,123,154,39,49.276,76.454,477.2,0,102.3,21.4375523889355,65.1,28.5,16.4,1.26,5,3,2,3,2,2,4,2,0,irregular heading and flowering,irregular heading and flowering 
+0,B098,1,B06_row-1_rep-GBS1_E,4,162,NA,NA,NA,50.292,74.168,892.6,0,139.2,15.5948913287027,83,33.6,23.2,NA,5,1,5,3,3,2,3,1,NA,romancesco? ,romancesco? 
+1,B098,1,B098_row-4_rep-1_E,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B098,2,B098_row-11_rep-2_E,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B098,3,B098_row-17_rep-3_W,5,192,NA,NA,NA,48.768,90.17,941.9,0,113,11.9970272852744,65.7,37.1,19.4,NA,5,5,5,2,5,4,NA,3,NA,romancesco? ,
+2,B098,1,B098_row-20_rep-1_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B098,2,B098_row-26_rep-2_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B098,3,B098_row-30_rep-3_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+0,B099,1,B07_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,romancesco? 
+1,B099,1,B099_row-3_rep-1_E,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B099,2,B099_row-9_rep-2_W,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B099,3,B099_row-18_rep-3_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B099,1,B099_row-19_rep-1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B099,2,B099_row-26_rep-2_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B099,3,B099_row-30_rep-3_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+0,B100,1,B08_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,romancesco? 
+1,B100,1,B100_row-3_rep-1_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B100,2,B100_row-10_rep-2_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B100,3,B100_row-15_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,botrytis? strange leaves
+2,B100,1,B100_row-19_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B100,2,B100_row-27_rep-2_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B100,3,B100_row-28_rep-3_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+0,B101,1,B09_row-1_rep-GBS1_E,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,diseased?,not flowering disease? 
+1,B101,1,B101_row-3_rep-1_E,1,114,116,126,12,46.736,81.28,925.3,15,144.9,15.6597860153464,40,13.2,18.5,1.8,1,2,1,2,0,1,1,1,0,diseased?,
+1,B101,2,B101_row-9_rep-2_W,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,diseased?,single plant no grow point 
+1,B101,3,B101_row-15_rep-3_E,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,diseased?,
+2,B101,1,B101_row-19_rep-1_E,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,diseased?,
+2,B101,2,B101_row-25_rep-2_W,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,diseased?,
+2,B101,3,B101_row-28_rep-3_E,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,diseased?,
+0,B102,1,B10_row-1_rep-GBS1_E,5,81,99,103,22,54.102,75.692,663.3,1,135,20.3527815468114,59.3,32.2,24.3,2.1,3,3,3,3,2,2,2,2,0,irregular heading and flowering,
+1,B102,1,B102_row-3_rep-1_E,9,109,147,154,45,49.276,61.468,532.7,3,83.1,15.5997747324948,43.7,21.9,12.1,1.7,1,4,3,4,2,1,2,2,0,irregular heading and flowering,
+1,B102,2,B102_row-8_rep-2_E,9,108,135,165,57,50.292,62.484,686.1,10,44.9,6.54423553417869,36.7,12.8,19,0.7,1,3,1,4,0,1,1,1,0,irregular heading and flowering,
+1,B102,3,B102_row-15_rep-3_E,8,130,135,172,42,41.656,59.69,390.9,8,113.3,28.9843949859299,51.6,25.4,14.4,1.82,2,4,1,3,1,2,2,1,0,irregular heading and flowering,
+2,B102,1,B102_row-19_rep-1_E,7,125,126,140,15,66.04,80.264,552.1,6,98.8,17.8953088208658,61.7,25.9,14.1,1.76,5,3,2,5,3,3,4,2,0,irregular heading and flowering,
+2,B102,2,B102_row-25_rep-2_W,8,118,131,147,29,53.34,74.676,505.5,3,67.7,13.3926805143422,50.4,25.8,14.3,1.18,4,3,3,4,2,3,4,2,0,irregular heading and flowering,irregular heading and flowering 
+2,B102,3,B102_row-29_rep-3_W,8,114,119,139,25,51.562,86.614,606,0,124.2,20.4950495049505,46.6,20.7,22.8,1.24,2,2,1,3,2,1,1,1,0,irregular heading and flowering,irregular heading and flowering 
+0,B103,1,B11_row-1_rep-GBS1_E,4,87,97,106,19,71.628,76.454,763.3,14,55.5,7.27105987161011,48.4,24.9,18.6,2.56,4,4,2,4,3,3,4,3,0,irregular heading and flowering,
+1,B103,1,B103_row-3_rep-1_E,9,111,120,152,41,64.77,73.66,499.1,4,58.7,11.7611701061911,58.9,28.7,13.9,2.3,3,4,3,5,2,2,4,2,0,irregular heading and flowering,
+1,B103,2,B103_row-10_rep-2_W,10,128,142,185,57,72.644,82.042,650.2,0,64.9,9.98154414026454,56,26.9,21.2,2.64,5,2,3,5,2,2,4,3,0,irregular heading and flowering,irregular heading and flowering 
+1,B103,3,B103_row-16_rep-3_E,9,125,127,145,20,59.436,55.88,585.7,21,35.4,6.04404985487451,35.3,22.7,18.7,2.4,3,3,2,4,3,1,2,2,0,irregular heading and flowering,
+2,B103,1,B103_row-19_rep-1_E,9,123,124,147,24,63.246,107.442,980.2,16,57.8,5.89675576412977,34.2,12.8,10.6,2,5,3,2,4,3,3,4,2,0,irregular heading and flowering,irregular heading and flowering 
+2,B103,2,B103_row-28_rep-2_E,9,109,118,149,40,66.548,83.82,350.5,0,32.7,9.32952924393723,39.4,19.5,11,1.68,4,4,2,4,3,2,3,2,0,irregular heading and flowering,irregular heading and flowering 
+2,B103,3,B103_row-27_rep-3_E,9,116,113,140,24,57.15,113.03,1042.2,9,51.6,4.951065054692,39.7,16.2,13.9,1.86,4,3,2,3,3,3,4,2,0,irregular heading and flowering,irregular heading and flowering 
+0,B104,1,B12_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B104,1,B104_row-3_rep-1_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B104,2,B104_row-14_rep-2_W,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B104,3,B104_row-14_rep-3_E,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B104,1,B104_row-19_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B104,2,B104_row-28_rep-2_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B104,3,B104_row-27_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B105,1,C01_row-1_rep-GBS1_E,1,102,NA,NA,NA,66.294,68.58,528.3,2,43.1,8.15824342229794,31,11.9,9.6,2.5,5,3,3,3,3,3,5,3,NA,irregular heading and flowering,
+1,B105,1,B105_row-3_rep-1_E,10,129,113,134,5,77.47,91.186,1070,12,107.8,10.0747663551402,68.5,45.5,21.3,2.04,4,3,2,4,2,2,4,2,0,irregular heading and flowering,
+1,B105,2,B105_row-12_rep-2_E,10,131,127,166,35,79.248,79.756,1009.2,12,67.6,6.69837495045581,51.6,27.5,3,1.9,4,3,3,4,3,3,4,3,0,irregular heading and flowering,irregular heading and flowering 
+1,B105,3,B105_row-14_rep-3_E,10,116,128,136,20,73.66,80.518,784,13,48.4,6.1734693877551,52.1,22.5,17,2.06,4,2,2,4,3,2,3,2,0,irregular heading and flowering,somewhat irregular flowering 
+2,B105,1,B105_row-19_rep-1_E,8,103,105,124,21,54.102,92.456,847.4,9,63.8,7.52891196601369,53.1,26.5,25.2,2.54,5,2,1,4,2,2,4,2,0,irregular heading and flowering,
+2,B105,2,B105_row-28_rep-2_E,7,115,113,147,32,59.944,90.17,921.5,8,73.2,7.94357026587086,53.8,20.8,19.1,1.48,5,2,2,4,3,2,3,2,0,irregular heading and flowering,irregular heading and flowering 
+2,B105,3,B105_row-29_rep-3_W,7,105,105,141,36,50.546,101.6,909.1,4,118.5,13.0348696513035,58.3,28.1,17.3,2.02,2,2,2,3,3,2,2,2,0,irregular heading and flowering,irregular heading and flowering 
+0,B106,1,C02_row-1_rep-GBS1_E,5,164,NA,NA,NA,118.11,87.122,1574.3,1,58.2,3.69688115352855,31.8,14.5,12.2,1.88,2,3,4,4,4,3,4,2,NA,irregular heading and flowering,very tall
+1,B106,1,B106_row-3_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B106,2,B106_row-11_rep-2_E,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B106,3,B106_row-13_rep-3_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B106,1,B106_row-19_rep-1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B106,2,B106_row-28_rep-2_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B106,3,B106_row-30_rep-3_W,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+0,B107,1,C03_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B107,1,B107_row-4_rep-1_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B107,2,B107_row-12_rep-2_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,missing plot before? 
+1,B107,3,B107_row-14_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B107,1,B107_row-20_rep-1_E,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B107,2,B107_row-26_rep-2_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B107,3,B107_row-30_rep-3_W,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B108,1,C04_row-1_rep-GBS1_E,5,94,103,108,14,69.088,75.692,837.9,2,129.5,15.4553049289891,72.7,30.2,24.5,2.1,4,3,3,4,3,4,3,3,0,irregular heading and flowering,
+1,B108,1,B108_row-4_rep-1_E,7,124,133,184,60,67.31,65.532,565,6,46.1,8.15929203539823,40.7,15.2,13.8,1.58,1,3,1,5,2,1,1,1,0,irregular heading and flowering,irregular heading and flowering 
+1,B108,2,B108_row-12_rep-2_E,8,137,175,188,51,66.04,58.928,658.2,16,127.6,19.3862048009723,52.8,19.1,13.4,1.1,1,2,4,3,1,1,1,1,0,irregular heading and flowering,"extreme lats, slow flowering? irregular? "
+1,B108,3,B108_row-16_rep-3_E,10,114,127,148,34,56.642,64.262,511.4,3,45.7,8.93625342197888,49.6,23.7,22.3,1.76,2,4,3,4,4,2,3,2,0,irregular heading and flowering,
+2,B108,1,B108_row-20_rep-1_E,6,121,125,155,34,62.992,71.628,1024.6,16,76.8,7.4956080421628,44.3,23.9,10.5,1.54,4,3,3,4,2,3,3,2,0,irregular heading and flowering,slow? irregular flowering 
+2,B108,2,B108_row-26_rep-2_W,9,104,112,128,24,52.578,61.214,325.2,0,33.5,10.3013530135301,44.6,21.2,14,2.92,3,4,3,4,3,2,3,2,0,irregular heading and flowering,2 late Oct 28th heading 
+2,B108,3,B108_row-30_rep-3_W,9,99,101,116,17,48.006,83.82,589.1,6,100.3,17.0259718214225,56.9,26.6,15.3,2.36,3,3,3,3,2,2,3,2,0,irregular heading and flowering,
+0,B109,1,C05_row-1_rep-GBS1_E,5,108,127,132,24,49.276,59.944,419.6,17,47.4,11.2964728312679,30.8,12,9.6,1.28,2,1,2,4,1,2,1,1,0,irregular heading and flowering, extreme lats
+1,B109,1,B109_row-4_rep-1_E,4,133,133,155,22,61.468,61.214,489.5,0,53.5,10.929519918284,41.1,17.5,16.2,1.66,4,2,4,4,3,3,3,3,0,irregular heading and flowering, extreme lats
+1,B109,2,B109_row-11_rep-2_E,10,139,160,178,39,48.514,59.944,521.9,2,74,14.1789614868749,54.3,24.7,9.6,1.6,3,4,4,3,2,2,3,2,0,irregular heading and flowering, extreme lats
+1,B109,3,B109_row-13_rep-3_W,11,125,121,175,50,50.292,56.388,394.6,0,61.4,15.5600608210846,39.7,17.4,11,1.16,2,3,4,4,2,2,2,1,0,irregular heading and flowering, extreme lats
+2,B109,1,B109_row-20_rep-1_E,6,126,155,161,35,62.23,74.168,767.6,0,93,12.1156852527358,56.3,30.7,19.4,2,5,4,3,4,2,3,4,3,0,irregular heading and flowering," extreme lats,irregular flowering and heading  "
+2,B109,2,B109_row-26_rep-2_W,7,119,133,147,28,45.72,69.088,637.4,12,64,10.0407907122686,36.1,14.9,8.9,1.58,3,3,4,4,3,3,3,2,0,irregular heading and flowering, extreme lats
+2,B109,3,B109_row-30_rep-3_W,7,117,125,155,38,55.372,84.582,821.2,6,93,11.3248904042864,50.3,29.5,13.5,1.58,5,5,3,3,2,3,4,2,0,irregular heading and flowering," extreme lats,irregular flowering and heading  "
+0,B110,1,C06_row-1_rep-GBS1_E,4,87,97,101,14,87.376,93.98,1076.6,15,69.3,6.4369310793238,59,26.4,22.2,2.24,4,3,3,4,5,3,4,2,0,irregular heading and flowering, extreme lats
+1,B110,1,B110_row-4_rep-1_E,6,108,114,128,20,69.088,58.928,612,16,32.8,5.35947712418301,20.7,10.3,9.9,2.1,3,3,1,3,0,1,2,1,0,irregular heading and flowering, extreme lats
+1,B110,2,B110_row-9_rep-2_W,6,119,140,144,25,81.28,88.646,1318.1,20,40.5,3.07260450648661,34.8,17.3,11,2.9,3,2,3,4,4,2,3,2,0,irregular heading and flowering, extreme lats
+1,B110,3,B110_row-17_rep-3_W,7,144,155,176,32,83.058,64.516,716.3,19,48.8,6.8127879380148,27,13,15.3,1.92,3,2,3,5,4,2,3,2,0,irregular heading and flowering," extreme lats,variable maturity, late flowering  "
+2,B110,1,B110_row-20_rep-1_E,9,115,99,133,18,69.85,79.502,715.3,13,70,9.78610373269957,49.5,28.1,19,1.88,4,2,2,4,3,2,3,2,0,irregular heading and flowering," extreme lats,irregular heading  "
+2,B110,2,B110_row-26_rep-2_W,9,127,116,156,29,61.468,77.978,512.7,11,47.4,9.24517261556466,48.7,20.9,20.9,1.98,5,2,2,4,4,2,3,2,0,irregular heading and flowering," extreme lats,irregular flowering and heading  "
+2,B110,3,B110_row-29_rep-3_W,9,109,99,156,47,59.182,73.66,547.8,14,42.6,7.77656078860898,48.7,17.5,17,1.56,5,2,1,4,3,3,3,2,0,irregular heading and flowering," extreme lats,one early flowering, most late flowering  "
+0,B111,1,C07_row-1_rep-GBS1_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,very frilly,frilly 
+1,B111,1,B111_row-4_rep-1_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,very frilly,
+1,B111,2,B111_row-10_rep-2_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,very frilly,
+1,B111,3,B111_row-17_rep-3_W,9,190,NA,NA,NA,54.356,97.79,848.7,14,90.3,10.6398020501944,19.1,5.7,8.7,1.98,2,3,2,3,3,2,3,2,NA,very frilly,very curly 
+2,B111,1,B111_row-20_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,very frilly,
+2,B111,2,B111_row-23_rep-2_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,very frilly,
+2,B111,3,B111_row-28_rep-3_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,very frilly,
+0,B112,1,C08_row-1_rep-GBS1_E,4,105,NA,NA,NA,51.308,89.154,1263.2,0,194.3,15.3815706143129,103.2,49.7,25.9,0.2332,5,3,4,2,3,3,5,3,NA,romancesco? ,romancesco? 
+1,B112,1,B112_row-4_rep-1_E,12,141,169,190,49,45.466,73.406,717.1,0,76.8,10.7098033747037,56.1,18.3,9.2,NA,5,3,3,2,3,3,5,3,0,romancesco? ,romancesco? only 2 heading and flowering 
+1,B112,2,B112_row-8_rep-2_E,9,187,NA,NA,NA,64.516,72.644,605.1,0,130.9,21.6327879689308,78.4,29.9,23.6,NA,5,4,3,3,5,4,NA,3,NA,romancesco? ,
+1,B112,3,B112_row-15_rep-3_E,11,190,NA,NA,NA,50.546,71.882,602.7,0,112.1,18.5996349759416,88.9,42.2,34.7,0.88,5,4,4,3,3,3,NA,3,NA,romancesco? ,2 heading Oct 29th 
+2,B112,1,B112_row-20_rep-1_E,8,155,NA,NA,NA,52.07,57.15,451.8,0,76.2,16.8658698539177,68,33.1,28.2,0.78,5,3,5,4,3,3,3,1,NA,romancesco? ,
+2,B112,2,B112_row-24_rep-2_E,6,155,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5,3,5,3,3,3,3,1,NA,romancesco? ,
+2,B112,3,B112_row-27_rep-3_E,8,NA,NA,NA,NA,48.768,91.44,994.4,0,160.8,16.1705551086082,74.2,38,35.2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+0,B113,1,C09_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,romancesco? 
+1,B113,1,B113_row-4_rep-1_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B113,2,B113_row-10_rep-2_W,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+1,B113,3,B113_row-18_rep-3_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B113,1,B113_row-20_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B113,2,B113_row-23_rep-2_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+2,B113,3,B113_row-27_rep-3_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,romancesco? ,
+0,B114,1,C10_row-1_rep-GBS1_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B114,1,B114_row-4_rep-1_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B114,2,B114_row-11_rep-2_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B114,3,B114_row-17_rep-3_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B114,1,B114_row-20_rep-1_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B114,2,B114_row-24_rep-2_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B114,3,B114_row-27_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B115,1,C11_row-1_rep-GBS1_E,4,134,87,157,23,56.642,72.136,666.1,6,57.8,8.67737576940399,46.6,20.5,19.4,2.08,5,2,2,4,3,2,3,2,0,"extreme lats, irregular heading and flowering",irregular heading and flowering 
+1,B115,1,B115_row-3_rep-1_E,12,120,112,153,33,74.676,77.216,585.1,3,67.8,11.5877627755939,37.7,18.6,13.3,1.4,2,3,4,4,3,2,3,2,0,"extreme lats, irregular heading and flowering",irregular heading and flowering 
+1,B115,2,B115_row-11_rep-2_E,10,149,168,180,31,59.182,63.5,525.2,3,129.5,24.6572734196497,63.7,36.3,11.2,1.18,3,4,3,3,2,2,4,2,0,"extreme lats, irregular heading and flowering",slower heading? 
+1,B115,3,B115_row-13_rep-3_W,11,127,138,186,59,74.93,69.088,901,19,93.3,10.3551609322974,45.1,20.7,22.2,1.68,1,3,4,5,1,1,2,1,0,"extreme lats, irregular heading and flowering","extreme lats, irregular heading and flowering "
+2,B115,1,B115_row-19_rep-1_E,11,149,NA,NA,NA,70.104,93.726,364.2,0,30.2,8.29214717188358,28.6,13,7.4,1.48,5,2,3,4,3,3,3,2,NA,"extreme lats, irregular heading and flowering",late or irregular 
+2,B115,2,B115_row-23_rep-2_E,12,121,149,159,38,59.944,90.17,465.3,0,44.2,9.49924779712014,53.1,24.9,17.4,1.98,5,3,2,4,2,3,4,2,0,"extreme lats, irregular heading and flowering",irregular heading and flowering 
+2,B115,3,B115_row-27_rep-3_E,11,118,132,149,31,62.484,117.348,1243.8,6,108,8.68306801736614,65.5,35.7,19.5,1.58,3,3,4,3,3,3,3,2,0,"extreme lats, irregular heading and flowering",irregular heading and flowering 
+0,B116,1,C12_row-1_rep-GBS1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B116,1,B116_row-6_rep-1_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B116,2,B116_row-12_rep-2_E,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B116,3,B116_row-13_rep-3_W,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B116,1,B116_row-19_rep-1_E,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B116,2,B116_row-24_rep-2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B116,3,B116_row-28_rep-3_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B117,1,D01_row-1_rep-GBS1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,irregular heading and flowering 
+1,B117,1,B117_row-6_rep-1_W,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B117,2,B117_row-11_rep-2_E,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B117,3,B117_row-14_rep-3_E,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B117,1,B117_row-19_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B117,2,B117_row-23_rep-2_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B117,3,B117_row-29_rep-3_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+0,B118,1,D02_row-1_rep-GBS1_E,5,63,68,71,8,52.07,82.296,731.8,3,95.4,13.036348729161,77.1,34.8,14.2,2.98,4,3,3,4,5,4,5,4,1,no notes,
+1,B118,1,B118_row-6_rep-1_W,8,98,99,112,14,59.69,67.818,344.6,0,47.7,13.8421358096344,70,30.4,17.6,2.04,5,4,3,5,3,3,4,3,1,no notes,
+1,B118,2,B118_row-10_rep-2_W,9,98,99,108,10,54.102,90.424,574.5,2,44.4,7.72845953002611,47.9,17,12.5,2.24,4,3,1,4,4,4,4,2,1,no notes,
+1,B118,3,B118_row-15_rep-3_E,10,101,102,112,11,52.832,82.296,718.8,0,64.9,9.02893711741792,49.8,23.9,29.7,1.84,5,4,3,4,4,4,4,3,1,no notes,
+2,B118,1,B118_row-19_rep-1_E,6,105,99,109,4,42.672,77.47,432.4,1,56.6,13.0897317298797,49.6,22.2,23.8,1.52,5,4,3,3,3,4,4,2,1,no notes,
+2,B118,2,B118_row-24_rep-2_E,6,84,90,97,13,47.244,77.724,403.4,1,31.7,7.8582052553297,40.3,23,18.2,2.16,5,4,2,2,4,4,4,3,1,no notes,
+2,B118,3,B118_row-29_rep-3_W,5,91,99,105,14,53.848,70.612,246.7,0,33.6,13.6197811106607,40.5,17.5,19.6,1.98,4,2,2,4,4,3,3,2,1,no notes,one with yellow flowers!! 
+0,B119,1,D03_row-1_rep-GBS1_E,3,96,NA,NA,NA,72.39,88.392,907.7,18,37.5,4.13132092100914,33.6,15.7,10.1,2.66,3,2,2,4,4,2,3,2,NA,"extreme lats, irregular heading and flowering",extreme lats
+1,B119,1,B119_row-6_rep-1_W,10,138,159,194,56,84.836,102.87,1362.8,19,55.7,4.08717346639272,41.2,19.1,17.9,2.5,3,3,2,5,5,2,3,2,1,"extreme lats, irregular heading and flowering","extreme lats, irregular flowering and heading "
+1,B119,2,B119_row-10_rep-2_W,11,191,NA,NA,NA,76.708,69.596,430.1,7,35.8,8.32364566379911,44.7,12.8,22.6,1.9,5,4,2,4,4,4,4,3,NA,"extreme lats, irregular heading and flowering",
+1,B119,3,B119_row-16_rep-3_E,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"extreme lats, irregular heading and flowering",
+2,B119,1,B119_row-19_rep-1_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"extreme lats, irregular heading and flowering",
+2,B119,2,B119_row-23_rep-2_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"extreme lats, irregular heading and flowering",
+2,B119,3,B119_row-29_rep-3_W,10,165,NA,NA,NA,67.31,97.79,825.6,7,99.8,12.0881782945736,60.4,18.3,25.2,1.96,5,3,2,4,4,3,4,3,NA,"extreme lats, irregular heading and flowering",only one plant heading Oct 29th 
+0,B120,1,D04_row-1_rep-GBS1_E,4,80,111,116,36,76.708,99.06,896.7,7,87.6,9.76915356306457,56.2,23.8,20.7,2.24,4,3,3,5,5,3,4,3,1,"extreme lats, irregular heading and flowering",
+1,B120,1,B120_row-6_rep-1_W,12,105,112,136,31,73.152,78.232,628,0,60.9,9.69745222929936,55.3,20.8,24.7,3.16,3,3,2,4,5,3,4,3,1,"extreme lats, irregular heading and flowering",
+1,B120,2,B120_row-8_rep-2_E,11,108,113,125,17,74.93,80.264,604.8,0,83.1,13.7400793650794,52.7,21.2,21.5,2.22,5,3,3,5,5,3,4,3,1,"extreme lats, irregular heading and flowering",
+1,B120,3,B120_row-16_rep-3_E,10,121,121,130,9,58.42,64.008,501.3,0,56.3,11.2307999202075,50.1,26.5,24.3,1.92,4,4,4,4,4,4,4,3,1,"extreme lats, irregular heading and flowering",
+2,B120,1,B120_row-19_rep-1_E,9,112,110,122,10,71.882,92.202,759.3,0,99.1,13.0514947978401,53.3,16.5,9.1,1.56,5,3,3,5,5,2,3,2,1,"extreme lats, irregular heading and flowering",
+2,B120,2,B120_row-25_rep-2_W,9,102,102,116,14,60.706,89.408,773.7,0,116.6,15.0704407393046,77.1,31.1,32.1,2.56,4,3,3,4,5,2,4,2,1,"extreme lats, irregular heading and flowering",
+2,B120,3,B120_row-30_rep-3_W,9,107,112,116,9,79.502,101.092,859.1,0,70,8.14806192527063,48.1,14.6,23.8,1.76,NA,3,3,4,5,3,4,2,1,"extreme lats, irregular heading and flowering",
+0,B121,1,D05_row-1_rep-GBS1_E,3,NA,113,122,NA,53.594,89.408,976.4,0,121.8,12.474395739451,83.7,27.7,29.1,1.38,5,5,3,3,3,4,5,4,0,"extreme lats, irregular heading and flowering",
+1,B121,1,B121_row-6_rep-1_W,10,108,141,155,47,39.37,89.916,717.9,0,122.5,17.0636578910712,62.5,23.2,22.3,0.96,5,5,4,3,3,4,5,4,0,"extreme lats, irregular heading and flowering",
+1,B121,2,B121_row-9_rep-2_W,12,119,135,170,51,50.546,86.868,769.7,0,99.5,12.9271144601793,80.1,36,25.3,1.34,5,5,3,4,4,4,5,3,0,"extreme lats, irregular heading and flowering",
+1,B121,3,B121_row-18_rep-3_W,12,130,127,156,26,55.88,66.294,586.2,0,78.5,13.3913340156943,74.6,34.9,18.3,0.88,5,5,4,4,3,3,4,3,0,"extreme lats, irregular heading and flowering",
+2,B121,1,B121_row-19_rep-1_E,10,114,115,156,42,52.832,93.98,659.4,0,86.1,13.0573248407643,69.1,27.8,24.2,0.98,5,5,3,3,3,3,3,3,0,"extreme lats, irregular heading and flowering",irregular heading and flowering 
+2,B121,2,B121_row-23_rep-2_E,11,157,146,163,6,54.356,87.63,1000.3,0,126.4,12.6362091372588,79,31.4,22.8,0.7,5,5,5,4,3,4,NA,3,0,"extreme lats, irregular heading and flowering","slow... only one head on Oct 15, irregular heading and flowering "
+2,B121,3,B121_row-30_rep-3_W,10,141,NA,NA,NA,51.562,75.438,568.2,0,93.2,16.4026751143963,88.8,23.2,27.7,1.02,5,5,2,4,2,3,3,2,NA,"extreme lats, irregular heading and flowering",only one heading on Oct 15 
+0,B122,1,D06_row-1_rep-GBS1_E,4,86,97,101,15,69.342,68.072,667.1,4,59.2,8.87423174936291,47.4,20.3,21.3,1.86,3,4,2,4,3,2,3,2,0,"extreme lats, irregular heading and flowering",
+1,B122,1,B122_row-6_rep-1_W,6,134,147,172,38,61.976,76.962,493.3,17,37.3,7.56132171092641,46.5,22.6,20.5,2.32,5,2,2,4,3,2,3,2,0,"extreme lats, irregular heading and flowering",
+1,B122,2,B122_row-10_rep-2_W,4,133,147,149,16,49.022,56.642,288.3,12,36.8,12.7644814429414,31.5,12.8,11.4,1.62,2,3,4,3,3,3,2,2,0,"extreme lats, irregular heading and flowering",extreme lats
+1,B122,3,B122_row-14_rep-3_E,6,126,129,161,35,81.28,73.152,961.6,17,68.8,7.15474209650582,39.8,17.3,17.7,1.82,2,2,3,4,3,1,2,2,0,"extreme lats, irregular heading and flowering",
+2,B122,1,B122_row-19_rep-1_E,5,112,133,148,36,63.5,102.108,1222.3,14,75.1,6.14415446289781,52.5,27.7,13.4,1.62,4,3,2,4,2,2,3,2,0,"extreme lats, irregular heading and flowering","irregular heading, mix of small and large"
+2,B122,2,B122_row-26_rep-2_W,6,108,119,129,21,52.832,86.868,687,10,88.9,12.9403202328967,71.1,35.4,23.8,1.98,5,3,3,3,2,2,4,2,0,"extreme lats, irregular heading and flowering",one late heading Oct 29th 
+2,B122,3,B122_row-27_rep-3_E,6,112,122,134,22,78.994,81.026,661.3,20,27.7,4.18871918947528,49.8,21.6,15.6,1.94,5,3,1,5,2,3,4,2,0,"extreme lats, irregular heading and flowering","extreme lats on some plants , irregular heading "
+0,B123,1,D07_row-1_rep-GBS1_E,,84,72,NA,NA,42.672,64.77,562.2,7,64.1,11.4016364283173,38.5,23.3,18.4,2.04,4,2,2,3,2,1,3,2,0,not enough plants,
+1,B123,1,B123_row-4_rep-1_E,5,109,129,134,25,59.182,51.562,307.5,14,27.9,9.07317073170732,41.5,19.3,10.8,2.38,5,4,3,5,2,2,4,2,0,not enough plants,
+1,B123,2,B123_row-10_rep-2_W,5,114,130,171,57,43.942,57.404,321.2,7,45.1,14.041095890411,36,20.8,18.6,1.3,2,4,1,3,2,1,2,1,0,not enough plants,
+1,B123,3,B123_row-14_rep-3_E,5,124,135,142,18,37.846,67.818,314.8,0,51,16.2007623888183,30.6,18.4,18.3,1.86,5,3,3,4,4,3,4,2,0,not enough plants,
+2,B123,1,B123_row-20_rep-1_E,9,111,99,136,25,49.276,63.246,609.3,3,60.5,9.92942721155424,52.3,23.9,14.7,2.5,5,3,4,3,2,3,5,2,0,not enough plants,
+2,B123,2,B123_row-26_rep-2_W,2,91,112,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4,4,4,3,2,3,4,3,0,not enough plants,dont know where heading data is--only 2 plants :(
+2,B123,3,B123_row-27_rep-3_E,3,83,109,113,30,30.734,67.818,381.1,1,59.4,15.5864602466544,57.3,23.8,19.1,2.02,4,4,NA,3,2,2,4,2,0,not enough plants,
+0,B124,1,D08_row-1_rep-GBS1_E,5,79,93,98,19,35.052,73.406,856.1,9,140.6,16.4233150332905,59.2,24.6,15.9,1.3,3,3,5,3,2,3,3,3,0,no notes,
+1,B124,1,B124_row-4_rep-1_E,9,109,127,133,24,41.656,56.896,367,0,64.7,17.6294277929155,57.7,21.1,6.3,1.68,3,4,2,4,2,1,3,2,0,irregular heading and flowering,
+1,B124,2,B124_row-9_rep-2_W,10,126,134,145,19,37.084,64.516,372.3,1,55.2,14.8267526188558,48.9,24.3,19.2,2.78,4,3,3,3,3,4,4,2,0,irregular heading and flowering,"one very earpy flowered, did not keep data from"
+1,B124,3,B124_row-15_rep-3_E,11,102,129,142,40,42.672,54.61,464.8,8,72.3,15.5550774526678,48.2,22.3,18.1,2.68,4,4,4,3,2,2,3,2,0,irregular heading and flowering,
+2,B124,1,B124_row-20_rep-1_E,7,100,109,128,28,41.402,71.628,449.6,7,100.7,22.3976868327402,87.1,40.5,16.2,2.36,5,4,3,3,2,3,4,3,0,irregular heading and flowering,
+2,B124,2,B124_row-23_rep-2_E,8,104,105,112,8,43.942,86.868,716.2,4,161.6,22.563529740296,90,35.3,20.8,2.92,4,2,3,3,2,2,4,3,0,irregular heading and flowering,irregular heading and flowering 
+2,B124,3,B124_row-31_rep-3_E,8,98,105,116,18,39.37,53.848,311.2,7,74.5,23.939588688946,55.3,27.8,22.4,2.32,4,3,3,4,2,2,4,2,0,irregular heading and flowering,
+0,B125,1,D09_row-1_rep-GBS1_E,5,69,97,101,32,43.688,74.93,734.7,16,78.1,10.6301891928678,43,30,6.1,1.24,3,3,2,3,1,2,2,2,0,irregular heading and flowering,EXTREME (TM) laterals
+1,B125,1,B125_row-4_rep-1_E,8,113,134,148,35,41.91,73.152,869,12,118.9,13.6823935558113,75.9,38.1,25.2,1.38,3,4,3,3,2,1,3,2,0,irregular heading and flowering," extreme lats,irregular heading and flowering "
+1,B125,2,B125_row-11_rep-2_E,11,133,141,178,45,46.482,54.61,271.3,6,45.5,16.7711021009952,49.8,24.9,14.1,2.22,4,3,3,4,3,3,4,3,0,irregular heading and flowering, extreme lats
+1,B125,3,B125_row-13_rep-3_W,9,110,120,137,27,45.974,54.61,583.3,7,93.1,15.9609120521173,69.3,29.3,16.3,2.36,4,2,3,4,3,2,4,3,0,irregular heading and flowering, extreme lats
+2,B125,1,B125_row-20_rep-1_E,6,107,104,147,40,45.212,91.44,706.1,12,72.1,10.2110182693669,39.4,20.5,12.9,2.52,5,4,2,3,3,2,4,2,0,irregular heading and flowering," extreme lats,extreme lats, irregular heading and flowering  "
+2,B125,2,B125_row-24_rep-2_E,6,101,111,128,27,42.164,60.96,413.2,14,91.8,22.216844143272,57.9,26.3,14.7,3,5,2,3,3,2,2,3,2,0,irregular heading and flowering," extreme lats,irregular flowering and heading  "
+2,B125,3,B125_row-32_rep-3_E,7,104,112,121,17,52.07,73.66,577.9,12,68.8,11.90517390552,58.4,26.9,19.8,1.8,5,3,3,4,3,3,4,3,0,irregular heading and flowering, extreme lats
+0,B126,1,D10_row-1_rep-GBS1_E,4,69,99,102,33,36.322,69.088,363,5,80.5,22.1763085399449,63,29.8,17.4,2.44,5,4,2,3,3,3,4,3,0,irregular heading and flowering,
+1,B126,1,B126_row-5_rep-1_W,5,121,127,135,14,57.404,74.93,654.1,19,69.2,10.5794221067115,60.6,23.3,26.3,3.5,3,2,2,4,2,1,2,2,0,irregular heading and flowering,
+1,B126,2,B126_row-11_rep-2_E,8,112,129,171,59,37.592,55.626,412.3,12,82.5,20.0097016735387,49.5,33,14.1,1.88,4,4,2,3,2,2,3,2,0,irregular heading and flowering,irregular heading and flowering 
+1,B126,3,B126_row-16_rep-3_E,7,106,115,128,22,52.832,50.8,237,2,20.9,8.81856540084388,33.7,18.8,6.2,1.6,4,3,2,4,3,2,4,2,0,irregular heading and flowering,
+2,B126,1,B126_row-20_rep-1_E,3,98,104,109,11,41.402,74.422,432.6,8,89.4,20.6657420249653,70.2,31.6,20.2,2.68,4,3,3,3,3,2,3,3,0,irregular heading and flowering,
+2,B126,2,B126_row-26_rep-2_W,3,114,125,130,16,45.212,56.388,632.5,0,77.6,12.2687747035573,77.1,26.8,16.2,2.96,5,4,3,3,2,3,4,2,0,irregular heading and flowering,maybe take a different head?? 
+2,B126,3,B126_row-31_rep-3_E,2,99,113,121,22,40.64,82.042,1068.2,9,196.3,18.3767084815578,80.8,35.8,31.8,2.02,5,4,5,2,3,3,4,4,0,irregular heading and flowering,
+0,B127,1,D11_row-1_rep-GBS1_E,5,161,NA,NA,NA,65.786,77.724,1258.5,21,95.2,7.56456098529996,22.5,9.3,10.8,2.12,2,2,3,3,3,2,3,2,NA,irregular heading and flowering, extreme lats
+1,B127,1,B127_row-5_rep-1_W,7,186,176,193,7,69.342,91.186,769.7,21,55,7.14564115889308,25.8,12.7,12,2.54,4,3,1,3,3,2,3,2,0,irregular heading and flowering," extreme lats,irregular heading and flowering. two heads Oct 29th  "
+1,B127,2,B127_row-9_rep-2_W,8,188,181,NA,NA,55.626,85.09,712.3,14,93,13.0562965042819,32.2,15.5,15,3.04,4,2,2,3,3,2,3,2,0,irregular heading and flowering," extreme lats,only 2 heading Oct 29th  "
+1,B127,3,B127_row-15_rep-3_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B127,1,B127_row-20_rep-1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B127,2,B127_row-28_rep-2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B127,3,B127_row-29_rep-3_W,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+0,B128,1,D12_row-1_rep-GBS1_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+1,B128,1,B128_row-5_rep-1_W,8,193,NA,NA,NA,60.96,87.63,800.6,26,69.6,8.69347989008244,38.4,18.2,16.8,2.62,4,3,2,3,3,3,3,2,NA,irregular heading and flowering," extreme lats,two heads ready oct 29th  "
+1,B128,2,B128_row-10_rep-2_W,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+1,B128,3,B128_row-18_rep-3_W,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering," extreme lats,curly  "
+2,B128,1,B128_row-20_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B128,2,B128_row-27_rep-2_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B128,3,B128_row-30_rep-3_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+0,B129,1,E01_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+1,B129,1,B129_row-5_rep-1_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+1,B129,2,B129_row-9_rep-2_W,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+1,B129,3,B129_row-17_rep-3_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B129,1,B129_row-20_rep-1_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B129,2,B129_row-25_rep-2_W,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B129,3,B129_row-30_rep-3_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+0,B130,1,E02_row-1_rep-GBS1_E,5,116,114,128,12,51.308,70.104,690.1,0,73,10.5781770757861,76.9,36.3,15.7,0.66,5,4,3,4,2,3,3,2,0,irregular heading and flowering, extreme lats
+1,B130,1,B130_row-5_rep-1_W,12,143,167,178,35,54.102,81.28,591.6,0,110,18.5936443542934,87.1,28.9,22.5,0.6,5,3,3,3,2,2,3,1,0,irregular heading and flowering, extreme lats
+1,B130,2,B130_row-11_rep-2_E,12,148,184,NA,NA,51.308,59.69,449.3,0,71.2,15.8468729134209,68.3,34.4,16.1,0.46,5,3,3,3,3,2,3,2,NA,irregular heading and flowering," extreme lats,irregular heading and flowering  "
+1,B130,3,B130_row-16_rep-3_E,11,140,149,178,38,39.116,94.488,1187.7,0,217.4,18.3042855940052,97.4,43.9,15.2,0.42,5,5,4,1,3,4,3,1,0,irregular heading and flowering," extreme lats,irregular heading and flowering  "
+2,B130,1,B130_row-20_rep-1_E,11,123,NA,NA,NA,37.846,81.026,531,0,66.5,12.5235404896422,62.1,29.2,14.1,0.74,5,4,4,2,3,2,3,2,NA,irregular heading and flowering, extreme lats
+2,B130,2,B130_row-24_rep-2_E,11,123,NA,NA,NA,41.148,83.82,612,0,90.7,14.8202614379085,69.7,34.8,18.4,0.94,5,4,3,2,3,2,3,2,NA,irregular heading and flowering, extreme lats
+2,B130,3,B130_row-29_rep-3_W,11,139,NA,NA,NA,52.832,59.69,485,0,86.3,17.7938144329897,77.4,29.6,22.7,0.46,5,3,4,4,2,2,3,2,NA,irregular heading and flowering, extreme lats
+0,B131,1,E03_row-1_rep-GBS1_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B131,1,B131_row-6_rep-1_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,slow
+1,B131,2,B131_row-12_rep-2_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+1,B131,3,B131_row-15_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,irregular heading. only one head on Oct 15 
+2,B131,1,B131_row-22_rep-1_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,
+2,B131,2,B131_row-23_rep-2_E,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,slow... 
+2,B131,3,B131_row-32_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering,irregular maturity. one early flowering 
+0,B132,1,E04_row-1_rep-GBS1_E,4,89,101,105,16,80.264,66.04,625.6,16,75.9,12.1323529411765,39.5,18.5,14.1,1.9,1,3,1,4,0,1,1,1,0,irregular heading and flowering, extreme lats
+1,B132,1,B132_row-6_rep-1_W,10,126,137,141,15,64.516,91.948,1181.4,12,112.7,9.53952937193161,63.4,23.6,32.8,2.02,2,1,2,4,2,1,1,1,0,irregular heading and flowering, extreme lats
+1,B132,2,B132_row-9_rep-2_W,10,123,127,142,19,56.896,60.96,326.5,1,36.6,11.2098009188361,36.9,17.3,16.2,2.38,3,3,3,4,3,3,3,2,0,irregular heading and flowering, extreme lats
+1,B132,3,B132_row-14_rep-3_E,10,126,141,169,43,63.754,81.026,370.7,8,45.5,12.2740760722957,50,23.8,20.3,1.94,3,1,1,4,2,1,3,1,0,irregular heading and flowering," extreme lats,irregular heading and flowering  "
+2,B132,1,B132_row-22_rep-1_W,9,111,123,158,47,58.42,81.534,808.6,16,69.6,8.60746970071729,47.4,21.9,19.1,1.6,3,3,3,4,4,2,3,2,0,irregular heading and flowering," extreme lats,extreme lats, irregular heading and flowering, 50 headed on oct 29th"
+2,B132,2,B132_row-24_rep-2_E,10,121,NA,NA,NA,74.422,64.262,594.6,17,30.1,5.06222670702994,35.1,15.8,13.2,1.78,5,3,2,5,3,3,4,2,NA,irregular heading and flowering, extreme lats
+2,B132,3,B132_row-32_rep-3_E,9,129,135,151,22,60.452,94.488,1616.2,11,170.7,10.5618116569731,78.6,45.1,15.5,1.2,4,3,4,5,3,2,3,2,0,irregular heading and flowering," extreme lats,irregular heading and flowering  "
+0,B133,1,E05_row-1_rep-GBS1_E,3,116,127,135,19,63.5,58.674,671.2,17,62.4,9.29678188319428,27.4,9.6,7.1,1.14,3,3,2,4,2,2,2,1,0,irregular heading and flowering, extreme lats
+1,B133,1,B133_row-6_rep-1_W,7,119,152,161,42,71.12,57.15,599.4,3,66.3,11.0610610610611,45.2,21.9,17.7,1.46,2,2,4,4,2,2,2,1,0,irregular heading and flowering," extreme lats,late flowering  "
+1,B133,2,B133_row-12_rep-2_E,7,134,129,148,14,58.674,61.214,264.5,8,41,15.5009451795841,40.9,15.2,13,2.44,3,1,2,3,2,2,2,2,0,irregular heading and flowering, extreme lats
+1,B133,3,B133_row-18_rep-3_W,1,111,129,153,42,40.386,55.372,383.1,8,75.6,19.7337509788567,56.4,32,20.3,1.72,3,4,4,3,3,3,3,2,0,irregular heading and flowering, extreme lats
+2,B133,1,B133_row-22_rep-1_W,9,114,126,160,46,54.102,71.882,524.6,9,79.4,15.1353412123523,34,16.4,8.2,0.82,2,3,4,4,2,1,2,2,0,irregular heading and flowering," extreme lats,irregular heading and flowering. half heading on Oct 29th "
+2,B133,2,B133_row-23_rep-2_E,9,116,132,157,41,62.992,77.47,653.6,17,59.5,9.10342717258262,42.7,18.8,10.3,1.12,3,4,2,4,2,2,3,2,0,irregular heading and flowering," extreme lats,irregular heading and flowering  "
+2,B133,3,B133_row-31_rep-3_E,10,135,119,152,17,40.386,79.756,921.5,2,162.7,17.6559956592512,61.3,33,12.5,1.5,3,3,4,4,2,2,2,1,0,irregular heading and flowering," extreme lats,extreme lats, irregular heading and flowering. one early flowering.  "
+0,B134,1,E06_row-1_rep-GBS1_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B134,1,B134_row-6_rep-1_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B134,2,B134_row-9_rep-2_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B134,3,B134_row-18_rep-3_W,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B134,1,B134_row-22_rep-1_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B134,2,B134_row-24_rep-2_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B134,3,B134_row-29_rep-3_W,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B135,1,E07_row-1_rep-GBS1_E,4,110,119,122,12,65.786,87.884,821.9,3,92.3,11.2300766516608,49.3,20.5,20.3,2.02,4,3,3,5,4,2,4,3,1,some seed contamination,
+1,B135,1,B135_row-6_rep-1_W,7,124,128,135,11,55.88,97.282,903.7,10,78.9,8.73077348677659,38.3,16.8,22.6,2.1,3,2,3,4,4,2,4,2,1,some seed contamination,contaminated non oleracea types
+1,B135,2,B135_row-8_rep-2_E,5,123,131,140,17,69.85,79.502,534.5,4,80.5,15.0608044901777,61.2,25.8,26,2.24,2,2,2,5,5,2,3,2,1,some seed contamination,contaminated 
+1,B135,3,B135_row-15_rep-3_E,6,139,148,174,35,44.958,77.216,322.8,0,39.5,12.2366790582404,36.7,12.3,16.8,1.54,3,4,3,5,5,3,4,2,1,some seed contamination,contaminated.  4/8
+2,B135,1,B135_row-22_rep-1_W,4,116,135,145,29,59.182,83.312,676.9,0,76.6,11.3162948736889,47.5,18.6,18.4,2.18,4,3,3,5,5,3,3,2,1,some seed contamination,
+2,B135,2,B135_row-23_rep-2_E,7,113,126,152,39,59.944,87.122,853.9,10,107,12.5307413046024,61.7,28,16.3,2.84,3,2,3,4,5,2,2,2,1,some seed contamination,
+2,B135,3,B135_row-30_rep-3_W,6,109,121,146,37,54.356,102.362,495.5,0,66.6,13.4409687184662,51.9,28.2,27.1,1.92,4,3,3,4,5,3,3,2,1,some seed contamination,irregular heading and flowering 
+0,B136,1,E08_row-1_rep-GBS1_E,5,75,86,92,17,58.42,74.93,401.6,13,33.4,8.31673306772908,46.3,25.3,18.2,2.24,5,3,3,4,3,3,4,3,0,extreme lats,extreme lats
+1,B136,1,B136_row-6_rep-1_W,7,112,121,127,15,50.292,59.69,531.4,19,52.6,9.89838163342115,34.9,12.3,13.9,1.48,2,4,2,4,3,2,2,1,0,extreme lats,extreme lats
+1,B136,2,B136_row-10_rep-2_W,5,96,112,117,21,51.308,74.422,812.1,18,74.6,9.18606082994705,61.7,28.3,15.6,1.77,2,2,3,3,2,1,1,1,0,extreme lats,EXTREME (TM) laterals
+1,B136,3,B136_row-16_rep-3_E,5,110,112,144,34,56.388,71.882,553.8,12,37,6.68111231491513,29.8,16.9,11.1,2.14,2,4,3,4,3,2,3,2,0,extreme lats,
+2,B136,1,B136_row-22_rep-1_W,7,109,113,118,9,53.34,74.422,515.9,12,57.8,11.2037216514828,41.6,18,11.5,1.74,3,4,2,3,2,3,3,2,0,extreme lats,
+2,B136,2,B136_row-24_rep-2_E,9,98,109,113,15,60.96,68.072,534.8,0,52.1,9.74195961106956,53.2,23.6,17.1,2.48,5,3,1,4,2,2,3,2,0,extreme lats,
+2,B136,3,B136_row-30_rep-3_W,9,100,101,119,19,72.644,74.168,400.1,2,46.3,11.5721069732567,56.2,20.7,14.3,2,5,2,1,4,3,2,4,2,0,extreme lats,"one white flowered at end, probably mistake looks like b120"
+0,B137,1,E09_row-1_rep-GBS1_E,3,75,97,100,25,44.45,71.628,596.5,2,90.5,15.1718357082984,50.6,20.4,14.8,2.42,5,4,4,3,3,4,4,3,0,irregular heading and flowering,
+1,B137,1,B137_row-6_rep-1_W,9,111,123,132,21,54.102,58.42,405.8,0,66.1,16.2888122227698,45.5,22.1,16.7,2.5,4,4,3,4,2,3,4,3,0,irregular heading and flowering,
+1,B137,2,B137_row-14_rep-2_W,9,107,124,132,25,43.18,64.262,434.1,9,55.8,12.8541810642709,68.8,32.6,14.4,2.24,4,4,2,4,2,3,4,2,0,irregular heading and flowering,
+1,B137,3,B137_row-15_rep-3_E,8,119,124,171,52,56.388,59.69,478.5,24,26.4,5.51724137931035,32.1,19.6,15,2.32,3,3,2,4,3,2,3,2,0,irregular heading and flowering,
+2,B137,1,B137_row-22_rep-1_W,6,125,139,150,25,52.07,88.646,1057.5,5,174.6,16.5106382978723,82.1,38,22.5,1.48,5,3,5,3,3,2,4,2,0,irregular heading and flowering,slow? 
+2,B137,2,B137_row-26_rep-2_W,7,148,113,158,10,51.562,52.324,205.6,0,24.4,11.8677042801556,28.7,11.8,11.4,1.84,5,4,3,4,4,4,5,4,0,irregular heading and flowering,irregular heading and flowering. contaminated?? 
+2,B137,3,B137_row-29_rep-3_W,9,104,110,130,26,48.26,80.772,1132.9,5,217.5,19.19851708006,98.6,45,34.5,2.08,5,4,4,3,2,3,4,4,0,irregular heading and flowering,irregular heading and flowering 
+0,B138,1,E10_row-1_rep-GBS1_E,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B139,1,E11_row-1_rep-GBS1_E,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B140,1,E12_row-1_rep-GBS1_E,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,flowered in tray probably not oleracea
+0,B141,1,F01_row-1_rep-GBS1_E,4,62,80,88,26,35.56,73.914,671.2,3,155.6,23.1823599523242,94.5,51.1,17.9,2.04,5,5,4,3,4,4,5,4,0,no notes,
+1,B141,1,B141_row-6_rep-1_W,6,92,108,112,20,29.972,69.342,592.4,0,181.9,30.7056043214045,99.7,39.1,21.7,2.1,5,5,5,3,4,4,5,5,0,no notes,
+1,B141,2,B141_row-14_rep-2_W,5,95,112,116,21,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5,5,4,3,4,4,5,4,0,no notes,missed sampling head? 
+1,B141,3,B141_row-13_rep-3_W,5,95,112,115,20,28.448,67.31,491.1,0,141.1,28.7314192628792,82.6,36.6,25.5,1.5,5,5,4,3,4,5,5,5,0,no notes,
+2,B141,1,B141_row-22_rep-1_W,5,89,105,108,19,28.194,67.818,454.7,2,140,30.7895315592698,77.4,40.3,17.9,2.08,5,4,4,3,3,5,5,4,0,no notes,
+2,B141,2,B141_row-25_rep-2_W,5,87,106,108,21,27.432,65.024,256.6,2,67.5,26.3055339049104,43.7,22.8,19.1,1.82,5,4,4,3,3,4,5,3,0,no notes,
+2,B141,3,B141_row-29_rep-3_W,6,87,101,107,20,29.21,61.214,299.5,1,88.3,29.4824707846411,60.2,27.1,18,2.14,5,4,4,2,3,4,5,4,0,no notes,
+0,B142,1,F02_row-1_rep-GBS1_E,5,69,106,110,41,36.576,61.468,508.7,5,106.7,20.9750344014154,68.8,32.3,20.8,1.58,5,5,4,4,3,4,5,4,0,no notes,
+0,B142,1,G10_row-2_rep-GBS1_E,4,64,84,89,25,34.544,59.69,671.7,6,152,22.6291499181182,94.7,46.7,9.9,2.28,5,4,3,4,2,4,4,4,0,no notes,
+1,B142,1,B142_row-5_rep-1_W,12,94,115,120,26,34.798,59.182,471.9,0,108.2,22.9285865649502,79.9,33.9,16.3,2.18,5,3,4,4,2,4,4,4,0,no notes,
+1,B142,2,B142_row-12_rep-2_E,11,104,127,130,26,39.624,65.024,244.7,0,66.4,27.1352676747037,60,24.9,16.6,1.84,4,4,4,4,2,3,4,3,0,no notes,
+1,B142,3,B142_row-13_rep-3_W,11,104,127,134,30,37.592,45.72,432.3,1,89.1,20.6106870229008,65.2,28.7,18.2,2.04,5,5,4,4,4,5,5,5,0,no notes,
+2,B142,1,B142_row-21_rep-1_W,11,92,113,117,25,35.052,47.752,426.1,0,85.7,20.112649612767,76.8,29.9,25.5,2.22,5,4,4,4,3,4,5,4,0,no notes,
+2,B142,2,B142_row-26_rep-2_W,11,83,102,109,26,38.608,56.642,431.1,2,84,19.4850382741823,65.5,30.4,17.2,1.9,5,5,3,3,2,4,5,3,0,no notes,
+2,B142,3,B142_row-31_rep-3_E,6,89,108,125,36,39.878,49.53,383.9,0,84.8,22.0890856994009,67.9,30.6,19.8,1.96,5,5,4,3,3,4,5,4,0,no notes,
+0,B143,1,F03_row-1_rep-GBS1_E,6,62,74,78,16,39.624,60.96,476.6,0,104.8,21.9890893831305,82.4,42.2,19,1.74,5,4,4,4,3,3,4,3,0,some early heading,
+1,B143,1,B143_row-5_rep-1_W,5,92,115,120,28,35.306,55.88,586.1,0,135.8,23.1701074901894,100.7,56.6,21.7,1.52,5,4,4,3,5,4,5,5,0,some early heading,
+1,B143,2,B143_row-11_rep-2_E,5,100,112,116,16,37.846,60.96,230.3,0,51.4,22.3187147199305,58,19.7,19.3,1.38,5,4,3,5,3,4,5,4,0,some early heading,
+1,B143,3,B143_row-15_rep-3_E,9,95,114,125,30,35.56,74.422,283.8,0,69.2,24.3833685694151,65.3,27.2,17.8,1.48,5,4,4,3,4,4,4,4,0,some early heading,some very early heading 
+2,B143,1,B143_row-21_rep-1_W,3,88,105,107,19,39.116,54.61,258.3,0,61.4,23.7708091366628,60.3,22.6,27,2.06,5,4,3,4,3,4,5,4,0,some early heading,
+2,B143,2,B143_row-27_rep-2_E,4,87,105,112,25,41.91,53.848,207.1,0,47.3,22.8392081120232,49,23.9,16.8,2.1,5,4,3,4,4,5,5,4,0,some early heading,
+2,B143,3,B143_row-31_rep-3_E,5,86,105,108,22,39.878,47.752,224,0,61.3,27.3660714285714,62.3,29.7,20.8,2.36,5,4,3,4,4,4,4,3,0,some early heading,
+0,B144,1,F04_row-1_rep-GBS1_E,5,77,101,104,27,42.672,61.976,862.7,2,181.3,21.0154167149646,NA,31.8,9.6,1.5,4,3,5,2,2,3,4,4,0,no notes,
+1,B144,1,B144_row-5_rep-1_W,10,107,127,136,29,37.084,39.116,591.5,0,124.1,20.9805579036348,69.4,29.7,13.7,1.48,5,4,5,3,2,3,4,3,0,no notes,
+1,B144,2,B144_row-11_rep-2_E,12,119,139,143,24,35.052,48.514,394.6,1,100.1,25.3674607197162,58.5,30.7,18.2,0.96,5,4,5,3,2,3,4,3,0,no notes,
+1,B144,3,B144_row-14_rep-3_E,10,113,124,130,17,39.37,39.624,548.3,2,141.2,25.7523253693234,66.1,37.3,15,0.98,4,3,5,3,2,3,4,3,0,no notes,
+2,B144,1,B144_row-21_rep-1_W,11,105,120,122,17,35.814,41.402,517.6,0,186.2,35.9737248840804,89.6,41.2,21,1.36,5,3,5,3,2,5,4,4,0,no notes,
+2,B144,2,B144_row-28_rep-2_E,12,101,115,122,21,37.592,45.974,653,1,171.4,26.2480857580398,78.2,44.2,30.6,1.3,5,4,5,3,2,4,4,4,0,no notes,
+2,B144,3,B144_row-31_rep-3_E,12,106,122,130,24,39.116,73.66,550.9,0,169.2,30.7133781085496,89.9,54.1,16.1,1.56,5,4,4,4,3,2,3,3,0,no notes,
+0,B145,1,G06_row-1_rep-GBS1_E,3,70,97,101,31,39.37,69.088,676.6,0,141.6,20.9281702630801,81.9,30.9,25.7,1.58,5,3,4,3,2,4,4,3,0,no notes,
+0,B146,1,F06_row-1_rep-GBS1_E,4,72,96,97,25,40.132,54.61,736.6,0,135.2,18.3546022264458,91.6,38.1,17.2,1.76,5,4,4,3,2,3,4,3,0,no notes,
+1,B146,1,B146_row-5_rep-1_W,10,97,123,127,30,43.688,67.818,856,1,175.8,20.5373831775701,87.5,37.9,22,1.12,4,3,3,3,2,2,3,2,0,no notes,
+1,B146,2,B146_row-10_rep-2_W,10,103,124,127,24,38.862,64.008,529.8,1,101.4,19.1392978482446,78.2,38.6,20.3,1.16,5,4,4,3,2,4,4,3,0,no notes,
+1,B146,3,B146_row-16_rep-3_E,12,105,115,127,22,39.37,72.644,871.7,0,206.3,23.6663989904784,110.4,49.8,23.1,1.3,4,3,4,3,2,3,3,3,0,no notes,
+2,B146,1,B146_row-21_rep-1_W,10,96,107,117,21,38.1,72.644,449.5,1,111.6,24.8275862068966,61.3,22.8,21.6,1.6,5,4,5,3,3,4,5,4,0,no notes,
+2,B146,2,B146_row-28_rep-2_E,10,95,109,112,17,32.512,71.12,683.7,0,147,21.5006581834138,64.7,27.4,23.4,1.76,5,4,4,2,3,3,5,4,0,no notes,
+2,B146,3,B146_row-30_rep-3_W,11,96,112,115,19,34.29,66.802,551.7,1,164.7,29.8531810766721,98.3,52,25.6,1.44,5,4,4,2,3,4,4,4,0,no notes,
+0,B147,1,F07_row-1_rep-GBS1_E,6,98,108,114,16,30.988,72.136,697.4,1,151.5,21.7235445942071,77.3,44.3,27,1.44,5,4,4,4,4,4,5,4,0,some irregular heading,
+1,B147,1,B147_row-5_rep-1_W,12,122,139,141,19,34.544,73.914,895.7,0,177.4,19.8057385285252,80.8,41.4,32.3,1.72,5,4,5,4,4,5,5,5,0,some irregular heading,
+1,B147,2,B147_row-8_rep-2_E,10,123,141,155,32,35.052,77.47,672.8,5,149.4,22.205707491082,62.4,30.2,20,1.34,4,3,5,3,3,4,3,3,0,some irregular heading,
+1,B147,3,B147_row-16_rep-3_E,9,130,147,150,20,35.306,78.74,1097.1,5,212.1,19.3327864369702,98.4,3.4,23.3,1.14,5,4,4,4,3,4,5,4,0,some irregular heading,
+2,B147,1,B147_row-21_rep-1_W,10,117,141,148,31,36.322,59.69,770.5,2,148.4,19.2602206359507,72.1,34.4,21.1,1.26,5,5,4,3,4,5,5,5,0,some irregular heading,
+2,B147,2,B147_row-27_rep-2_E,10,112,133,150,38,41.402,66.548,1096.6,3,201.2,18.3476199161043,83.8,36.2,34.7,1.34,5,5,5,3,4,4,5,4,0,some irregular heading,irregular heading and flowering 
+2,B147,3,B147_row-29_rep-3_W,10,114,142,151,37,30.734,80.01,804.7,0,149.2,18.5410712066609,81.5,45,20.6,1.28,5,4,5,4,4,4,5,4,0,some irregular heading,
+0,B148,1,F08_row-1_rep-GBS1_E,5,67,86,90,23,38.1,61.976,755.8,1,158.6,20.9843874040752,86.6,36.1,21.4,1.24,5,4,5,3,3,4,4,4,0,no notes,
+1,B148,1,B148_row-5_rep-1_W,11,97,115,119,22,34.29,77.216,857.3,0,184.4,21.5093899451767,83,40.7,31.2,1.52,5,4,5,3,4,4,4,4,0,no notes,
+1,B148,2,B148_row-12_rep-2_E,10,107,127,130,23,37.084,81.28,499.5,2,114.9,23.003003003003,69.4,24.9,8.4,1.36,5,4,5,3,3,3,4,2,0,no notes,missing plants? maybe wrong plot? 
+1,B148,3,B148_row-18_rep-3_W,11,104,124,128,24,30.48,78.74,861.8,0,192.6,22.3485727546995,90.2,42,34.5,1.3,5,4,5,3,3,5,5,5,0,no notes,
+2,B148,1,B148_row-21_rep-1_W,8,90,107,112,22,37.592,66.548,491.3,3,115.2,23.447995115001,57,25.1,19.1,1.62,5,4,5,2,2,4,5,3,0,no notes,
+2,B148,2,B148_row-28_rep-2_E,11,89,103,109,20,51.816,74.676,271.7,0,67.7,24.9171880750828,50.6,22.8,14.4,1.56,5,4,5,3,3,4,4,4,0,no notes,
+2,B148,3,B148_row-32_rep-3_E,10,89,101,105,16,54.864,76.454,421.4,2,102.2,24.2524916943522,59,32.6,21.6,1.58,5,5,5,2,3,4,5,4,0,no notes,
+0,B150,1,F10_row-1_rep-GBS1_E,5,67,102,110,43,46.736,82.55,843,17,200,23.7247924080664,91.3,38.1,23.8,1.56,5,4,5,2,3,3,4,3,0,some stunting,
+1,B150,1,B150_row-5_rep-1_W,12,114,138,141,27,49.53,81.788,601.2,0,193.4,32.168995342648,80.2,24.4,23.7,1.08,4,4,5,2,4,3,4,3,0,some stunting,
+1,B150,2,B150_row-13_rep-2_W,12,118,140,148,30,46.736,91.44,650.6,7,206.7,31.7706732247156,87.1,29.4,15,1.54,5,5,4,1,4,3,5,4,0,some stunting,
+1,B150,3,B150_row-17_rep-3_W,12,123,129,143,20,37.846,96.774,533.3,0,174.4,32.7020438777424,76.6,33.1,24.5,1.5,5,5,4,1,4,4,5,4,0,some stunting,
+2,B150,1,B150_row-21_rep-1_W,10,108,125,144,36,54.61,92.202,272.9,0,135.8,49.7618175155735,60,28.9,17.7,1.08,5,4,4,2,4,4,5,4,0,some stunting,
+2,B150,2,B150_row-27_rep-2_E,9,120,147,152,32,44.45,69.088,242.1,0,82.8,34.2007434944238,49.5,27.7,15.3,1.3,5,5,3,2,4,3,4,3,0,some stunting,slow or stunted? 
+2,B150,3,B150_row-32_rep-3_E,10,107,127,139,32,37.592,81.28,409.9,0,118.1,28.8119053427665,73.4,23.8,13.8,1.24,5,4,4,2,3,3,4,4,0,some stunting,
+0,B151,1,F11_row-1_rep-GBS1_E,6,84,105,108,24,40.64,65.786,757.3,0,157,20.731546282847,74.4,43.5,32.2,1.54,5,4,4,2,4,4,5,4,0,no notes,
+1,B151,1,B151_row-5_rep-1_W,11,112,133,137,25,39.37,75.184,821,0,136.2,16.5895249695493,63,31.5,23.6,1.28,5,5,5,3,4,4,5,4,0,no notes,
+1,B151,2,B151_row-14_rep-2_W,11,125,133,141,16,36.068,70.612,388.4,0,91.7,23.6096807415036,49.8,25.8,18.3,1.54,5,5,4,3,4,4,5,4,0,no notes,
+1,B151,3,B151_row-17_rep-3_W,12,117,127,132,15,36.83,60.198,571.7,1,127.1,22.2319398285814,64,34.2,27.2,1.5,5,5,4,2,4,3,5,4,0,no notes,
+2,B151,1,B151_row-21_rep-1_W,10,108,119,126,18,34.036,62.484,866,0,249.6,28.8221709006928,103.2,52.4,26.3,1.4,5,5,4,2,4,4,5,5,0,no notes,
+2,B151,2,B151_row-25_rep-2_W,9,107,126,136,29,28.702,70.104,586.1,0,162.6,27.742706022863,79.5,36.3,23.1,1.2,5,5,4,2,4,4,5,4,0,no notes,
+2,B151,3,B151_row-31_rep-3_E,10,115,131,143,28,29.972,74.168,668.2,0,153.6,22.9871296019156,81.9,32.6,23.7,1.34,5,4,5,2,3,4,5,4,0,no notes,
+0,B152,1,F12_row-1_rep-GBS1_E,5,72,92,100,28,28.956,64.77,903.2,0,194.2,21.5013286093888,73.4,30.6,29.7,2.88,2,1,5,1,3,2,3,2,0,no notes,
+1,B152,1,B152_row-6_rep-1_W,11,108,127,132,24,30.226,59.182,566,4,146.8,25.9363957597173,73.1,29.9,17.9,1.4,4,3,5,2,4,4,4,3,0,no notes,
+1,B152,2,B152_row-12_rep-2_E,12,114,133,139,25,26.162,69.596,470.7,5,127.8,27.151051625239,71.1,36.6,23.1,1.34,3,2,4,2,2,2,3,2,0,no notes,
+1,B152,3,B152_row-18_rep-3_W,12,111,129,147,36,25.654,52.324,701.2,4,156.4,22.3046206503137,74.7,36.3,22.9,1.68,4,4,5,3,4,4,4,4,0,no notes,
+2,B152,1,B152_row-22_rep-1_W,10,104,113,116,12,26.924,69.596,415.1,5,61.3,14.7675258973741,33.9,25.5,22,1.42,5,3,4,1,4,3,4,3,0,no notes,
+2,B152,2,B152_row-26_rep-2_W,10,100,114,121,21,41.148,69.596,579.2,3,178,30.732044198895,75.8,30.6,27.6,1.28,5,3,4,2,5,4,4,5,0,no notes,
+2,B152,3,B152_row-29_rep-3_W,10,97,114,119,22,33.528,76.2,544.7,2,140.6,25.8123737837342,56.2,33.6,20.6,1.36,4,3,5,1,4,4,4,4,0,no notes,
+0,B153,1,G01_row-1_rep-GBS1_E,1,67,NA,NA,NA,40.386,60.706,649.3,3,156.1,24.0412752194671,99,50.2,25.1,1.34,4,3,5,3,4,4,4,3,NA,no notes,
+1,B153,1,B153_row-6_rep-1_W,12,98,109,114,16,35.56,69.85,468.5,3,96.8,20.6616862326574,81.8,37.3,28.5,1.76,4,5,3,4,2,3,4,3,0,no notes,
+1,B153,2,B153_row-12_rep-2_E,11,100,115,119,19,39.116,83.312,452.1,0,82.3,18.2039371820394,60.4,25,32.5,1.72,3,4,4,3,3,2,3,2,0,no notes,
+1,B153,3,B153_row-17_rep-3_W,12,102,112,117,15,36.068,78.232,543.1,3,131.3,24.1760265144541,100.7,44.9,27.6,1.3,4,4,3,3,2,3,4,3,0,no notes,
+2,B153,1,B153_row-22_rep-1_W,6,93,107,109,16,37.338,88.646,465.7,2,131.1,28.151170281297,74.6,33.2,22.8,1.36,4,2,4,3,2,3,4,3,0,no notes,
+2,B153,2,B153_row-25_rep-2_W,4,90,105,109,19,28.448,81.28,425.6,0,104.4,24.5300751879699,67.8,34.1,22.3,1.84,3,3,5,3,2,4,4,3,0,no notes,
+2,B153,3,B153_row-29_rep-3_W,3,90,105,109,19,28.194,71.12,323.3,0,82.8,25.6108877203835,61,32.2,22.1,1.9,4,4,4,2,3,3,4,3,0,no notes,
+0,B154,1,G02_row-1_rep-GBS1_E,3,73,99,102,29,30.988,66.548,738.4,6,138.6,18.7703141928494,87.9,35.9,24.6,1.68,5,5,4,3,3,5,5,5,0,no notes,
+1,B154,1,B154_row-6_rep-1_W,5,96,121,128,32,29.972,31.242,579.6,1,144.1,24.8619737750173,104.6,38.4,37.3,1.64,5,4,2,4,3,4,5,3,0,no notes,
+1,B154,2,B154_row-9_rep-2_W,5,94,113,128,34,29.972,66.802,813.5,0,140.2,17.2341733251383,106.6,48.7,22.5,2.02,5,4,4,4,2,4,5,4,0,no notes,
+1,B154,3,B154_row-17_rep-3_W,5,101,116,120,19,29.718,82.55,435.7,2,86.4,19.8301583658481,77.2,36.6,24.9,1.62,5,5,4,4,4,4,5,4,0,no notes,
+2,B154,1,B154_row-22_rep-1_W,4,90,108,111,21,28.956,80.772,414.3,0,81.3,19.6234612599566,57,24.3,18.5,1.82,5,4,4,4,3,4,5,4,0,no notes,
+2,B154,2,B154_row-25_rep-2_W,5,89,104,107,18,41.656,72.644,431.9,0,109.9,25.4457050243112,60.6,32.9,20.7,1.82,5,5,4,4,3,4,5,4,0,no notes,
+2,B154,3,B154_row-30_rep-3_W,5,91,105,110,19,45.466,73.66,422.5,0,80.5,19.0532544378698,61.4,30,23.4,1.7,5,4,4,4,4,4,4,4,0,no notes,
+0,B155,1,G03_row-1_rep-GBS1_E,4,69,101,105,36,41.148,72.136,737.3,3,142.2,19.2865861928659,70.5,35,14.7,0.74,2,5,4,4,2,2,2,2,0,no notes,
+1,B155,1,B155_row-6_rep-1_W,5,122,130,133,11,42.672,73.152,683.3,3,200.4,29.3282599151178,NA,NA,NA,NA,5,4,3,4,3,4,4,4,0,no notes,harvested late
+1,B155,2,B155_row-10_rep-2_W,5,124,144,157,33,41.148,67.31,623.4,7,117,18.7680461982676,73.4,26.3,20.6,1.46,4,4,4,4,3,3,4,3,0,no notes,
+1,B155,3,B155_row-17_rep-3_W,4,111,142,148,37,41.656,74.93,1235.4,8,213.2,17.2575683988991,108.3,40.6,25.9,1.58,4,4,5,4,3,3,4,3,0,no notes,
+2,B155,1,B155_row-22_rep-1_W,3,106,131,134,28,40.64,70.104,800.9,5,163.1,20.364589836434,86.7,45.4,27.8,1.16,5,5,5,4,3,4,4,4,0,no notes,
+2,B155,2,B155_row-26_rep-2_W,3,106,124,146,40,46.736,115.824,623.5,0,117.8,18.8933440256616,65.4,32.2,21.3,1.08,5,5,5,4,3,4,5,4,0,no notes,
+2,B155,3,B155_row-32_rep-3_E,3,106,126,133,27,43.434,64.77,858.9,2,172.4,20.0721853533589,86.6,43.7,30.7,0.9,5,5,5,4,4,3,4,4,0,no notes,
+0,B156,1,G04_row-1_rep-GBS1_E,4,72,99,103,31,46.99,73.152,374.7,0,93.9,25.0600480384307,64.1,29.8,17,1.68,5,4,3,3,4,4,5,3,0,no notes,
+1,B156,1,B156_row-6_rep-1_W,5,97,124,129,32,39.624,62.23,658.7,1,137.2,20.8289054197662,109.6,53.4,32.1,1.66,5,5,4,3,3,4,5,4,0,no notes,
+1,B156,2,B156_row-8_rep-2_E,4,102,124,129,27,42.672,64.516,461,0,90.3,19.587852494577,69.1,33.1,25.6,1.64,5,5,4,3,5,5,5,5,0,no notes,
+1,B156,3,B156_row-18_rep-3_W,5,105,128,130,25,34.798,64.262,383.2,0,91.7,23.9300626304802,55.5,25.2,13.5,1.56,5,4,4,3,4,4,5,4,0,no notes,
+2,B156,1,B156_row-22_rep-1_W,5,87,111,113,26,41.656,69.088,343.9,0,79.4,23.0881070078511,50.8,27.7,22.8,1.7,5,5,4,2,3,4,5,4,0,no notes,
+2,B156,2,B156_row-24_rep-2_E,4,92,102,109,17,51.308,61.722,745.7,0,173.3,23.2399088105136,78.9,36.7,29.8,1.62,5,5,4,4,3,4,5,4,0,no notes,
+2,B156,3,B156_row-30_rep-3_W,4,90,100,107,17,69.342,53.34,NA,NA,NA,NA,NA,NA,NA,NA,5,4,3,3,3,4,4,3,0,no notes,missed some data?? 
+0,B159,1,G07_row-1_rep-GBS1_E,3,67,92,96,29,61.976,50.292,694.1,1,155.4,22.3887047975796,82.6,31.7,25.6,1.16,5,5,5,3,4,5,5,5,0,no notes,
+1,B159,1,B159_row-6_rep-1_W,5,94,112,116,22,55.372,77.47,542.5,0,128.8,23.741935483871,99.3,43.5,23.9,1.82,5,3,4,3,4,4,5,4,0,no notes,
+1,B159,2,B159_row-9_rep-2_W,5,105,115,122,17,54.61,78.232,194.5,0,37.6,19.3316195372751,49.5,19.2,16.5,1.56,5,4,3,3,4,4,4,4,0,no notes,
+1,B159,3,B159_row-16_rep-3_E,5,103,115,125,22,53.34,65.278,344.2,0,61.5,17.8675188843696,63.4,28.2,22,1.42,5,4,3,5,3,3,4,3,0,no notes,
+2,B159,1,B159_row-22_rep-1_W,5,93,105,107,14,51.816,73.152,399.2,0,88.8,22.2444889779559,64,30.5,21.7,1.92,5,4,3,3,4,4,5,4,0,no notes,
+2,B159,2,B159_row-26_rep-2_W,5,92,105,109,17,34.544,52.324,331.7,0,66.9,20.1688272535424,64.6,28.5,22.8,1.6,5,3,2,3,4,4,4,3,0,no notes,
+2,B159,3,B159_row-30_rep-3_W,5,88,101,105,17,33.782,65.024,330,0,63.6,19.2727272727273,51.4,26.7,21.1,1.76,4,4,3,4,4,4,4,3,0,no notes,
+0,B161,1,G09_row-2_rep-GBS1_E,5,79,99,101,22,37.084,53.086,446,15,84.9,19.0358744394619,70.7,23.9,6.7,2.5,3,1,4,3,2,1,2,1,0,no notes,
+0,B163,1,G11_row-2_rep-GBS1_E,1,123,NA,NA,NA,28.956,49.53,416.4,0,97,23.2949087415946,23.5,14.8,9.3,2.16,4,2,1,2,2,2,3,1,NA,no notes,no plant for flowers 
+0,B164,1,G12_row-2_rep-GBS1_E,2,68,111,115,47,31.75,56.642,834.2,0,152.4,18.2690002397507,80.3,45.6,32,2.22,5,2,4,3,3,4,4,4,0,no notes,
+0,B165,1,H01_row-2_rep-GBS1_E,5,66,80,85,19,28.956,78.232,451.7,0,118,26.1235333185743,92,38.9,30.2,2.46,5,4,3,3,3,5,5,4,0,no notes,
+0,B166,1,H02_row-2_rep-GBS1_E,1,104,NA,NA,NA,NA,NA,489.9,0,82.4,16.8197591345172,60.5,30.6,21.5,1.78,5,4,4,4,3,4,5,4,NA,no notes,
+0,B167,1,H03_row-2_rep-GBS1_E,4,80,93,96,16,39.37,62.992,651.3,4,133.8,20.5435283279595,17.5,37.9,26.7,1.3,5,5,5,2,3,4,5,4,0,no notes,
+0,B168,1,H04_row-2_rep-GBS1_E,4,77,105,108,31,45.212,61.722,838.4,11,125,14.9093511450382,49.3,29.3,57.8,2.4,1,NA,4,5,2,1,2,1,0,extreme lats,extreme laterals
+0,B169,1,H05_row-2_rep-GBS1_E,3,79,NA,NA,NA,39.37,40.386,657.8,15,139.7,21.2374581939799,96.2,37.1,11.5,1.18,3,3,4,4,2,1,1,1,NA,no notes,
+0,B170,1,H06_row-2_rep-GBS1_E,3,74,NA,NA,NA,37.846,52.578,867,21,136.1,15.6978085351788,79.9,39.7,28.6,2.38,3,1,4,4,2,1,2,1,NA,no notes,
+0,B171,1,H07_row-2_rep-GBS1_E,5,105,127,133,28,37.592,66.294,375.2,0,74.8,19.9360341151386,58.5,32.5,15.8,0.92,3,4,4,4,2,2,2,2,0,no notes,
+0,B172,1,H08_row-2_rep-GBS1_E,2,74,87,91,17,40.64,60.706,460,18,101.2,22,78.6,31.5,24.2,2.4,4,4,4,3,2,3,4,3,0,no notes,
+0,B173,1,H09_row-2_rep-GBS1_E,2,NA,NA,NA,NA,39.878,49.53,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B174,1,H10_row-2_rep-GBS1_E,4,72,92,95,23,53.594,49.53,353.8,0,68.2,19.2764273600904,66.5,32.2,24.3,1.9,5,4,2,3,4,5,4,4,0,no notes,
+0,B175,1,H11_row-2_rep-GBS1_E,5,97,113,122,25,38.608,60.96,275.5,2,74.2,26.9328493647913,45,19.8,18.3,1.38,3,2,4,3,3,3,3,2,0,no notes,
+0,B176,2,H12_row-2_rep-GBS2_E,3,85,105,107,22,35.052,75.946,405.9,6,72.9,17.960088691796,30,16.2,9,1.66,2,3,NA,3,0,NA,1,1,0,no notes,
+0,B181,2,A05_row-2_rep-GBS2_E,5,57,85,91,34,37.084,63.5,709.4,0,207.3,29.2218776430787,98.6,50,11.8,1.26,4,4,4,3,3,4,4,4,0,no notes,
+1,B181,1,B181_row-6_rep-1_W,6,97,113,116,19,43.18,51.054,508.3,1,127,24.985244934094,70.7,28,14.6,1.06,3,3,4,3,3,3,3,3,0,no notes,
+1,B181,2,B181_row-13_rep-2_W,6,100,115,125,25,38.608,61.214,355.2,0,82.7,23.2826576576577,47.4,25.9,15.5,1.34,3,3,3,3,2,2,3,2,0,no notes,
+1,B181,3,B181_row-15_rep-3_E,6,102,116,130,28,72.898,60.452,243.8,0,74.6,30.5988515176374,53.7,27.2,15.6,1.42,3,3,3,3,3,2,3,2,0,no notes,
+2,B181,1,B181_row-22_rep-1_W,3,94,107,109,15,49.53,59.944,398.4,0,115.1,28.890562248996,56.4,30.7,18.2,1.6,3,4,3,2,2,3,3,3,0,no notes,
+2,B181,2,B181_row-26_rep-2_W,5,86,105,108,22,56.388,60.452,320.7,0,73,22.7627065793577,41.7,18.6,14.9,1.16,4,3,3,2,2,2,3,2,0,no notes,
+2,B181,3,B181_row-32_rep-3_E,5,87,105,109,22,56.896,40.386,467.3,0,125.2,26.7922105713674,67.3,36.5,25.9,1.4,4,4,4,3,2,4,4,3,0,no notes,
+0,B182,2,A06_row-2_rep-GBS2_E,5,70,77,73,3,36.068,61.214,568.8,4,105.9,18.6181434599156,65.5,32.3,11.3,1.52,5,4,4,2,2,4,5,4,0,no notes,
+1,B182,1,B182_row-6_rep-1_W,6,94,108,113,19,NA,NA,813.2,7,161.4,19.8475159862273,93.6,51.8,30.1,2.22,5,4,4,3,2,4,4,3,0,no notes,
+1,B182,2,B182_row-14_rep-2_W,5,101,112,114,13,37.338,48.26,319.1,0,55.5,17.3926668755876,52.7,24.4,11.7,1.76,5,4,4,3,3,4,5,3,0,no notes,
+1,B182,3,B182_row-14_rep-3_E,6,97,108,112,15,36.322,49.53,620.7,4,134.9,21.7335266634445,94.7,50.1,17.1,1.64,5,3,4,3,2,4,4,3,0,no notes,
+2,B182,1,B182_row-22_rep-1_W,6,90,99,106,16,36.576,54.61,353.9,1,73.6,20.7968352641989,64.5,30.1,16.5,1.66,5,4,3,2,2,3,4,3,0,no notes,
+2,B182,2,B182_row-23_rep-2_E,4,88,97,101,13,32.512,72.136,749.3,9,131.3,17.5230214867209,52.5,23.1,21.9,2.16,5,4,4,1,2,3,4,3,0,no notes,
+2,B182,3,B182_row-31_rep-3_E,10,92,102,106,14,33.274,69.088,738.6,10,147.1,19.9160574059031,70.1,36.4,17.6,1.92,4,3,4,2,2,3,4,3,0,no notes,
+0,B183,2,A07_row-2_rep-GBS2_E,4,46,NA,NA,NA,27.94,69.85,288.8,0,NA,NA,40,19.6,2.9,NA,5,NA,5,1,4,4,NA,1,NA,botrytis,Cauliflower
+1,B183,1,B183_row-5_rep-1_W,6,94,NA,NA,NA,30.48,46.228,297.7,0,137.7,46.2546187437017,82.3,32.1,21.6,NA,5,1,4,1,3,2,NA,1,NA,botrytis,botrytis? flowers didn't open
+1,B183,2,B183_row-14_rep-2_W,6,98,NA,NA,NA,30.988,64.516,762.1,0,NA,NA,120,62.7,0,NA,5,1,5,1,4,3,NA,1,NA,botrytis,"botrytis?  Early purple head, didn't really flower"
+1,B183,3,B183_row-13_rep-3_W,6,91,NA,NA,NA,28.702,68.58,231,0,107.1,46.3636363636364,89,50.1,1.5,NA,5,1,3,2,1,1,1,1,NA,botrytis,botrytis? didn't flower
+2,B183,1,B183_row-21_rep-1_W,6,104,NA,NA,NA,33.02,71.882,781.3,0,202.8,25.9567387687188,80.9,47.1,38,NA,5,1,5,1,4,4,NA,1,NA,botrytis,"cauliflower, didn't flower"
+2,B183,2,B183_row-24_rep-2_E,6,100,NA,NA,NA,35.052,78.994,814.8,0,325.9,39.9975454099165,124.4,58.6,40.5,NA,5,NA,5,1,5,4,NA,NA,NA,botrytis,botrytis did not flower 
+2,B183,3,B183_row-31_rep-3_E,4,107,NA,NA,NA,35.306,83.312,915.7,0,288,31.4513486949874,108.6,62.5,42.6,NA,5,1,5,1,5,4,NA,1,NA,botrytis,"cauli, didn't flower"
+1,B187,1,B187_row-5_rep-1_W,12,66,70,79,13,29.972,31.496,244,2,NA,NA,129.2,56,4.3,1.275,5,NA,2,4,2,2,NA,1,0,irregular heading and flowering,very early flowering
+1,B187,2,B187_row-7_rep-2_E,12,61,70,77,16,35.052,67.31,135.8,3,NA,NA,NA,NA,NA,1.82,5,1,1,4,1,1,NA,NA,0,irregular heading and flowering,early irregular flowering
+1,B187,3,B187_row-13_rep-3_W,11,63,72,80,17,37.592,68.072,70.3,3,NA,NA,74.6,36.6,6.6,1.44,5,2,2,5,4,2,NA,1,0,irregular heading and flowering,early irregular flowering 
+2,B187,1,B187_row-21_rep-1_W,8,69,93,106,37,35.052,89.408,139,0,69.6,50.0719424460432,83.4,31.4,22.5,NA,5,NA,5,3,3,3,NA,1,0,irregular heading and flowering,
+2,B187,2,B187_row-25_rep-2_W,8,81,105,109,28,33.528,83.312,379.1,0,159.8,42.152466367713,103.4,59.4,40.8,NA,5,NA,5,2,2,3,1,NA,0,irregular heading and flowering,
+2,B187,3,B187_row-32_rep-3_E,8,65,99,104,39,11.43,39.37,190.6,3,50.4,26.4428121720881,38.4,21,8.4,NA,3,NA,4,1,4,4,NA,1,0,irregular heading and flowering,
+0,B189,2,B01_row-2_rep-GBS2_E,4,77,99,100,23,18.288,55.626,811.5,5,158.2,19.4947627849661,70.4,37,22,1.04,4,3,5,3,4,3,4,4,0,not enough plants,
+1,B189,1,B189_row-5_rep-1_W,1,105,NA,NA,NA,23.876,63.754,986.4,7,200.8,20.3568532035685,86.9,39.5,17.5,1.2,5,4,5,4,2,3,4,3,NA,not enough plants,big lats. only one plant 
+1,B189,2,B189_row-10_rep-2_W,1,109,NA,NA,NA,17.272,51.308,738.1,7,113.9,15.4315133450752,59.4,31.2,17.7,1.38,3,4,5,3,3,3,4,3,NA,not enough plants,no plants remaining 
+1,B189,3,B189_row-12_rep-3_E,1,105,NA,NA,NA,22.352,86.36,364.7,4,80.5,22.0729366602687,65.7,26.4,26.2,1.96,5,4,3,4,3,3,4,3,NA,not enough plants,no plants remaining 
+2,B189,1,B189_row-21_rep-1_W,1,102,NA,NA,NA,24.384,71.12,734.6,12,164,22.3250748706779,79,37.5,24.3,1.48,5,3,4,4,4,4,4,4,NA,no notes,extreme lats
+0,B190,2,B02_row-2_rep-GBS2_E,4,79,92,98,19,28.956,70.866,728.6,7,138.9,19.063958276146,70.6,32.6,26.2,1.42,5,3,5,3,4,4,4,4,0,no notes,
+1,B190,1,B190_row-5_rep-1_W,1,112,NA,NA,NA,27.432,41.91,703.7,3,208.4,29.6148927099616,76.5,30.8,15.5,1.5,5,2,5,2,2,3,4,3,NA,no notes,only one plant 
+1,B190,2,B190_row-11_rep-2_E,1,135,NA,NA,NA,33.274,34.798,669.9,7,204,30.4523063143753,70.7,39.6,22.8,1.16,5,2,4,3,4,3,3,3,NA,no notes,no plants remaining 
+1,B190,3,B190_row-16_rep-3_E,1,118,NA,NA,NA,27.686,24.13,754,0,174.4,23.1299734748011,62.7,27.6,20.3,1.06,5,5,5,2,4,4,4,3,NA,no notes,
+2,B190,1,B190_row-21_rep-1_W,2,111,130,134,23,26.67,36.576,770,4,293,38.0519480519481,106.1,79.1,12.1,1.18,5,4,5,2,4,3,5,4,0,no notes,
+2,B190,2,B190_row-24_rep-2_E,1,101,NA,NA,NA,27.432,46.99,1040.7,7,276.5,26.5686557125012,86.7,39.8,25.9,1.4,5,4,5,2,4,4,5,4,0,no notes,
+2,B190,3,B190_row-32_rep-3_E,2,108,144,NA,NA,22.352,48.768,591.8,1,154,26.0223048327138,62,28.2,18.3,1.26,5,2,4,3,4,3,3,3,0,no notes,
+0,B191,2,B03_row-2_rep-GBS2_E,5,72,84,84,12,36.83,74.676,670.1,13,29.1,4.34263542754813,46.7,21.8,21.2,2.76,3,3,1,5,3,2,3,1,0,"extreme lats, irregular heading and flowering",
+1,B191,1,B191_row-5_rep-1_W,12,106,121,126,20,36.322,84.582,623.3,25,23.9,3.83442964864431,47.2,22,13.4,1.98,4,2,2,5,3,3,4,3,0,"extreme lats, irregular heading and flowering","extreme lats, irregular heading and flowering "
+1,B191,2,B191_row-11_rep-2_E,11,134,127,180,46,37.592,78.74,770.8,16,56.6,7.34302023871303,48.3,20.2,16.1,2.12,4,2,3,4,2,3,3,2,0,"extreme lats, irregular heading and flowering",irregular heading and flowering 
+1,B191,3,B191_row-18_rep-3_W,8,130,135,145,15,35.052,52.07,377.1,12,56.9,15.088835852559,57.3,28.3,13.9,2.22,4,3,2,5,3,2,4,2,0,"extreme lats, irregular heading and flowering",
+2,B191,1,B191_row-21_rep-1_W,6,104,110,117,13,34.798,79.756,445.1,20,33.2,7.45899797798248,50.1,26,18.6,1.74,4,2,2,4,3,2,3,2,0,"extreme lats, irregular heading and flowering",
+2,B191,2,B191_row-25_rep-2_W,5,104,107,137,33,33.782,71.12,554.9,6,42.4,7.64101639935123,29.3,11.6,13.8,1.74,5,3,2,4,3,2,4,2,0,"extreme lats, irregular heading and flowering",very irregular flowering and heading 
+2,B191,3,B191_row-32_rep-3_E,8,108,112,126,18,26.416,62.992,905.8,17,53.9,5.95054095826893,56.3,21.1,10.8,1.92,4,2,2,5,2,1,3,2,0,"extreme lats, irregular heading and flowering",flowered in tray:extreme lats
+0,B192,2,B04_row-2_rep-GBS2_E,4,72,84,85,13,32.512,60.706,746.2,6,112,15.0093808630394,62.9,27.3,20.8,1.24,5,4,3,3,2,2,4,3,0,extreme lats,
+1,B192,1,B192_row-5_rep-1_W,8,105,114,123,18,31.242,59.69,638.4,6,106.6,16.6979949874687,75.7,38,11.3,1.42,5,4,3,2,2,2,5,3,0,extreme lats,
+1,B192,2,B192_row-12_rep-2_E,8,107,115,122,15,33.782,82.042,665.5,11,98.3,14.770848985725,68.8,28.4,17.5,1.78,4,3,3,2,2,1,3,2,0,extreme lats,
+1,B192,3,B192_row-18_rep-3_W,8,107,115,124,17,26.924,77.978,887.2,14,145.9,16.4449954914337,99.1,44.9,18.7,1.76,5,4,4,2,2,3,4,4,0,extreme lats,extreme lats
+2,B192,1,B192_row-21_rep-1_W,6,101,111,114,13,28.448,64.262,411.3,0,79.9,19.4262095793824,74.5,27.8,19.6,1.46,4,4,4,2,2,3,4,3,0,extreme lats,
+2,B192,2,B192_row-26_rep-2_W,3,94,101,104,10,56.388,96.52,640.1,4,125.6,19.6219340728011,62.9,34.8,19.9,1.62,5,4,4,2,2,2,4,3,0,extreme lats,
+2,B192,3,B192_row-31_rep-3_E,5,96,100,108,12,70.104,79.502,580.4,4,113.8,19.6071674707099,62.3,33.2,17.7,1.72,4,4,4,2,3,3,4,4,0,extreme lats,
+0,B193,2,B05_row-2_rep-GBS2_E,4,66,90,95,29,61.722,80.01,757.5,NA,67.9,8.96369636963697,76.1,29.4,22,2.56,5,2,3,4,3,3,4,3,0,no notes,
+1,B193,1,B193_row-5_rep-1_W,5,109,127,129,20,70.612,59.436,486.1,0,124.8,25.6737296852499,77.1,38.6,16.2,1.56,4,2,4,3,2,3,3,3,0,no notes,
+1,B193,2,B193_row-14_rep-2_W,5,104,121,127,23,54.356,82.042,494.7,1,123.4,24.9444107539923,74.8,32.1,17.76,1.42,5,4,5,3,2,3,5,4,0,no notes,
+1,B193,3,B193_row-17_rep-3_W,5,107,129,132,25,58.166,85.852,526.4,2,135.7,25.7788753799392,75.7,40.9,19.1,1.664,5,3,4,3,2,3,3,3,0,no notes,
+2,B193,1,B193_row-21_rep-1_W,5,99,111,113,14,51.816,95.25,547.6,0,177.7,32.4506939371804,93.4,50.8,27.3,1.74,5,4,4,3,3,4,4,4,0,no notes,
+2,B193,2,B193_row-25_rep-2_W,5,94,107,111,17,40.894,92.71,447.8,0,133,29.7007592675301,74.6,34.6,22.5,1.56,5,4,4,2,3,3,4,3,0,no notes,
+2,B193,3,B193_row-27_rep-3_E,5,95,116,120,25,36.83,88.9,512.6,0,153.9,30.0234100663285,85.9,44.8,20.8,1.52,5,4,5,2,3,3,4,4,0,no notes,
+0,B194,2,B06_row-2_rep-GBS2_E,4,77,103,106,29,34.798,90.17,889.5,3,183.2,20.5958403597527,74.7,34.6,24.7,1.72,5,3,5,2,2,3,4,3,NA,no notes,
+1,B194,1,B194_row-5_rep-1_W,11,108,129,132,24,38.354,86.868,628.3,3,156.9,24.9721470635047,67.2,36.3,18.6,1.6,4,4,4,2,3,2,4,4,0,no notes,
+1,B194,2,B194_row-13_rep-2_W,9,122,133,137,15,35.306,82.042,498.3,1,172.9,34.6979731085691,85.5,30.7,21.5,1.26,4,4,4,3,3,2,3,3,0,no notes,
+1,B194,3,B194_row-16_rep-3_E,11,115,129,133,18,37.084,85.344,696.3,0,199.3,28.6227200919144,76.8,30.7,23,1.58,4,3,4,3,3,2,3,3,0,no notes,
+2,B194,1,B194_row-21_rep-1_W,12,111,121,126,15,35.56,79.502,646.7,0,245.2,37.9155713623009,93.5,43,28.2,1.46,5,5,5,2,4,5,5,5,0,no notes,
+2,B194,2,B194_row-25_rep-2_W,10,105,119,129,24,49.022,68.834,737.1,2,228,30.9320309320309,87.5,38.6,38.3,1.34,5,3,5,2,3,4,4,4,0,no notes,
+2,B194,3,B194_row-31_rep-3_E,12,106,113,122,16,34.29,69.85,485.7,2,126,25.9419394688079,50.6,25.9,17.2,1.42,5,3,4,2,4,4,4,3,0,no notes,
+0,B195,2,B07_row-2_rep-GBS2_E,4,84,101,109,25,33.274,69.596,994.7,5,180.2,18.1160148788579,80.5,59.4,22.8,1.34,4,4,5,3,2,3,4,3,0,no notes,
+1,B195,1,B195_row-7_rep-1_E,11,124,133,142,18,34.036,67.564,884.6,1,150,16.9568166402894,75.4,43.7,26.5,1.58,5,4,5,4,3,4,5,4,0,no notes,
+1,B195,2,B195_row-9_rep-2_W,11,126,135,150,24,34.29,73.406,679.5,1,140.9,20.7358351729213,80.6,36.2,15.6,1.8,4,2,5,3,3,2,3,2,0,no notes,
+1,B195,3,B195_row-13_rep-3_W,12,126,129,146,20,30.988,67.31,553.2,0,118.8,21.4750542299349,59.5,29,25.9,1.46,5,4,5,4,4,3,4,4,0,no notes,3 late heading and flowering 
+2,B195,1,B195_row-22_rep-1_W,11,114,146,151,37,36.322,69.342,794.5,4,180.5,22.7186910006293,73.8,33.4,22.8,1.46,5,4,5,3,3,4,4,4,0,no notes,
+2,B195,2,B195_row-26_rep-2_W,10,116,133,147,31,33.528,79.502,522.8,5,123.2,23.5654169854629,71.8,28.6,12.1,1.22,5,4,4,4,3,4,5,3,0,no notes,
+2,B195,3,B195_row-32_rep-3_E,9,117,134,145,28,33.02,80.772,464.2,0,100.9,21.7363205514864,54.7,24.6,15.4,1.32,5,4,4,3,4,4,3,2,0,no notes,
+0,B196,2,B08_row-2_rep-GBS2_E,4,68,87,89,21,40.64,61.722,504.6,5,119.6,23.7019421323821,54.1,23.3,22.7,0.96,1,1,4,3,2,1,1,1,0,extreme lats,
+1,B196,1,B196_row-7_rep-1_E,3,100,125,128,28,36.068,74.422,611.2,4,180.5,29.5320680628272,93.6,46.8,28.1,1.86,2,2,5,3,2,2,1,1,0,extreme lats,
+1,B196,2,B196_row-11_rep-2_E,2,98,128,132,34,31.496,81.534,362,10,99.6,27.5138121546961,53.3,25,16.1,1.4,1,3,2,3,2,1,1,1,0,extreme lats,extreme lats
+1,B196,3,B196_row-14_rep-3_E,3,100,129,132,32,30.226,90.17,427.4,8,99.5,23.2802994852597,65.9,27.1,10.7,1.56,3,2,3,3,2,2,2,2,0,extreme lats,extreme lats
+2,B196,1,B196_row-22_rep-1_W,2,93,109,114,21,37.592,67.564,388.9,7,126,32.3990743121625,77.1,41.8,24.4,1.7,4,4,4,2,3,3,4,4,0,extreme lats,
+2,B196,2,B196_row-25_rep-2_W,1,94,NA,NA,NA,37.338,65.024,314.9,2,121.9,38.7107018100984,76.6,35,22.8,1.56,3,2,4,2,3,3,3,3,NA,extreme lats,NO PLANTS TO SAMPLE FLOWERING
+2,B196,3,B196_row-31_rep-3_E,2,89,112,NA,NA,46.99,69.596,442.3,12,130.2,29.4370336875424,67,30.6,13.5,1.36,3,2,4,2,2,2,2,2,0,extreme lats,
+0,B198,2,B10_row-2_rep-GBS2_E,4,87,112,116,29,54.864,58.674,912.1,7,173,18.9672185067427,64.7,27.6,22.9,1.36,2,4,4,2,2,2,3,2,0,extreme lats,
+1,B198,1,B198_row-7_rep-1_E,11,128,133,146,18,46.228,59.436,522,12,113.4,21.7241379310345,60.9,33.3,18.7,1.3,5,3,5,3,2,2,4,3,0,extreme lats,extreme lats
+1,B198,2,B198_row-11_rep-2_E,12,134,141,153,19,39.116,62.23,476.6,14,127.9,26.8359211078472,70.8,31.2,17.2,1.46,5,3,5,3,2,2,4,2,0,extreme lats,
+1,B198,3,B198_row-15_rep-3_E,12,120,133,139,19,38.1,53.34,596,17,103.5,17.3657718120805,47.1,17.9,20.4,1.52,3,3,4,3,3,4,3,3,0,extreme lats,
+2,B198,1,B198_row-22_rep-1_W,9,113,127,156,43,37.846,57.404,947,16,199.7,21.0876451953537,78.7,39.1,23.5,1.4,5,5,5,3,3,4,5,4,0,extreme lats,extreme lats
+2,B198,2,B198_row-28_rep-2_E,9,110,124,143,33,27.432,62.738,412,9,98.3,23.8592233009709,52.6,27.2,18.6,1.42,5,4,5,3,3,4,5,4,0,extreme lats,
+2,B198,3,B198_row-31_rep-3_E,10,116,135,143,27,31.75,66.04,554.2,9,117.6,21.2197762540599,52.8,19.7,14.2,1.3,4,2,5,2,3,2,3,2,0,extreme lats,
+0,B200,2,B12_row-2_rep-GBS2_E,4,63,71,76,13,25.146,57.912,564.4,9,181.6,32.1757618710135,96.6,44,9.8,1.06,4,4,4,3,2,2,2,2,0,no notes,
+1,B200,1,B200_row-7_rep-1_E,12,96,112,114,18,27.686,62.23,363,2,105.1,28.9531680440771,64,31.9,20.4,0.84,4,2,5,3,4,3,3,2,0,no notes,
+1,B200,2,B200_row-10_rep-2_W,11,96,108,113,17,30.988,56.388,519.2,3,158.7,30.5662557781202,94.9,43,25.6,0.92,5,4,5,3,3,3,2,2,0,no notes,
+1,B200,3,B200_row-17_rep-3_W,12,95,108,117,22,28.956,66.04,650.3,10,166.3,25.5728125480547,84.2,46.5,12.7,1.3,4,1,4,3,2,2,3,2,0,no notes,
+2,B200,1,B200_row-22_rep-1_W,8,85,98,102,17,26.67,62.23,514.3,1,132.4,25.7437293408516,74.2,35,23.5,1.48,4,3,4,3,2,3,3,3,0,no notes,
+2,B200,2,B200_row-26_rep-2_W,8,82,94,99,17,40.132,61.976,328,2,87.1,26.5548780487805,59,29.3,14.3,0.96,5,4,4,2,2,3,4,3,0,no notes,
+2,B200,3,B200_row-29_rep-3_W,8,84,97,100,16,41.656,69.342,437.2,3,111.2,25.4345837145471,64.9,29.4,26.7,1.04,5,4,5,3,3,3,4,4,0,no notes,
+0,B203,2,C03_row-2_rep-GBS2_E,3,NA,NA,NA,NA,41.656,62.992,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,evidence of contaimination,floweree in tray. not sure if oleracea. no plants for flowering. likely contaminated 
+1,B203,1,B203_row-7_rep-1_E,12,124,129,140,16,37.846,64.008,500.6,19,33.9,6.7718737514982,36.3,19.2,10.7,1.62,4,2,1,4,2,3,3,2,0,evidence of contaimination,contaminated.   6/10 non oleracea
+1,B203,2,B203_row-10_rep-2_W,12,130,144,160,30,37.846,75.438,245.8,4,24.8,10.0895036615134,35.4,18.9,16,4.02,3,2,1,3,3,3,3,2,0,evidence of contaimination,"contaminated some early flowering.  4/10 non oleracea, oleracea are slightly irregular "
+1,B203,3,B203_row-18_rep-3_W,12,107,121,125,18,35.306,62.23,611,10,46.1,7.54500818330606,46.9,25.8,13,3.26,5,3,2,4,3,3,4,2,0,evidence of contaimination,contaminated. 5/11.  extreme lats
+2,B203,1,B203_row-22_rep-1_W,8,105,NA,NA,NA,34.036,80.772,467.9,12,62.3,13.3148108570207,54.4,24.1,18,2.46,4,2,2,3,1,2,3,2,NA,evidence of contaimination,"flowered in tray (extreme lats), "
+2,B203,2,B203_row-27_rep-2_E,8,116,133,158,42,29.21,63.5,520.7,16,34.8,6.68331092759746,38.2,13.4,9.2,1.58,5,3,4,3,2,3,4,2,0,evidence of contaimination,"extreme lats, irregular heading and flowering "
+2,B203,3,B203_row-31_rep-3_E,9,116,NA,NA,NA,33.274,57.15,707.3,21,29.4,4.15665205711862,42.2,14.8,9.5,1.52,5,1,2,4,2,2,3,2,0,evidence of contaimination,flowered in tray: extreme lats. only one plant heading (Oct 15) 
+0,B204,2,C04_row-2_rep-GBS2_E,3,79,NA,NA,NA,35.814,63.5,810.2,11,49.5,6.10960256726734,48.1,17.9,11.9,2.64,3,3,2,4,3,2,3,1,NA,irregular heading and flowering, extreme lats
+1,B204,1,B204_row-7_rep-1_E,12,109,121,164,55,32.258,61.468,443.7,16,28.4,6.40072120802344,31,15.3,13.3,1.92,3,4,2,5,2,2,4,2,0,,
+1,B204,2,B204_row-10_rep-2_W,11,128,127,165,37,34.29,68.58,197.2,11,20.7,10.4969574036511,15.7,7.6,3.4,1.84,3,4,1,5,0,1,2,1,0,,diseased irregular flowering and heading 
+1,B204,3,B204_row-18_rep-3_W,11,127,129,155,28,31.75,59.944,301.8,10,80.6,26.7064280980782,44.7,21.2,15.6,1.1,4,2,2,4,3,2,3,2,0,,
+2,B204,1,B204_row-22_rep-1_W,8,120,140,149,29,30.988,64.77,279.8,8,35.8,12.794853466762,26.9,11.6,6.9,1.66,5,4,2,5,3,3,4,2,0,,extreme head extension 
+2,B204,2,B204_row-28_rep-2_E,8,99,101,122,23,49.53,31.75,434.7,16,22.6,5.19898780768346,34.6,16.1,14.3,1.76,4,2,2,5,2,2,4,2,0,,
+2,B204,3,B204_row-31_rep-3_E,9,114,112,140,26,67.056,67.31,327.1,17,21.9,6.69520024457353,30.7,14.2,13,1.58,4,1,1,5,2,2,2,2,0,,"extreme lats, irregular heading and flowering "
+0,B205,2,C05_row-2_rep-GBS2_E,4,80,97,106,26,55.626,67.31,863.1,18,41.4,4.79666319082377,44.4,19.4,19,2.62,4,1,2,4,2,2,3,2,0,irregular heading and flowering, extreme lats
+1,B205,1,B205_row-7_rep-1_E,12,112,121,138,26,46.736,79.248,704.3,5,86.4,12.2674996450376,52,24.8,18.3,1.9,4,3,3,4,4,4,4,3,0,irregular heading and flowering, extreme lats
+1,B205,2,B205_row-10_rep-2_W,11,107,114,NA,NA,37.592,74.422,441,14,35.1,7.95918367346939,48.6,21.5,15.8,2.82,5,2,2,5,2,2,3,2,0,irregular heading and flowering," extreme lats,"
+1,B205,3,B205_row-17_rep-3_W,10,107,121,124,17,66.802,74.93,564.5,19,18.6,3.29495128432241,21.8,7.6,6.2,2.36,3,3,2,5,2,2,3,1,0,irregular heading and flowering, extreme lats
+2,B205,1,B205_row-22_rep-1_W,9,116,128,147,31,70.104,76.454,250.6,12,25.8,10.2952913008779,30,11,10.5,1.72,4,3,2,4,3,3,4,2,0,irregular heading and flowering, extreme lats
+2,B205,2,B205_row-25_rep-2_W,10,106,101,114,8,52.07,84.328,607,20,41.5,6.83690280065898,44.8,22.2,9.5,1.28,4,4,3,4,2,3,4,2,0,irregular heading and flowering, extreme lats
+2,B205,3,B205_row-32_rep-3_E,6,104,105,148,44,66.04,71.882,430.1,17,23.3,5.41734480353406,25.9,12.3,7.5,2.1,4,3,2,4,2,2,3,2,0,irregular heading and flowering,"extreme lats, irregular heading and flowering "
+0,B206,2,C06_row-2_rep-GBS2_E,2,78,92,96,18,52.07,50.8,963.7,5,138.1,14.330185742451,58.9,27.2,23.1,1.64,5,4,5,3,3,4,4,4,0,extreme lats,biiig lats
+1,B206,1,B206_row-5_rep-1_W,12,109,127,134,25,30.734,62.484,934.5,6,193.5,20.7062600321027,89.7,42.7,19.5,1.44,5,4,5,3,3,4,5,4,0,extreme lats,
+1,B206,2,B206_row-8_rep-2_E,9,118,133,137,19,42.672,64.516,465.5,1,130.3,27.9914070891515,61.2,37.1,15.8,1.44,5,5,5,3,3,4,4,4,0,extreme lats,
+1,B206,3,B206_row-15_rep-3_E,12,112,133,140,28,107.442,55.88,754.7,1,158.8,21.0414734331522,80.8,42,27.7,1.6,5,5,5,3,4,5,5,4,0,extreme lats,
+2,B206,1,B206_row-21_rep-1_W,9,107,128,135,28,58.928,71.628,601.5,1,166.1,27.6142975893599,84.7,41.5,25.4,1.18,5,4,5,3,3,5,5,5,0,extreme lats,
+2,B206,2,B206_row-26_rep-2_W,10,108,119,126,18,46.228,80.01,568.6,2,147,25.8529722124516,67.7,28.9,21.3,1.2,5,4,5,3,3,4,4,4,0,extreme lats,
+2,B206,3,B206_row-32_rep-3_E,9,111,127,135,24,57.15,79.502,880.5,5,213.1,24.2021578648495,93.7,49.1,30.3,1.42,5,5,5,2,4,4,5,5,0,extreme lats,
+0,B210,2,C10_row-2_rep-GBS2_E,2,NA,NA,NA,NA,60.198,72.39,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B210,1,B210_row-5_rep-1_W,11,NA,NA,NA,NA,60.96,61.976,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B210,2,B210_row-9_rep-2_W,12,NA,NA,NA,NA,50.546,57.658,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+1,B210,3,B210_row-17_rep-3_W,9,NA,NA,NA,NA,54.356,80.518,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B210,1,B210_row-21_rep-1_W,11,NA,NA,NA,NA,55.372,71.882,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B210,2,B210_row-26_rep-2_W,10,NA,NA,NA,NA,29.972,83.058,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+2,B210,3,B210_row-30_rep-3_W,11,NA,NA,NA,NA,35.56,85.344,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B211,2,C11_row-2_rep-GBS2_E,5,NA,NA,NA,NA,35.306,76.708,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,not enough plants,
+1,B211,1,B211_row-8_rep-1_E,12,NA,NA,NA,NA,33.528,81.026,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,not enough plants,
+1,B211,2,B211_row-10_rep-2_W,13,194,NA,NA,NA,41.91,84.328,333.6,42,15.6,4.67625899280576,13.1,10.5,4,1.76,2,2,2,4,3,3,3,1,NA,not enough plants,only one plant heading Oct 29th 
+1,B211,3,B211_row-15_rep-3_E,12,152,NA,NA,NA,39.116,87.63,691.1,42,26.3,3.80552742005498,19,8.5,6.9,1.86,2,2,2,5,3,1,2,1,1,not enough plants,"extreme lats, only one early flowering Oct 28"
+2,B211,1,B211_row-21_rep-1_W,11,169,NA,NA,NA,37.338,89.154,NA,NA,NA,NA,NA,NA,NA,NA,3,2,2,4,4,2,NA,1,1,not enough plants,only one plant heading and flowering. one head ready oct 29th 
+2,B211,2,B211_row-25_rep-2_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,not enough plants,
+2,B211,3,B211_row-29_rep-3_W,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,not enough plants,
+0,B212,2,C12_row-2_rep-GBS2_E,5,NA,119,NA,NA,NA,NA,396.5,40,14,3.53089533417402,14.6,6.9,3.4,1.86,3,2,2,5,2,2,2,1,1,irregular heading and flowering," extreme lats,irregular heading. first head oct 6th. on Oct 28th only one head "
+1,B212,1,B212_row-8_rep-1_E,11,130,148,NA,NA,NA,NA,566.1,43,22.1,3.9039039039039,34.8,10.6,2.1,2.78,3,2,1,4,2,2,3,1,1,irregular heading and flowering," extreme lats,extreme lats. one flowered way before all others  "
+1,B212,2,B212_row-11_rep-2_E,12,151,150,NA,NA,NA,NA,184.2,36,15.5,8.41476655808904,15.5,23.6,10.9,1.925,2,2,2,5,3,3,3,1,1,irregular heading and flowering," extreme lats,extreme lats, one very early flowering, one by oct 28th  "
+1,B212,3,B212_row-13_rep-3_W,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B212,1,B212_row-21_rep-1_W,8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B212,2,B212_row-25_rep-2_W,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+2,B212,3,B212_row-29_rep-3_W,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,irregular heading and flowering, extreme lats
+0,B213,2,D01_row-2_rep-GBS2_E,4,64,78,83,19,67.056,24.13,900.9,14,105.6,11.7216117216117,82.4,33.5,21,2,4,4,1,4,1,2,3,2,0,no notes,
+1,B213,1,B213_row-8_rep-1_E,10,96,106,110,14,79.502,61.468,662.8,13,97.1,14.6499698249849,71,40.2,26.2,2.18,4,2,1,4,2,3,4,2,0,no notes,
+1,B213,2,B213_row-9_rep-2_W,9,96,108,112,16,NA,NA,435,8,72,16.551724137931,53.1,27.2,18.7,1.42,5,5,2,4,2,2,5,3,0,no notes,
+1,B213,3,B213_row-14_rep-3_E,10,92,108,113,21,NA,NA,378.7,8,68.9,18.1938209664642,48,26.6,15.2,2.14,4,3,3,3,2,3,4,2,0,no notes,
+2,B213,1,B213_row-24_rep-1_E,10,87,94,103,16,NA,NA,301.5,4,53.4,17.7114427860697,48.7,22.8,17.9,1.56,5,4,2,3,2,2,4,3,0,no notes,
+2,B213,2,B213_row-25_rep-2_W,12,87,97,104,17,100.838,46.228,559.2,5,68.8,12.3032904148784,40,17.8,15.6,1.88,5,3,3,1,3,3,3,3,0,no notes,
+2,B213,3,B213_row-30_rep-3_W,12,89,100,105,16,78.994,61.468,813.3,8,117.4,14.4350178285995,72,32.3,24.3,1.84,5,3,2,4,2,3,3,3,0,no notes,extreme lats
+0,B214,2,D02_row-2_rep-GBS2_E,4,101,128,134,33,90.17,47.498,1273.9,2,277.3,21.7677996703038,90.3,36.4,23,1.14,4,3,5,3,4,3,3,3,0,"few plants, irregular heading and flowering",
+1,B214,1,B214_row-8_rep-1_E,6,134,149,175,41,NA,NA,768.8,2,219.2,28.5119667013528,76.3,30.4,32.8,1.02,3,4,5,3,3,2,2,2,0,"few plants, irregular heading and flowering",
+1,B214,2,B214_row-11_rep-2_E,7,145,147,183,38,NA,NA,651.7,1,133.5,20.4848856835967,55,29.2,10,0.9,5,5,5,3,3,3,4,4,0,"few plants, irregular heading and flowering",irregular heading and flowering 
+1,B214,3,B214_row-13_rep-3_W,7,142,167,183,41,NA,NA,814.8,0,173.8,21.3303878252332,64,41.1,18.9,1,5,4,5,3,4,3,4,3,0,"few plants, irregular heading and flowering",
+2,B214,1,B214_row-24_rep-1_E,1,114,NA,NA,NA,NA,NA,1215,7,228.6,18.8148148148148,87.7,32.2,20.9,1.2,5,4,4,3,5,5,5,5,NA,"few plants, irregular heading and flowering","only one plant: extreme lats, no flowering data"
+2,B214,2,B214_row-26_rep-2_W,1,148,NA,NA,NA,52.832,70.866,440.9,2,93.7,21.2519845770016,54,19,15.4,1.08,5,4,5,3,4,5,5,4,NA,"few plants, irregular heading and flowering","only one plant, still trying to head on Oct 15, stunted end of row"
+2,B214,3,B214_row-30_rep-3_W,3,113,136,148,35,46.99,78.486,1021.8,1,223.6,21.882951653944,87.1,37.4,29,1.4,5,4,5,2,4,3,4,3,0,"few plants, irregular heading and flowering",
+0,B215,2,D03_row-2_rep-GBS2_E,6,66,80,82,16,43.434,71.628,753.5,2,125.9,16.7086927670869,90,35.2,34.9,2,5,4,3,4,2,3,4,3,0,no notes,
+1,B215,1,B215_row-8_rep-1_E,12,95,110,117,22,42.672,65.278,575.3,0,78.1,13.5755258126195,77.9,27.1,15.4,1.23,5,5,2,4,2,2,4,3,0,no notes,
+1,B215,2,B215_row-11_rep-2_E,12,101,115,118,17,40.132,65.532,473.2,0,76.7,16.2087912087912,79.6,24.2,19.1,1.76,5,5,2,5,2,3,5,3,0,no notes,
+1,B215,3,B215_row-18_rep-3_W,10,96,112,115,19,48.514,77.47,761,0,99.1,13.0223390275953,82,41.2,20,1.74,5,4,3,4,2,3,4,4,0,no notes,
+2,B215,1,B215_row-24_rep-1_E,10,85,101,103,18,52.07,79.756,433.6,1,58.7,13.5378228782288,56.7,24.8,13.9,1.52,4,4,3,3,2,3,3,3,0,no notes,
+2,B215,2,B215_row-28_rep-2_E,11,89,101,103,14,42.926,79.502,783,0,78.3,10,63.6,28.9,20.8,1.76,4,5,3,4,2,3,4,3,0,no notes,
+2,B215,3,B215_row-29_rep-3_W,12,86,100,103,17,39.116,64.516,485.3,2,80.1,16.5052544817639,64.7,29,17.2,1.82,5,4,3,4,1,2,3,3,0,no notes,
+0,B216,2,D04_row-2_rep-GBS2_E,5,69,92,96,27,46.228,72.644,863.2,6,101.6,11.7701575532901,36.9,12.2,6.7,0.92,2,3,1,4,3,3,NA,2,0,no notes,
+1,B216,1,B216_row-8_rep-1_E,12,112,128,130,18,39.878,84.328,753,3,54.1,7.18459495351926,38.6,15.3,19,1.52,2,4,1,4,0,1,NA,1,0,no notes,
+1,B216,2,B216_row-12_rep-2_E,12,109,129,140,31,39.37,76.454,492.2,2,65.9,13.3888663145063,42.4,12.3,12.5,1.02,2,5,1,4,0,3,NA,1,0,no notes,
+1,B216,3,B216_row-18_rep-3_W,12,106,125,136,30,36.068,48.006,694.3,3,81.8,11.7816505833213,49.7,13.5,4.1,0.72,2,5,1,4,3,1,NA,1,0,no notes,
+2,B216,1,B216_row-24_rep-1_E,11,96,113,117,21,38.608,73.914,331.3,0,34.2,10.3229701177181,31.5,14.3,11.7,1.3,3,5,2,4,3,2,NA,2,0,no notes,
+2,B216,2,B216_row-27_rep-2_E,12,100,113,122,22,54.864,85.852,637.8,7,56.3,8.82721856381311,35.7,15.7,16.7,0.92,3,3,2,4,4,2,NA,2,0,no notes,
+2,B216,3,B216_row-32_rep-3_E,12,100,113,116,16,53.34,76.454,616.5,2,61.1,9.91078669910787,43.9,16.4,15.3,1.1,2,3,2,4,4,2,NA,2,0,no notes,
+0,B217,2,E07_row-2_rep-GBS2_E,5,95,109,115,20,53.34,76.454,660.7,0,159.3,24.1107915846829,74.7,34.9,23.7,1.04,5,4,5,2,4,4,4,4,0,no notes,
+1,B217,1,B217_row-7_rep-1_E,12,123,141,148,25,53.594,86.36,464.6,0,161.4,34.739560912613,78.7,34.5,27.1,1.58,5,4,5,2,5,4,5,4,0,no notes,
+1,B217,2,B217_row-14_rep-2_W,11,123,141,143,20,51.308,74.422,621,0,166.6,26.8276972624799,73.5,30.5,26.4,1.28,5,5,5,2,5,4,5,4,0,no notes,
+1,B217,3,B217_row-16_rep-3_E,12,119,140,146,27,51.816,68.072,653,0,157.9,24.1807044410413,87.6,42.1,29.7,1.34,4,3,5,1,4,4,4,3,0,no notes,
+2,B217,1,B217_row-23_rep-1_E,11,112,126,133,21,52.324,59.944,509.4,0,135.4,26.5802905378877,66,26.8,23.4,1.08,5,5,4,3,5,4,5,4,0,no notes,
+2,B217,2,B217_row-27_rep-2_E,10,114,137,154,40,55.372,74.168,475.7,0,151,31.7426949758251,82.3,32.7,26.8,1.18,5,5,4,2,4,4,4,4,0,no notes,
+2,B217,3,B217_row-31_rep-3_E,12,112,127,140,28,71.882,69.596,603,1,142.6,23.6484245439469,73.9,33.8,20.1,0.94,5,5,4,2,5,4,4,3,0,no notes,
+0,B218,1,A12_row-1_rep-GBS1_E,3,86,111,113,27,63.5,59.436,1091.1,5,194.6,17.8352121712034,88.9,33.7,19.7,1.24,5,3,5,3,2,3,4,4,0,no notes,
+1,B218,1,B218_row-7_rep-1_E,12,120,129,136,16,58.928,71.12,438.5,2,117.4,26.7730900798176,77.3,41.5,21.7,1.52,3,4,5,4,3,2,4,4,0,no notes,
+1,B218,2,B218_row-12_rep-2_E,11,116,135,141,25,59.436,61.976,654.9,4,159.7,24.385402351504,83.3,40.9,16.4,1.42,3,3,5,3,2,2,3,3,0,no notes,
+1,B218,3,B218_row-16_rep-3_E,12,118,133,140,22,58.928,73.914,465.4,4,93.3,20.0472711645896,69.7,25,24.3,1.44,3,4,5,3,3,3,3,3,0,no notes,
+2,B218,1,B218_row-23_rep-1_E,11,113,128,141,28,59.182,76.708,504.2,0,109.5,21.717572391908,69.1,29,16.5,1.06,5,5,5,4,3,4,5,4,0,no notes,
+2,B218,2,B218_row-28_rep-2_E,12,111,125,140,29,34.29,81.788,396.5,0,105.1,26.5069356872636,73.7,41.4,23.6,1.22,5,5,4,3,3,3,4,3,0,no notes,
+2,B218,3,B218_row-32_rep-3_E,12,108,123,137,29,30.988,90.932,568.5,1,160.9,28.3025505716799,87.2,47.7,17.2,1.22,5,4,5,3,2,3,4,3,0,no notes,
+0,B219,1,G05_row-1_rep-GBS1_E,5,90,121,129,39,35.052,88.392,1043.2,8,192.5,18.4528374233129,74.5,40.3,29.1,1.32,5,4,5,2,3,4,4,4,0,some extreme lats," some irregular flowering,extreme lats "
+1,B219,1,B219_row-7_rep-1_E,12,124,139,147,23,38.862,75.692,583.4,2,153.9,26.3798423037367,76.7,38.7,17,1,4,2,5,2,2,2,2,2,0,some extreme lats, some irregular flowering
+1,B219,2,B219_row-13_rep-2_W,12,128,140,147,19,36.068,80.01,450.6,0,143,31.7354638260098,79.6,31.9,24.6,1.48,4,3,5,3,3,3,3,3,0,some extreme lats, some irregular flowering
+1,B219,3,B219_row-15_rep-3_E,12,127,142,150,23,32.512,84.074,527.4,1,167.4,31.740614334471,81.1,41.6,27.3,0.86,4,1,5,2,2,2,2,3,0,some extreme lats, some irregular flowering
+2,B219,1,B219_row-23_rep-1_E,12,112,143,152,40,28.956,93.218,451.5,0,139.5,30.8970099667774,83,29.3,16.8,0.82,5,3,5,2,3,3,4,3,0,some extreme lats, some irregular flowering
+2,B219,2,B219_row-26_rep-2_W,11,108,122,138,30,44.196,66.04,549.5,3,136.6,24.8589626933576,60.4,27,19.3,0.76,5,4,4,2,3,3,4,3,0,some extreme lats, some irregular flowering
+2,B219,3,B219_row-29_rep-3_W,12,109,128,137,28,44.958,65.532,633.8,5,195.1,30.7825812559167,94.5,34.2,21.4,0.98,5,4,4,2,3,3,4,3,0,some extreme lats," some irregular flowering,late flowering  "
+1,B145,1,B220_row-7_rep-1_E,12,100,125,129,29,44.45,62.738,586.5,0,163.7,27.9113384484228,110.7,49.7,25.4,1.52,4,4,4,3,2,4,4,3,NA,no notes,
+1,B145,2,B220_row-11_rep-2_E,11,100,127,131,31,46.482,52.832,572.1,0,115.2,20.1363398007341,72.4,28.1,18.3,1.34,4,4,4,3,2,2,2,2,0,no notes,
+1,B145,3,B220_row-17_rep-3_W,12,102,109,115,13,47.752,62.992,560.4,0,112.9,20.146324054247,78,38.8,16.5,1.5,5,2,4,3,2,3,4,3,0,no notes,
+2,B145,1,B220_row-23_rep-1_E,12,96,109,113,17,43.688,60.706,377.6,0,107.6,28.4957627118644,68.5,36,25.9,1.52,5,4,4,3,3,4,4,5,0,no notes,
+2,B145,2,B220_row-23_rep-2_E,12,94,107,111,17,45.72,67.818,456.6,0,119.6,26.1936049058257,69.8,31.6,23.9,1.7,5,4,4,2,3,4,4,4,0,no notes,
+2,B145,3,B220_row-27_rep-3_E,12,95,108,115,20,43.942,60.452,347.5,0,105.8,30.4460431654676,71.9,34.8,22.8,1.4,5,4,5,2,3,4,4,4,0,no notes,
+0,B221,1,G08_row-1_rep-GBS1_E,2,105,139,150,45,35.052,76.2,1229.2,3,232.4,18.9066059225513,91.9,38.3,22.7,1.24,4,3,5,3,3,2,3,3,0,no notes,
+1,B221,1,B221_row-7_rep-1_E,12,130,135,159,29,34.798,64.77,929.4,1,195.3,21.0135571336346,76.7,34,21.5,1.44,2,2,4,3,3,1,2,2,0,no notes,
+1,B221,2,B221_row-9_rep-2_W,12,135,160,168,33,38.608,66.802,762.2,0,145.2,19.0501180792443,67.1,26.2,20.3,1.02,2,4,5,3,2,2,2,2,0,no notes,
+1,B221,3,B221_row-15_rep-3_E,12,136,149,170,34,36.576,73.914,694.8,0,183,26.3385146804836,78.4,45.8,20,1.18,4,3,5,4,2,1,2,2,0,no notes,
+2,B221,1,B221_row-23_rep-1_E,12,121,138,152,31,30.988,80.772,770.4,0,157.2,20.404984423676,77.3,31.7,17.8,1.08,5,4,5,4,3,4,5,4,0,no notes,
+2,B221,2,B221_row-28_rep-2_E,12,116,145,152,36,34.29,86.614,659.4,0,160.6,24.355474673946,80.3,41.7,15.4,1.26,5,3,4,3,3,4,3,3,0,no notes,
+2,B221,3,B221_row-31_rep-3_E,11,125,149,155,30,48.006,52.07,878.8,0,180.4,20.5279927173418,92.4,37.4,19.6,1.16,5,4,4,3,4,5,5,4,0,no notes,
+0,B222,2,B09_row-2_rep-GBS2_E,4,62,66,NA,NA,49.276,96.774,436.1,5,107.7,24.6961706030727,66.8,31.8,16.7,2.26,4,4,3,3,2,3,4,3,0,no notes,
+1,B222,1,B222_row-7_rep-1_E,10,86,93,101,15,49.53,78.232,503.5,6,98.5,19.5630585898709,75.7,37.9,17.5,2.4,4,2,3,4,2,3,3,3,0,no notes,missing data :(
+1,B222,2,B222_row-7_rep-2_E,12,91,99,101,10,49.53,77.216,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,3,NA,NA,NA,NA,0,no notes,
+1,B222,3,B222_row-15_rep-3_E,12,91,97,101,10,40.132,78.74,357.8,0,73.8,20.6260480715483,73.7,34.9,12,1.56,5,3,4,3,2,3,4,3,0,no notes,
+2,B222,1,B222_row-23_rep-1_E,4,82,93,116,34,43.18,80.01,425.6,2,90.3,21.2171052631579,75.9,34.9,16.6,1.88,5,4,4,3,2,4,4,3,0,no notes,
+2,B222,2,B222_row-28_rep-2_E,5,81,91,96,15,42.418,86.614,244.7,0,48.8,19.942787086228,49.8,23.5,16.9,1.8,5,4,3,2,2,3,4,3,0,no notes,
+2,B222,3,B222_row-32_rep-3_E,4,85,99,103,18,35.052,64.77,410,0,79.3,19.3414634146341,56.4,29.7,15.6,2.48,4,4,3,2,2,3,4,3,0,no notes,
+0,B223,2,C07_row-2_rep-GBS2_E,4,81,97,100,19,35.052,71.882,1023.4,11,106.4,10.3967168262654,67,29,14.5,1.7,4,4,4,4,4,4,4,4,0,some irregular flowering,
+1,B223,1,B223_row-7_rep-1_E,12,109,127,130,21,NA,NA,594.2,2,72.8,12.2517670817906,51.6,21.7,14.8,2.02,5,4,4,4,3,3,4,4,0,some irregular flowering,
+1,B223,2,B223_row-9_rep-2_W,11,110,124,127,17,39.116,71.12,830.4,8,84.4,10.1637764932563,53.9,23.7,18.7,1.52,4,5,4,4,4,4,5,4,0,some irregular flowering,
+1,B223,3,B223_row-18_rep-3_W,12,108,115,127,19,34.036,72.39,1035.1,8,113.2,10.9361414356101,69.9,32.1,12.7,1.64,5,3,4,4,3,3,4,3,0,some irregular flowering,
+2,B223,1,B223_row-23_rep-1_E,5,107,115,125,18,30.988,65.532,591,3,81.9,13.8578680203046,61.1,26.7,16.5,1.54,5,4,4,5,3,4,4,4,0,some irregular flowering,
+2,B223,2,B223_row-26_rep-2_W,5,98,112,128,30,35.052,70.866,626.8,2,103.4,16.4964901084876,70.1,31.1,25,1.9,5,3,4,4,3,4,4,4,0,some irregular flowering,irregular flowering 
+2,B223,3,B223_row-29_rep-3_W,7,103,127,138,35,44.704,81.28,669.1,7,102.2,15.2742489911822,70.2,33,25.4,1.56,5,4,4,4,3,4,5,4,0,some irregular flowering,
+0,B224,2,C02_row-2_rep-GBS2_E,2,72,98,102,30,48.26,72.39,878.4,21,55.2,6.28415300546448,50.7,24,12,2.14,3,3,2,3,2,3,4,2,0,extreme lats,extreme lats
+1,B224,1,B224_row-7_rep-1_E,2,107,120,124,17,53.34,82.296,632.2,16,93.5,14.7896235368554,57.8,28.5,11.7,1.48,4,2,4,3,2,2,3,2,0,extreme lats,
+1,B224,2,B224_row-11_rep-2_E,1,110,NA,NA,NA,45.466,79.248,411.8,6,93.2,22.6323457989315,55.8,27.3,13.2,1.26,4,4,4,3,2,1,2,1,NA,extreme lats,"only one plant, no flowering data"
+1,B224,3,B224_row-17_rep-3_W,1,106,NA,NA,NA,50.292,77.216,755.4,10,111.6,14.7736298649722,68.2,26.7,13.9,1.1,3,4,4,3,2,3,3,2,NA,extreme lats,"only one plant, no flowering data"
+0,B225,2,D06_row-2_rep-GBS2_E,4,86,103,105,19,41.148,75.438,540.7,7,99.7,18.4390604771592,64.4,27.2,17.3,1.52,4,4,4,3,4,3,4,3,NA,extreme lats,
+1,B225,1,B225_row-8_rep-1_E,10,111,128,137,26,48.768,78.232,517.4,10,93.9,18.1484344800928,53.8,27.6,21.6,1.28,4,4,4,4,4,3,4,3,0,extreme lats,
+1,B225,2,B225_row-12_rep-2_E,12,118,133,135,17,47.1678,86.36,379,6,81.7,21.55672823219,50.8,25.2,24.5,1.82,4,5,5,4,4,4,4,3,0,extreme lats,
+1,B225,3,B225_row-17_rep-3_W,12,108,122,129,21,40.64,76.962,757.3,11,109.1,14.4064439455962,55.5,22.6,15.3,1.56,4,4,4,3,2,4,4,4,0,extreme lats,
+2,B225,1,B225_row-24_rep-1_E,9,103,120,128,25,35.814,67.31,1037.7,6,185.4,17.8664353859497,85.1,37.3,35.9,1.62,5,4,5,4,4,4,5,4,0,extreme lats,extreme lats
+2,B225,2,B225_row-25_rep-2_W,12,105,120,126,21,36.83,53.594,562.2,4,128.7,22.8922091782284,74.4,33.3,29.8,1.42,5,4,5,3,3,4,5,4,0,extreme lats,
+2,B225,3,B225_row-32_rep-3_E,12,107,117,121,14,47.752,58.674,750.6,7,154.7,20.6101785238476,73.5,35.4,24.8,1.58,5,5,5,4,3,5,5,4,0,extreme lats,
+0,B226,2,E04_row-2_rep-GBS2_E,4,74,87,89,15,41.91,57.404,560.9,0,130.2,23.212693884828,65.5,25.6,17,1.86,2,2,3,3,2,2,2,1,0,no notes,
+1,B226,1,B226_row-8_rep-1_E,12,109,129,132,23,43.18,52.07,288.2,6,94.7,32.8591256072172,41,18.4,13.1,2.04,1,2,3,3,2,2,1,1,0,no notes,
+1,B226,2,B226_row-14_rep-2_W,12,106,115,125,19,41.91,78.232,550.4,7,136.7,24.8364825581395,76.4,37.3,16.9,1.8,1,1,4,3,2,1,1,1,0,no notes,
+1,B226,3,B226_row-17_rep-3_W,12,105,112,120,15,40.64,74.422,592.5,3,121.8,20.5569620253165,63.8,30,17.4,2,3,1,3,3,2,2,2,1,0,no notes,
+2,B226,1,B226_row-24_rep-1_E,10,95,105,108,13,42.164,69.85,483.7,6,147,30.3907380607815,77.6,31.8,23.2,1.98,3,1,4,2,2,2,2,2,0,no notes,
+2,B226,2,B226_row-25_rep-2_W,10,94,104,107,13,44.196,76.2,557.4,5,141.4,25.367778973807,72.7,34.6,25.6,1.5,4,2,5,2,3,3,3,3,0,no notes,
+2,B226,3,B226_row-32_rep-3_E,10,98,106,109,11,34.29,58.42,583.8,5,172.5,29.5477903391572,83.4,50,23.2,1.28,3,3,4,3,3,3,3,3,0,no notes,
+0,B227,2,E05_row-2_rep-GBS2_E,4,72,87,106,34,35.052,42.672,988.1,0,177.7,17.9840097156158,102.4,60,24.3,2,4,3,5,3,2,1,3,2,0,no notes,
+1,B227,1,B227_row-8_rep-1_E,9,108,133,136,28,36.322,65.532,688.9,0,140.9,20.4528959210335,75.4,28,20.2,1.5,4,2,5,4,2,3,3,2,0,no notes,
+1,B227,2,B227_row-12_rep-2_E,11,112,137,141,29,36.576,59.436,420.9,0,90.5,21.5015443098123,64.7,28.2,18.6,1.44,5,4,5,4,3,4,4,4,0,no notes,
+1,B227,3,B227_row-17_rep-3_W,12,110,133,137,27,36.576,51.308,560,0,101.6,18.1428571428571,65.3,25,14.3,1.86,4,2,4,3,3,3,3,3,0,no notes,
+2,B227,1,B227_row-24_rep-1_E,12,97,119,127,30,36.068,67.31,773.7,0,184.4,23.8335272069277,78.9,43.4,18.4,1.84,5,4,5,2,3,4,5,4,0,no notes,missing some heading data
+2,B227,2,B227_row-24_rep-2_E,11,99,113,118,19,36.83,68.58,NA,NA,NA,NA,NA,NA,NA,NA,5,3,4,4,3,4,4,4,0,no notes,
+2,B227,3,B227_row-28_rep-3_E,10,101,113,116,15,42.926,80.01,564.9,0,137,24.2520800141618,87.7,36.5,30.2,1.52,5,3,4,3,2,3,4,3,0,no notes,
+1,B142,1,B228_row-8_rep-1_E,12,93,121,125,32,38.608,67.31,607.7,0,110.5,18.1833141352641,80,35.4,19.9,2.24,5,3,3,4,3,3,4,3,0,some development irreguarities,Half the plants are developing slower
+1,B142,2,B228_row-12_rep-2_E,11,109,127,130,21,41.148,53.34,274.8,0,84.3,30.6768558951965,64.9,30.8,15.9,1.5,5,4,3,4,3,3,4,3,0,some development irreguarities,
+1,B142,3,B228_row-13_rep-3_W,12,101,120,125,24,39.37,64.77,396.3,3,100.3,25.3091092606611,67.7,29.2,18.9,1.5,5,4,3,4,4,4,5,4,0,some development irreguarities,
+2,B142,1,B228_row-24_rep-1_E,12,88,105,110,22,32.512,73.914,328.7,0,77.5,23.5777304533009,58.8,27.5,19,1.78,5,4,4,4,2,3,4,4,0,some development irreguarities,
+2,B142,2,B228_row-25_rep-2_W,11,82,101,105,23,NA,NA,726.8,6,115.3,15.864061640066,73.4,24.9,21.9,2.06,5,5,4,3,3,3,5,4,0,some development irreguarities,
+2,B142,3,B228_row-27_rep-3_E,11,88,105,114,26,43.942,61.468,414.7,1,91.1,21.9676874849289,66,27.5,21.4,1.96,5,5,4,4,3,4,5,4,0,some development irreguarities,
+0,B229,2,F02_row-2_rep-GBS2_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,botrytis,botrytis? 
+0,B231,2,F03_row-2_rep-GBS2_E,5,77,NA,NA,NA,41.656,69.85,912.6,0,154,16.8748630287092,73.8,27.9,29.7,1.94,5,5,5,3,5,5,5,5,NA,acelpha?,THIS IS ACTUALLY F04!!!!!!!!!! B231 I BELIEVE  (marked as B330)
+0,B232,2,A02_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no notes,
+0,B233,2,C08_row-2_rep-GBS2_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,capitata,capitata
+0,B234,2,C09_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,B235,1,F05_row-1_rep-GBS1_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+1,B235,1,B235_row-8_rep-1_E,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+1,B235,2,B235_row-9_rep-2_W,11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,gemmifera? 
+1,B235,3,B235_row-16_rep-3_E,10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,gemmifera? 
+2,B235,1,B235_row-24_rep-1_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+2,B235,2,B235_row-26_rep-2_W,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+2,B235,3,B235_row-28_rep-3_E,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+0,B257,2,D05_row-2_rep-GBS2_E,2,62,71,74,12,26.924,51.054,284.2,10,65.2,22.9415904292752,NA,NA,NA,NA,NA,NA,NA,3,NA,NA,NA,NA,0,acelpha?,
+1,B257,1,B257_row-8_rep-1_E,11,96,108,112,16,22.606,45.212,205.8,12,50.7,24.6355685131195,43.3,19.6,10.2,1.64,5,5,4,3,3,3,4,3,0,acelpha?,
+1,B257,2,B257_row-10_rep-2_W,10,95,108,115,20,22.86,44.196,210.9,6,55.3,26.2209577999052,42.8,19.8,15.3,1.84,5,4,3,3,3,3,4,2,0,acelpha?,some early heading.  
+1,B257,3,B257_row-15_rep-3_E,11,97,108,113,16,20.066,40.894,180.8,12,47.1,26.0508849557522,37.3,24.1,13.9,1.82,5,4,3,3,2,2,4,3,0,acelpha?,
+2,B257,1,B257_row-24_rep-1_E,5,87,96,100,13,28.956,44.196,269.2,11,52.1,19.3536404160476,40.2,17.3,17.7,1.58,5,4,3,3,3,3,4,2,0,acelpha?,
+2,B257,2,B257_row-25_rep-2_W,6,86,97,100,14,23.368,55.372,240.9,7,49.7,20.6309672063097,36.5,18.6,12.4,1.48,4,4,3,2,3,3,4,2,0,acelpha?,
+2,B257,3,B257_row-28_rep-3_E,5,84,98,102,18,24.13,21.082,234.4,8,55.3,23.5921501706485,42.1,20.9,7.8,1.62,5,4,3,3,2,3,4,2,0,acelpha?,
+0,B261,2,C01_row-2_rep-GBS2_E,2,100,NA,NA,NA,62.992,75.946,994.9,22,10.7,1.07548497336416,18.7,8.5,8.5,1.88,3,2,1,4,2,1,2,1,NA,acelpha?,extreme lats
+1,B261,1,B261_row-7_rep-1_E,12,119,130,144,25,66.802,71.12,945.6,21,30.1,3.1831641285956,33.5,19,13.4,2.24,4,4,2,5,3,3,4,2,0,acelpha?,extreme lats
+1,B261,2,B261_row-9_rep-2_W,11,115,113,146,31,74.422,78.232,762.3,6,52,6.82146136691591,43,19.2,17.8,2.24,3,3,3,4,2,3,3,2,0,acelpha?,
+1,B261,3,B261_row-16_rep-3_E,12,120,133,143,23,56.642,43.942,303.7,17,19.8,6.51959170233783,37.3,18.7,12.3,2.6,3,2,2,4,2,3,3,1,0,acelpha?,
+2,B261,1,B261_row-22_rep-1_W,9,103,96,135,32,62.738,77.47,472.1,3,37.4,7.92205041304808,46.1,21.1,13.9,2.24,4,2,2,4,3,3,4,3,0,acelpha?,
+2,B261,2,B261_row-27_rep-2_E,9,103,112,130,27,60.452,64.516,349.1,1,24.7,7.07533657977657,26,12.8,14.5,2.66,3,2,3,4,3,3,3,2,0,acelpha?,irregular heading and flowering 
+2,B261,3,B261_row-31_rep-3_E,12,113,105,145,32,74.422,85.09,619.4,14,27.8,4.48821440103326,40.7,20.7,13.1,1.56,5,4,2,4,2,2,5,2,0,acelpha?,irregular heading and flowering 
+0,FA195,2,E10_row-2_rep-GBS2_E,4,44,45,49,5,19.558,44.45,123,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,3,NA,NA,NA,NA,0,acelpha?,"alboglabra, didny really head"
+0,FA211,2,E11_row-2_rep-GBS2_E,4,39,39,44,5,17.272,49.53,NA,5,NA,NA,NA,NA,NA,3.9,NA,NA,NA,3,0,NA,NA,NA,1,acelpha?,alboglabra
+0,FA310,2,E12_row-2_rep-GBS2_E,4,NA,23,28,NA,26.924,26.67,33.8,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,5,0,NA,NA,NA,1,acelpha?,flowered in tray
+0,H057,2,F07_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+0,H058,2,F08_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H059,2,F09_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H060,2,F10_row-2_rep-GBS2_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H061,2,F11_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H062,2,F12_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,viridis acelpha? 
+0,H063,2,G01_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,viridis acelpha
+0,H064,2,G02_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,viridis? 
+0,H065,2,G03_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,unk? 
+0,H066,2,G04_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H067,2,G05_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H068,2,G06_row-2_rep-GBS2_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,acelpha
+0,H069,2,G07_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,viridis? 
+0,H070,2,G08_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,viridis? 
+0,H071,2,G09_row-3_rep-GBS2_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,
+0,H072,2,G10_row-3_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,dino kale
+0,H073,2,G11_row-3_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,kale/collard
+0,H074,2,G12_row-3_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,kale
+0,H075,2,H01_row-3_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,acelpha?,kale? 
+0,H076,2,H02_row-3_rep-GBS2_E,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,viridis? ,very dark kale collard
+0,H077,2,H03_row-3_rep-GBS2_E,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H078,2,H04_row-3_rep-GBS2_E,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H079,2,H05_row-3_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H080,2,H06_row-3_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H081,2,H07_row-3_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H082,2,H08_row-3_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H083,2,H09_row-3_rep-GBS2_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H084,2,H10_row-3_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H085,2,H11_row-3_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,H086,2,H12_row-3_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,unk,
+0,W001,2,A03_row-2_rep-GBS2_E,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,wild type,
+0,W002,2,A04_row-2_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,wild type,
+0,W003,2,A08_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,wild type,
+0,W004,2,A09_row-2_rep-GBS2_E,5,NA,NA,NA,NA,NA,NA,NA,NA,154.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,wild type,
+0,W005,2,A10_row-2_rep-GBS2_E,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,wild type,
